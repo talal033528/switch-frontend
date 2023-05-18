@@ -1,9 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_switch/flutter_switch.dart';
+import 'package:go_router/go_router.dart';
 import 'package:swish_basketball/widgets/authtextfield.dart';
 import 'package:swish_basketball/widgets/button.dart';
 import 'package:swish_basketball/widgets/paymentcard.dart';
@@ -20,7 +18,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
+      body: SizedBox(
         width: double.infinity,
         child: SingleChildScrollView(
           child: Column(
@@ -31,14 +29,24 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Icon(
-                      Icons.arrow_back_ios,
-                      color: Color(0xff5F677E),
+                    GestureDetector(
+                      onTap: () {
+                        context.pop();
+                      },
+                      child: const Icon(
+                        Icons.arrow_back_ios,
+                        color: Color(0xff5F677E),
+                      ),
                     ),
-                    Text(
-                      'Skip',
-                      style:
-                          TextStyle(color: Color(0xff5F677E), fontSize: 18.sp),
+                    GestureDetector(
+                      onTap: () {
+                        context.push('/register/otp');
+                      },
+                      child: Text(
+                        'Skip',
+                        style: TextStyle(
+                            color: const Color(0xff5F677E), fontSize: 18.sp),
+                      ),
                     )
                   ],
                 ),
@@ -48,7 +56,8 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 width: 333.w,
                 child: Text(
                   "Payment Method",
-                  style: TextStyle(color: Color(0xffFF4A31), fontSize: 18.sp),
+                  style: TextStyle(
+                      color: const Color(0xffFF4A31), fontSize: 18.sp),
                 ),
               ),
               13.verticalSpace,
@@ -56,7 +65,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 width: 333.w,
                 child: Column(
                   children: [
-                    AuthTextField(
+                    const AuthTextField(
                       hinttext: 'Enter Card hold name',
                       headertext: 'Card Holder Name',
                       obsecure: false,
@@ -64,7 +73,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                       suffixicon: SizedBox(),
                     ),
                     25.verticalSpace,
-                    AuthTextField(
+                    const AuthTextField(
                       hinttext: 'Enter your 16 Digits Card number',
                       headertext: 'Card Number',
                       obsecure: false,
@@ -72,7 +81,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                       suffixicon: SizedBox(),
                     ),
                     25.verticalSpace,
-                    AuthTextField(
+                    const AuthTextField(
                       hinttext: 'Type Full Name',
                       headertext: 'Mobile Number',
                       obsecure: false,
@@ -85,7 +94,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                       children: [
                         SizedBox(
                           width: 229.w,
-                          child: AuthTextField(
+                          child: const AuthTextField(
                             hinttext: '16/06/2025',
                             headertext: 'Expiry Date',
                             obsecure: false,
@@ -95,7 +104,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                         ),
                         SizedBox(
                           width: 76.w,
-                          child: AuthTextField(
+                          child: const AuthTextField(
                             hinttext: '245',
                             headertext: 'CVV',
                             obsecure: false,
@@ -113,23 +122,24 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 width: 333.w,
                 child: Text(
                   "Select Subscription Options",
-                  style: TextStyle(color: Color(0xffFF4A31), fontSize: 18.sp),
+                  style: TextStyle(
+                      color: const Color(0xffFF4A31), fontSize: 18.sp),
                 ),
               ),
               7.verticalSpace,
-              Container(
+              SizedBox(
                 width: 333.w,
                 height: 107.h,
                 child: Card(
                   elevation: 2,
                   shape: RoundedRectangleBorder(
-                    side: BorderSide(color: Color(0xffFFBDB5), width: 2),
+                    side: const BorderSide(color: Color(0xffFFBDB5), width: 2),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      gradient: LinearGradient(
+                      gradient: const LinearGradient(
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
                         colors: [
@@ -142,16 +152,16 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     child: ListTile(
                       leading: Icon(
                         Icons.check_circle_outline_outlined,
-                        color: Color(0xffFF4A31),
+                        color: const Color(0xffFF4A31),
                         size: 30.w,
                       ),
                       title: Text("Free Plan",
                           style: TextStyle(
-                              color: Color(0xffFF4A31), fontSize: 18.sp)),
+                              color: const Color(0xffFF4A31), fontSize: 18.sp)),
                       subtitle: Text(
                           "7 Days FREE throw tracking & 5-8 Training Video",
                           style: TextStyle(
-                            color: Color(0xff5F677E),
+                            color: const Color(0xff5F677E),
                             fontSize: 12.sp,
                           )),
                     ),
@@ -159,18 +169,18 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 ),
               ),
               7.verticalSpace,
-              Container(
+              SizedBox(
                 width: 333.w,
                 child: Card(
                   elevation: 2,
                   shape: RoundedRectangleBorder(
-                    side: BorderSide(color: Color(0xffFFBDB5), width: 2),
+                    side: const BorderSide(color: Color(0xffFFBDB5), width: 2),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      gradient: LinearGradient(
+                      gradient: const LinearGradient(
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
                         colors: [
@@ -187,29 +197,33 @@ class _PaymentScreenState extends State<PaymentScreen> {
                         children: [
                           Text("Basic",
                               style: TextStyle(
-                                  color: Color(0xffFF4A31),
+                                  color: const Color(0xffFF4A31),
                                   fontSize: 20.sp,
                                   fontWeight: FontWeight.bold)),
                           7.verticalSpace,
                           Text("+ Unlimited Shot Tracking",
                               style: TextStyle(
-                                  color: Color(0xff5F677E), fontSize: 18.sp)),
+                                  color: const Color(0xff5F677E),
+                                  fontSize: 18.sp)),
                           Text("+ Analytics",
                               style: TextStyle(
-                                  color: Color(0xff5F677E), fontSize: 18.sp)),
+                                  color: const Color(0xff5F677E),
+                                  fontSize: 18.sp)),
                           20.verticalSpace,
                           Text("Pro",
                               style: TextStyle(
-                                  color: Color(0xffFF4A31),
+                                  color: const Color(0xffFF4A31),
                                   fontSize: 20.sp,
                                   fontWeight: FontWeight.bold)),
                           7.verticalSpace,
                           Text("+ Unlimited Shot Tracking",
                               style: TextStyle(
-                                  color: Color(0xff5F677E), fontSize: 18.sp)),
+                                  color: const Color(0xff5F677E),
+                                  fontSize: 18.sp)),
                           Text("+ Analytics",
                               style: TextStyle(
-                                  color: Color(0xff5F677E), fontSize: 18.sp))
+                                  color: const Color(0xff5F677E),
+                                  fontSize: 18.sp))
                         ],
                       ),
                     ),
@@ -227,12 +241,12 @@ class _PaymentScreenState extends State<PaymentScreen> {
                         Text(
                           "Pay annually save ",
                           style: TextStyle(
-                              color: Color(0xff5F677E), fontSize: 18.sp),
+                              color: const Color(0xff5F677E), fontSize: 18.sp),
                         ),
                         Text(
                           " 2 months",
                           style: TextStyle(
-                              color: Color(0xffFF4A31), fontSize: 18.sp),
+                              color: const Color(0xffFF4A31), fontSize: 18.sp),
                         ),
                       ],
                     ),
@@ -244,11 +258,11 @@ class _PaymentScreenState extends State<PaymentScreen> {
                       borderRadius: 100.0,
                       value: _switchValue,
                       showOnOff: true,
-                      activeTextColor: Color(0xffFF4A31),
-                      inactiveTextColor: Color(0xffFF4A31),
+                      activeTextColor: const Color(0xffFF4A31),
+                      inactiveTextColor: const Color(0xffFF4A31),
                       activeColor: Colors.white,
                       inactiveColor: Colors.grey,
-                      toggleColor: Color(0xffFF4A31),
+                      toggleColor: const Color(0xffFF4A31),
                       switchBorder: Border.all(
                         color: Colors.grey,
                         width: 1.0,
@@ -267,20 +281,21 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 width: 333.w,
                 child: Text(
                   "Single",
-                  style: TextStyle(color: Color(0xffFF4A31), fontSize: 18.sp),
+                  style: TextStyle(
+                      color: const Color(0xffFF4A31), fontSize: 18.sp),
                 ),
               ),
               10.verticalSpace,
               SizedBox(
                 width: 333.w,
-                child: Divider(
+                child: const Divider(
                   thickness: 2,
                 ),
               ),
               10.verticalSpace,
               SizedBox(
                 width: 333.w,
-                child: Row(
+                child: const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     PaymentCard(
@@ -305,20 +320,21 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 width: 333.w,
                 child: Text(
                   "Double",
-                  style: TextStyle(color: Color(0xffFF4A31), fontSize: 18.sp),
+                  style: TextStyle(
+                      color: const Color(0xffFF4A31), fontSize: 18.sp),
                 ),
               ),
               10.verticalSpace,
               SizedBox(
                 width: 333.w,
-                child: Divider(
+                child: const Divider(
                   thickness: 2,
                 ),
               ),
               10.verticalSpace,
               SizedBox(
                 width: 333.w,
-                child: Row(
+                child: const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     PaymentCard(
@@ -343,20 +359,21 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 width: 333.w,
                 child: Text(
                   "Family (4 Users)",
-                  style: TextStyle(color: Color(0xffFF4A31), fontSize: 18.sp),
+                  style: TextStyle(
+                      color: const Color(0xffFF4A31), fontSize: 18.sp),
                 ),
               ),
               10.verticalSpace,
               SizedBox(
                 width: 333.w,
-                child: Divider(
+                child: const Divider(
                   thickness: 2,
                 ),
               ),
               10.verticalSpace,
               SizedBox(
                 width: 333.w,
-                child: Row(
+                child: const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     PaymentCard(
@@ -377,11 +394,16 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 ),
               ),
               30.verticalSpace,
-              SizedBox(
-                  width: 333.w,
-                  child: GlobalButton(
-                    text: 'Submit',
-                  )),
+              GestureDetector(
+                onTap: () {
+                  context.push('/register/otp');
+                },
+                child: SizedBox(
+                    width: 333.w,
+                    child: const GlobalButton(
+                      text: 'Submit',
+                    )),
+              ),
               30.verticalSpace,
             ],
           ),

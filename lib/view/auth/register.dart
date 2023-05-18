@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:swish_basketball/widgets/authtextfield.dart';
 import 'package:swish_basketball/widgets/skillscard.dart';
 
@@ -15,17 +16,17 @@ class _RegisterScreenState extends State<RegisterScreen>
   int _selectedIndex = 0;
 
   final List<Widget> _tabs = [
-    Tab(
+    const Tab(
       text: 'MYSELF',
     ),
-    Tab(
+    const Tab(
       text: 'FOR MY CHILD',
     ),
   ];
   late TabController _controller;
   @override
   void initState() {
-    _controller = new TabController(length: 2, vsync: this);
+    _controller = TabController(length: 2, vsync: this);
 
     super.initState();
   }
@@ -33,7 +34,7 @@ class _RegisterScreenState extends State<RegisterScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
+      body: SizedBox(
         width: double.infinity,
         child: SingleChildScrollView(
           child: Column(
@@ -43,7 +44,8 @@ class _RegisterScreenState extends State<RegisterScreen>
                 width: 333.w,
                 child: Text(
                   "Create your free account",
-                  style: TextStyle(color: Color(0xffFF4A31), fontSize: 27.sp),
+                  style: TextStyle(
+                      color: const Color(0xffFF4A31), fontSize: 27.sp),
                 ),
               ),
               5.verticalSpace,
@@ -54,13 +56,18 @@ class _RegisterScreenState extends State<RegisterScreen>
                   children: [
                     Text("Create your free account ? ",
                         style: TextStyle(
-                            color: Color(0xff7C8396), fontSize: 14.sp)),
-                    Text(
-                      "Signin",
-                      style: TextStyle(
-                          color: Color(0xffFF4A31),
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14.sp),
+                            color: const Color(0xff7C8396), fontSize: 14.sp)),
+                    GestureDetector(
+                      onTap: () {
+                        context.go('/');
+                      },
+                      child: Text(
+                        "Signin",
+                        style: TextStyle(
+                            color: const Color(0xffFF4A31),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14.sp),
+                      ),
                     )
                   ],
                 ),
@@ -69,7 +76,7 @@ class _RegisterScreenState extends State<RegisterScreen>
               Container(
                 width: 333.w,
                 decoration: BoxDecoration(
-                  color: Color(0xffECEDEF),
+                  color: const Color(0xffECEDEF),
                   borderRadius: BorderRadius.circular(20.0),
                 ),
                 child: TabBar(
@@ -85,7 +92,7 @@ class _RegisterScreenState extends State<RegisterScreen>
                     borderRadius: BorderRadius.circular(20.0),
                   ),
                   indicatorColor: Colors.blueGrey,
-                  unselectedLabelColor: Color(0xffFF4A31),
+                  unselectedLabelColor: const Color(0xffFF4A31),
                   labelColor: Colors.white,
                 ),
               ),
@@ -95,7 +102,7 @@ class _RegisterScreenState extends State<RegisterScreen>
                 child: _selectedIndex == 0
                     ? Column(
                         children: [
-                          AuthTextField(
+                          const AuthTextField(
                             hinttext: 'Type Full Name',
                             headertext: 'Full Name',
                             obsecure: false,
@@ -103,7 +110,7 @@ class _RegisterScreenState extends State<RegisterScreen>
                             suffixicon: SizedBox(),
                           ),
                           25.verticalSpace,
-                          AuthTextField(
+                          const AuthTextField(
                             hinttext: 'Type Full Name',
                             headertext: 'E-mail Address',
                             obsecure: false,
@@ -111,7 +118,7 @@ class _RegisterScreenState extends State<RegisterScreen>
                             suffixicon: SizedBox(),
                           ),
                           25.verticalSpace,
-                          AuthTextField(
+                          const AuthTextField(
                             hinttext: 'Type Full Name',
                             headertext: 'Mobile Number',
                             obsecure: false,
@@ -119,7 +126,7 @@ class _RegisterScreenState extends State<RegisterScreen>
                             suffixicon: SizedBox(),
                           ),
                           25.verticalSpace,
-                          AuthTextField(
+                          const AuthTextField(
                             hinttext: '*************',
                             headertext: 'Password',
                             obsecure: true,
@@ -130,7 +137,7 @@ class _RegisterScreenState extends State<RegisterScreen>
                       )
                     : Column(
                         children: [
-                          AuthTextField(
+                          const AuthTextField(
                             hinttext: 'Type Child Name',
                             headertext: 'Child Name',
                             obsecure: false,
@@ -138,7 +145,7 @@ class _RegisterScreenState extends State<RegisterScreen>
                             suffixicon: SizedBox(),
                           ),
                           25.verticalSpace,
-                          AuthTextField(
+                          const AuthTextField(
                             hinttext: 'Date of Birth',
                             headertext: 'Age',
                             obsecure: false,
@@ -146,7 +153,7 @@ class _RegisterScreenState extends State<RegisterScreen>
                             suffixicon: Icons.calendar_month,
                           ),
                           25.verticalSpace,
-                          AuthTextField(
+                          const AuthTextField(
                             hinttext: 'Court Size',
                             headertext: 'Select Basketball Court',
                             obsecure: false,
@@ -160,10 +167,11 @@ class _RegisterScreenState extends State<RegisterScreen>
                               Text(
                                 'Rate your Skills',
                                 style: TextStyle(
-                                    color: Color(0xff5F677E), fontSize: 14.sp),
+                                    color: const Color(0xff5F677E),
+                                    fontSize: 14.sp),
                               ),
                               9.verticalSpace,
-                              Row(
+                              const Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
@@ -181,7 +189,7 @@ class _RegisterScreenState extends State<RegisterScreen>
                             ],
                           ),
                           25.verticalSpace,
-                          AuthTextField(
+                          const AuthTextField(
                             hinttext: 'example@gmail.com',
                             headertext: 'E-mail Address',
                             obsecure: false,
@@ -189,7 +197,7 @@ class _RegisterScreenState extends State<RegisterScreen>
                             suffixicon: SizedBox,
                           ),
                           25.verticalSpace,
-                          AuthTextField(
+                          const AuthTextField(
                             hinttext: '+1 (457) 000 0000',
                             headertext: 'Your Child Mobile Number (if any)',
                             obsecure: false,
@@ -197,7 +205,7 @@ class _RegisterScreenState extends State<RegisterScreen>
                             suffixicon: SizedBox,
                           ),
                           25.verticalSpace,
-                          AuthTextField(
+                          const AuthTextField(
                             hinttext: '***************',
                             headertext: "Set your child's password",
                             obsecure: false,
@@ -211,12 +219,17 @@ class _RegisterScreenState extends State<RegisterScreen>
               _selectedIndex == 0 ? 50.verticalSpace : 5.verticalSpace,
               SizedBox(
                 width: 333.w,
-                child: Align(
-                  alignment: Alignment.centerRight,
-                  child: Icon(
-                    Icons.check,
-                    color: Color(0xffFF4A31),
-                    size: 42.w,
+                child: GestureDetector(
+                  onTap: () {
+                    context.go('/register/payment');
+                  },
+                  child: Align(
+                    alignment: Alignment.centerRight,
+                    child: Icon(
+                      Icons.check,
+                      color: const Color(0xffFF4A31),
+                      size: 42.w,
+                    ),
                   ),
                 ),
               ),

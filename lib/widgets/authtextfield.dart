@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AuthTextField extends StatelessWidget {
@@ -25,13 +23,18 @@ class AuthTextField extends StatelessWidget {
       children: [
         Text(
           headertext,
-          style: TextStyle(color: Color(0xff5F677E), fontSize: 14.sp),
+          style: TextStyle(color: const Color(0xff5F677E), fontSize: 14.sp),
         ),
         9.verticalSpace,
         TextFormField(
           obscureText: obsecure,
           decoration: InputDecoration(
-              suffixIcon: showsuffixicon ? Icon(suffixicon) : SizedBox(),
+              suffixIcon: showsuffixicon
+                  ? Icon(
+                      suffixicon,
+                      color: const Color(0xff5F677E),
+                    )
+                  : const SizedBox(),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(8.r)),
                 borderSide:
@@ -54,17 +57,18 @@ class AuthTextField extends StatelessWidget {
                   )),
               errorBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(8.r)),
-                  borderSide: BorderSide(width: 1, color: Color(0xffB4B8C3))),
+                  borderSide:
+                      const BorderSide(width: 1, color: Color(0xffB4B8C3))),
               focusedErrorBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(8.r)),
                   borderSide:
                       const BorderSide(width: 1, color: Color(0xffB4B8C3))),
               hintText: hinttext,
               hintStyle:
-                  const TextStyle(fontSize: 14, color: Color(0xFFECEDEF)),
-              fillColor: Color(0xffB4B8C3),
+                  const TextStyle(fontSize: 14, color: Color(0xFF5F677E)),
+              fillColor: const Color(0xffECEDEF),
               filled: true,
-              contentPadding: EdgeInsets.all(10)),
+              contentPadding: const EdgeInsets.all(10)),
         )
       ],
     );
