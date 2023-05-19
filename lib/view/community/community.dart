@@ -54,7 +54,7 @@ class CommunityScreen extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () {
-                      context.push('/addcommunity');
+                      context.push('/home/addcommunity');
                     },
                     child: const Icon(
                       LucideIcons.plusCircle,

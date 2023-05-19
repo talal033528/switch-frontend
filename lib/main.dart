@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+import 'package:swish_basketball/view/auth/login.dart';
 import 'package:swish_basketball/view/auth/otp.dart';
 import 'package:swish_basketball/view/auth/payment.dart';
 import 'package:swish_basketball/view/auth/register.dart';
@@ -40,7 +41,13 @@ class MyApp extends StatelessWidget {
 final GoRouter _router = GoRouter(
   routes: <RouteBase>[
     GoRoute(
-        path: '/',
+      path: '/',
+      builder: (BuildContext context, GoRouterState state) {
+        return const LoginScreen();
+      },
+    ),
+    GoRoute(
+        path: '/home',
         builder: (BuildContext context, GoRouterState state) {
           return const HomeMainScreen();
         },

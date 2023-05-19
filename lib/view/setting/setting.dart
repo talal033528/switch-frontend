@@ -37,7 +37,7 @@ class SettingScreen extends StatelessWidget {
               20.verticalSpace,
               GestureDetector(
                   onTap: () {
-                    context.push('/account');
+                    context.push('/home/account');
                   },
                   child: settingWidget(LucideIcons.user, 'Account')),
               settingWidget(LucideIcons.bell, 'Notifications'),

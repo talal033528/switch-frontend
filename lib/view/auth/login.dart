@@ -101,11 +101,16 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               21.verticalSpace,
-              SizedBox(
-                  width: 333.w,
-                  child: const GlobalButton(
-                    text: 'Login',
-                  )),
+              GestureDetector(
+                onTap: () {
+                  context.go('/home');
+                },
+                child: SizedBox(
+                    width: 333.w,
+                    child: const GlobalButton(
+                      text: 'Login',
+                    )),
+              ),
             ],
           ),
         ),
