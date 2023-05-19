@@ -3,6 +3,7 @@ import 'package:lucide_icons/lucide_icons.dart';
 import 'package:swish_basketball/view/community/community.dart';
 import 'package:swish_basketball/view/home/homescreen.dart';
 import 'package:swish_basketball/view/setting/setting.dart';
+import 'package:swish_basketball/view/video/videolibrary.dart';
 
 class HomeMainScreen extends StatefulWidget {
   const HomeMainScreen({super.key});
@@ -42,7 +43,9 @@ class _HomeMainScreenState extends State<HomeMainScreen> {
               ? const CommunityScreen()
               : _currentIndex == 4
                   ? const SettingScreen()
-                  : Container(),
+                  : _currentIndex == 2
+                      ? const VideoLibraryView()
+                      : Container(),
     );
   }
 }
