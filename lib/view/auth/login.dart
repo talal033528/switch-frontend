@@ -103,7 +103,7 @@ class _LoginScreenState extends State<LoginScreen> {
               21.verticalSpace,
               GestureDetector(
                 onTap: () {
-                  context.go('/home');
+                  context.goNamed('home', pathParameters: {"type": "child"});
                 },
                 child: SizedBox(
                     width: 333.w,

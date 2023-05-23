@@ -47,9 +47,12 @@ final GoRouter _router = GoRouter(
       },
     ),
     GoRoute(
-        path: '/home',
+        name: 'home',
+        path: '/home/:type',
         builder: (BuildContext context, GoRouterState state) {
-          return const HomeMainScreen();
+          return HomeMainScreen(
+            type: state.pathParameters["type"]!,
+          );
         },
         routes: [
           GoRoute(

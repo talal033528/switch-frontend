@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:lucide_icons/lucide_icons.dart';
+import 'package:swish_basketball/view/analytics/scoreanalytics.dart';
 import 'package:swish_basketball/view/community/community.dart';
-import 'package:swish_basketball/view/home/homescreen.dart';
+import 'package:swish_basketball/view/home/childhomescreen.dart';
+import 'package:swish_basketball/view/home/parenthomescreen.dart';
 import 'package:swish_basketball/view/setting/setting.dart';
 import 'package:swish_basketball/view/video/videolibrary.dart';
 
 class HomeMainScreen extends StatefulWidget {
-  const HomeMainScreen({super.key});
+  final String type;
+  const HomeMainScreen({super.key, required this.type});
 
   @override
   State<HomeMainScreen> createState() => _HomeMainScreenState();
@@ -15,38 +18,45 @@ class HomeMainScreen extends StatefulWidget {
 class _HomeMainScreenState extends State<HomeMainScreen> {
   int _currentIndex = 0;
 
+  List parentscreens = [
+    const HomeScreen(),
+    const CommunityScreen(),
+    const VideoLibraryView(),
+    const ScoreAnalytics(),
+    const SettingScreen()
+  ];
+  List childscreens = [
+    const ChildHomeScreen(),
+    const CommunityScreen(),
+    const VideoLibraryView(),
+    const ScoreAnalytics(),
+    const SettingScreen()
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _currentIndex,
-        onTap: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
-        type: BottomNavigationBarType.fixed,
-        selectedItemColor: Colors.black,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        items: [
-          navbaritem(LucideIcons.layoutDashboard),
-          navbaritem(LucideIcons.users),
-          navbaritem(LucideIcons.youtube),
-          navbaritem(LucideIcons.pieChart),
-          navbaritem(LucideIcons.settings),
-        ],
-      ),
-      body: _currentIndex == 0
-          ? const HomeScreen()
-          : _currentIndex == 1
-              ? const CommunityScreen()
-              : _currentIndex == 4
-                  ? const SettingScreen()
-                  : _currentIndex == 2
-                      ? const VideoLibraryView()
-                      : Container(),
-    );
+        bottomNavigationBar: BottomNavigationBar(
+          currentIndex: _currentIndex,
+          onTap: (index) {
+            setState(() {
+              _currentIndex = index;
+            });
+          },
+          type: BottomNavigationBarType.fixed,
+          selectedItemColor: Colors.black,
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          items: [
+            navbaritem(LucideIcons.layoutDashboard),
+            navbaritem(LucideIcons.users),
+            navbaritem(LucideIcons.youtube),
+            navbaritem(LucideIcons.pieChart),
+            navbaritem(LucideIcons.settings),
+          ],
+        ),
+        body: widget.type == "parent"
+            ? parentscreens[_currentIndex]
+            : childscreens[_currentIndex]);
   }
 }
 
