@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 
 class ChildHomeScreen extends StatelessWidget {
@@ -22,12 +23,17 @@ class ChildHomeScreen extends StatelessWidget {
         ),
         title: Text(
           "Hi Mike!",
-          style: TextStyle(color: const Color(0xffFF4A31), fontSize: 21.sp),
+          style: TextStyle(color: const Color(0xffEE7A1D), fontSize: 21.sp),
         ),
-        actions: const [
-          Padding(
-            padding: EdgeInsets.all(13.0),
-            child: Icon(LucideIcons.bellRing, color: Color(0xffFF4A31)),
+        actions: [
+          GestureDetector(
+            onTap: () {
+              context.push('/home/child/noitification');
+            },
+            child: const Padding(
+              padding: EdgeInsets.all(13.0),
+              child: Icon(LucideIcons.bellRing, color: Color(0xffEE7A1D)),
+            ),
           )
         ],
       ),
@@ -36,29 +42,34 @@ class ChildHomeScreen extends StatelessWidget {
         child: Column(
           children: [
             22.verticalSpace,
-            Container(
-              width: 353.w,
-              decoration: BoxDecoration(
-                  color: const Color(0xff3F1004),
-                  borderRadius: BorderRadius.all(Radius.circular(10.r))),
-              child: Padding(
-                padding: EdgeInsets.all(14.w),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Start Shooting",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 22.sp,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    Image.asset(
-                      'assets/images/basketball.png',
-                      height: 40.h,
-                      width: 40.w,
-                    )
-                  ],
+            GestureDetector(
+              onTap: () {
+                context.push('/home/child/shooting');
+              },
+              child: Container(
+                width: 353.w,
+                decoration: BoxDecoration(
+                    color: const Color(0xff3F1004),
+                    borderRadius: BorderRadius.all(Radius.circular(10.r))),
+                child: Padding(
+                  padding: EdgeInsets.all(14.w),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Start Shooting",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 22.sp,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Image.asset(
+                        'assets/images/basketball.png',
+                        height: 40.h,
+                        width: 40.w,
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -136,7 +147,7 @@ class ChildHomeScreen extends StatelessWidget {
                           Text(
                             "82%",
                             style: TextStyle(
-                                color: const Color(0xffFF4A31),
+                                color: const Color(0xffEE7A1D),
                                 fontSize: 27.sp,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -182,14 +193,14 @@ class ChildHomeScreen extends StatelessWidget {
                           children: [
                             Icon(
                               LucideIcons.bookDown,
-                              color: const Color(0xffFF4A31),
+                              color: const Color(0xffEE7A1D),
                               size: 23.h,
                             ),
                             14.horizontalSpace,
                             Text(
                               'Download\nBuilt-in-Guide',
                               style: TextStyle(
-                                  color: const Color(0xffFF4A31),
+                                  color: const Color(0xffEE7A1D),
                                   fontSize: 11.sp,
                                   fontWeight: FontWeight.bold),
                             )
@@ -255,30 +266,35 @@ class ChildHomeScreen extends StatelessWidget {
               ),
             ),
             22.verticalSpace,
-            Container(
-              width: 355.w,
-              decoration: BoxDecoration(
-                  color: const Color(0xffFF4A31),
-                  borderRadius: BorderRadius.all(Radius.circular(12.r))),
-              child: Center(
-                child: Padding(
-                  padding: EdgeInsets.all(14.w),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Icon(
-                        LucideIcons.locateFixed,
-                        color: Colors.white,
-                      ),
-                      12.horizontalSpace,
-                      Text(
-                        "Set My Goals",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15.sp),
-                      ),
-                    ],
+            GestureDetector(
+              onTap: () {
+                context.push('/home/child/setmygoals');
+              },
+              child: Container(
+                width: 355.w,
+                decoration: BoxDecoration(
+                    color: const Color(0xffEE7A1D),
+                    borderRadius: BorderRadius.all(Radius.circular(12.r))),
+                child: Center(
+                  child: Padding(
+                    padding: EdgeInsets.all(14.w),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Icon(
+                          LucideIcons.locateFixed,
+                          color: Colors.white,
+                        ),
+                        12.horizontalSpace,
+                        Text(
+                          "Set My Goals",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15.sp),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),

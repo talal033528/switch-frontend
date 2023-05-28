@@ -21,12 +21,12 @@ class HomeScreen extends StatelessWidget {
         ),
         title: Text(
           "Home",
-          style: TextStyle(color: const Color(0xffFF4A31), fontSize: 21.sp),
+          style: TextStyle(color: const Color(0xffEE7A1D), fontSize: 21.sp),
         ),
         actions: const [
           Padding(
             padding: EdgeInsets.all(13.0),
-            child: Icon(LucideIcons.bellRing, color: Color(0xffFF4A31)),
+            child: Icon(LucideIcons.bellRing, color: Color(0xffEE7A1D)),
           )
         ],
       ),
@@ -48,7 +48,7 @@ class HomeScreen extends StatelessWidget {
               width: 353.w,
               height: 60.h,
               child: Card(
-                color: const Color(0xffFF4A31),
+                color: const Color(0xffEE7A1D),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15.0),
                 ),
@@ -73,7 +73,7 @@ class HomeScreen extends StatelessWidget {
               width: 353.w,
               height: 60.h,
               child: Card(
-                color: const Color(0xffFF4A31),
+                color: const Color(0xffEE7A1D),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15.0),
                 ),
@@ -120,12 +120,12 @@ class HomeScreen extends StatelessWidget {
                   child: ListTile(
                     leading: Icon(
                       Icons.add,
-                      color: const Color(0xffFF4A31),
+                      color: const Color(0xffEE7A1D),
                       size: 30.w,
                     ),
                     title: Text("Invite User",
                         style: TextStyle(
-                            color: const Color(0xffFF4A31), fontSize: 18.sp)),
+                            color: const Color(0xffEE7A1D), fontSize: 18.sp)),
                   ),
                 ),
               ),
@@ -166,14 +166,14 @@ class HomeScreen extends StatelessWidget {
                             children: [
                               Icon(
                                 LucideIcons.creditCard,
-                                color: const Color(0xffFF4A31),
+                                color: const Color(0xffEE7A1D),
                                 size: 30.h,
                               ),
                               10.verticalSpace,
                               Text(
                                 "Billing",
                                 style: TextStyle(
-                                    color: const Color(0xffFF4A31),
+                                    color: const Color(0xffEE7A1D),
                                     fontSize: 14.sp,
                                     fontWeight: FontWeight.bold),
                               )
@@ -213,14 +213,14 @@ class HomeScreen extends StatelessWidget {
                             children: [
                               Icon(
                                 LucideIcons.barChart,
-                                color: const Color(0xffFF4A31),
+                                color: const Color(0xffEE7A1D),
                                 size: 30.h,
                               ),
                               10.verticalSpace,
                               Text(
                                 "Analytics",
                                 style: TextStyle(
-                                    color: const Color(0xffFF4A31),
+                                    color: const Color(0xffEE7A1D),
                                     fontSize: 14.sp,
                                     fontWeight: FontWeight.bold),
                               )
@@ -278,7 +278,7 @@ class HomeScreen extends StatelessWidget {
                             children: [
                               Icon(
                                 LucideIcons.dribbble,
-                                color: const Color(0xffFF4A31),
+                                color: const Color(0xffEE7A1D),
                                 size: 30.h,
                               ),
                               10.verticalSpace,
@@ -287,7 +287,7 @@ class HomeScreen extends StatelessWidget {
                                   Text(
                                     "Coaches Platform",
                                     style: TextStyle(
-                                        color: const Color(0xffFF4A31),
+                                        color: const Color(0xffEE7A1D),
                                         fontSize: 14.sp,
                                         fontWeight: FontWeight.bold),
                                   ),
@@ -335,7 +335,7 @@ class HomeScreen extends StatelessWidget {
                             children: [
                               Icon(
                                 LucideIcons.youtube,
-                                color: const Color(0xffFF4A31),
+                                color: const Color(0xffEE7A1D),
                                 size: 30.h,
                               ),
                               10.verticalSpace,
@@ -344,7 +344,7 @@ class HomeScreen extends StatelessWidget {
                                   Text(
                                     "SWISH VIDEO",
                                     style: TextStyle(
-                                        color: const Color(0xffFF4A31),
+                                        color: const Color(0xffEE7A1D),
                                         fontSize: 14.sp,
                                         fontWeight: FontWeight.bold),
                                   ),
@@ -352,7 +352,7 @@ class HomeScreen extends StatelessWidget {
                                   Text(
                                     "LIBRARY",
                                     style: TextStyle(
-                                        color: const Color(0xffFF4A31),
+                                        color: const Color(0xffEE7A1D),
                                         fontSize: 14.sp,
                                         fontWeight: FontWeight.bold),
                                   ),

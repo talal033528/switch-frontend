@@ -6,8 +6,12 @@ import 'package:swish_basketball/view/auth/otp.dart';
 import 'package:swish_basketball/view/auth/payment.dart';
 import 'package:swish_basketball/view/auth/register.dart';
 import 'package:swish_basketball/view/community/addcommunity.dart';
+import 'package:swish_basketball/view/goals/createyourgoals.dart';
+import 'package:swish_basketball/view/goals/setmygoals.dart';
 import 'package:swish_basketball/view/mainhome/mainhome.dart';
+import 'package:swish_basketball/view/notifications/notification.dart';
 import 'package:swish_basketball/view/setting/account.dart';
+import 'package:swish_basketball/view/shooting/shooting.dart';
 
 void main() {
   runApp(const MyApp());
@@ -65,6 +69,30 @@ final GoRouter _router = GoRouter(
             path: 'account',
             builder: (BuildContext context, GoRouterState state) {
               return const AccountScreen();
+            },
+          ),
+          GoRoute(
+            path: 'shooting',
+            builder: (BuildContext context, GoRouterState state) {
+              return const ShooingScreen();
+            },
+          ),
+          GoRoute(
+            path: 'noitification',
+            builder: (BuildContext context, GoRouterState state) {
+              return const NoitifcationScreen();
+            },
+          ),
+          GoRoute(
+            path: 'setmygoals',
+            builder: (BuildContext context, GoRouterState state) {
+              return const SetMyGoalsScreen();
+            },
+          ),
+          GoRoute(
+            path: 'createyourgoals',
+            builder: (BuildContext context, GoRouterState state) {
+              return const CreateYourGoals();
             },
           ),
         ]),

@@ -17,10 +17,10 @@ class AddCommunity extends StatelessWidget {
             onTap: () {
               context.pop();
             },
-            child: const Icon(Icons.arrow_back_ios, color: Color(0xffFF4A31))),
+            child: const Icon(Icons.arrow_back_ios, color: Color(0xffEE7A1D))),
         title: Text(
           "Add to your Community",
-          style: TextStyle(color: const Color(0xffFF4A31), fontSize: 21.sp),
+          style: TextStyle(color: const Color(0xffEE7A1D), fontSize: 21.sp),
         ),
       ),
       body: SizedBox(
@@ -51,25 +51,27 @@ class AddCommunity extends StatelessWidget {
             27.verticalSpace,
             Expanded(
               child: Container(
-                color: Colors.white,
-                width: 352.w,
-                child: ListView.builder(
-                    itemCount: 10,
-                    itemBuilder: (context, index) {
-                      return ListTile(
-                        contentPadding: const EdgeInsets.all(0),
-                        leading: Image.asset(
-                          'assets/images/userph.png',
-                          width: 40.w,
-                        ),
-                        title: Text(
-                          'Brooklyn Simmons',
-                          style: TextStyle(
-                              color: const Color(0xff38425F), fontSize: 14.sp),
-                        ),
-                        trailing: const Icon(LucideIcons.plusCircle),
-                      );
-                    }),
+                child: SizedBox(
+                  width: 352.w,
+                  child: ListView.builder(
+                      itemCount: 10,
+                      itemBuilder: (context, index) {
+                        return ListTile(
+                          contentPadding: const EdgeInsets.all(0),
+                          leading: Image.asset(
+                            'assets/images/userph.png',
+                            width: 40.w,
+                          ),
+                          title: Text(
+                            'Brooklyn Simmons',
+                            style: TextStyle(
+                                color: const Color(0xff38425F),
+                                fontSize: 14.sp),
+                          ),
+                          trailing: const Icon(LucideIcons.plusCircle),
+                        );
+                      }),
+                ),
               ),
             )
           ],

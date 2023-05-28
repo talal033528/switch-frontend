@@ -46,7 +46,7 @@ class _OtpScreenState extends State<OtpScreen> {
                 child: Text(
                   "Verify your phone number",
                   style: TextStyle(
-                      color: const Color(0xffFF4A31), fontSize: 27.sp),
+                      color: const Color(0xffEE7A1D), fontSize: 27.sp),
                 ),
               ),
               5.verticalSpace,
@@ -76,7 +76,7 @@ class _OtpScreenState extends State<OtpScreen> {
                   obscureText: false,
                   animationType: AnimationType.fade,
                   textStyle: TextStyle(
-                      fontSize: 53.sp, color: const Color(0xffFF4A31)),
+                      fontSize: 53.sp, color: const Color(0xffEE7A1D)),
                   // boxShadows: const [
                   //   BoxShadow(
                   //     offset: Offset(0, 1),
@@ -150,7 +150,7 @@ class _OtpScreenState extends State<OtpScreen> {
                   "Resend Code",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: const Color(0xffFF4A31),
+                    color: const Color(0xffEE7A1D),
                     fontSize: 14.sp,
                     fontWeight: FontWeight.bold,
                   ),
@@ -164,6 +164,7 @@ class _OtpScreenState extends State<OtpScreen> {
                 child: SizedBox(
                     width: 333.w,
                     child: const GlobalButton(
+                      color: Color(0xffEE7A1D),
                       text: 'Verify',
                     )),
               ),

@@ -39,13 +39,13 @@ class PaymentCard extends StatelessWidget {
               children: [
                 Icon(
                   Icons.check_circle_outline_outlined,
-                  color: Color(0xffFF4A31),
+                  color: Color(0xffEE7A1D),
                 ),
                 10.verticalSpace,
                 Text(
                   "${title}",
                   style: TextStyle(
-                      color: Color(0xffFF4A31),
+                      color: Color(0xffEE7A1D),
                       fontSize: 14.sp,
                       fontWeight: FontWeight.bold),
                 ),

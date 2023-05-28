@@ -57,7 +57,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 child: Text(
                   "Payment Method",
                   style: TextStyle(
-                      color: const Color(0xffFF4A31), fontSize: 18.sp),
+                      color: const Color(0xffEE7A1D), fontSize: 18.sp),
                 ),
               ),
               13.verticalSpace,
@@ -123,7 +123,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 child: Text(
                   "Select Subscription Options",
                   style: TextStyle(
-                      color: const Color(0xffFF4A31), fontSize: 18.sp),
+                      color: const Color(0xffEE7A1D), fontSize: 18.sp),
                 ),
               ),
               7.verticalSpace,
@@ -152,12 +152,12 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     child: ListTile(
                       leading: Icon(
                         Icons.check_circle_outline_outlined,
-                        color: const Color(0xffFF4A31),
+                        color: const Color(0xffEE7A1D),
                         size: 30.w,
                       ),
                       title: Text("Free Plan",
                           style: TextStyle(
-                              color: const Color(0xffFF4A31), fontSize: 18.sp)),
+                              color: const Color(0xffEE7A1D), fontSize: 18.sp)),
                       subtitle: Text(
                           "7 Days FREE throw tracking & 5-8 Training Video",
                           style: TextStyle(
@@ -197,7 +197,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                         children: [
                           Text("Basic",
                               style: TextStyle(
-                                  color: const Color(0xffFF4A31),
+                                  color: const Color(0xffEE7A1D),
                                   fontSize: 20.sp,
                                   fontWeight: FontWeight.bold)),
                           7.verticalSpace,
@@ -212,7 +212,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                           20.verticalSpace,
                           Text("Pro",
                               style: TextStyle(
-                                  color: const Color(0xffFF4A31),
+                                  color: const Color(0xffEE7A1D),
                                   fontSize: 20.sp,
                                   fontWeight: FontWeight.bold)),
                           7.verticalSpace,
@@ -246,7 +246,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                         Text(
                           " 2 months",
                           style: TextStyle(
-                              color: const Color(0xffFF4A31), fontSize: 18.sp),
+                              color: const Color(0xffEE7A1D), fontSize: 18.sp),
                         ),
                       ],
                     ),
@@ -258,11 +258,11 @@ class _PaymentScreenState extends State<PaymentScreen> {
                       borderRadius: 100.0,
                       value: _switchValue,
                       showOnOff: true,
-                      activeTextColor: const Color(0xffFF4A31),
-                      inactiveTextColor: const Color(0xffFF4A31),
+                      activeTextColor: const Color(0xffEE7A1D),
+                      inactiveTextColor: const Color(0xffEE7A1D),
                       activeColor: Colors.white,
                       inactiveColor: Colors.grey,
-                      toggleColor: const Color(0xffFF4A31),
+                      toggleColor: const Color(0xffEE7A1D),
                       switchBorder: Border.all(
                         color: Colors.grey,
                         width: 1.0,
@@ -282,7 +282,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 child: Text(
                   "Single",
                   style: TextStyle(
-                      color: const Color(0xffFF4A31), fontSize: 18.sp),
+                      color: const Color(0xffEE7A1D), fontSize: 18.sp),
                 ),
               ),
               10.verticalSpace,
@@ -321,7 +321,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 child: Text(
                   "Double",
                   style: TextStyle(
-                      color: const Color(0xffFF4A31), fontSize: 18.sp),
+                      color: const Color(0xffEE7A1D), fontSize: 18.sp),
                 ),
               ),
               10.verticalSpace,
@@ -360,7 +360,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 child: Text(
                   "Family (4 Users)",
                   style: TextStyle(
-                      color: const Color(0xffFF4A31), fontSize: 18.sp),
+                      color: const Color(0xffEE7A1D), fontSize: 18.sp),
                 ),
               ),
               10.verticalSpace,
@@ -402,6 +402,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     width: 333.w,
                     child: const GlobalButton(
                       text: 'Submit',
+                      color: Color(0xffEE7A1D),
                     )),
               ),
               30.verticalSpace,

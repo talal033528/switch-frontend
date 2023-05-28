@@ -45,7 +45,7 @@ class _RegisterScreenState extends State<RegisterScreen>
                 child: Text(
                   "Create your free account",
                   style: TextStyle(
-                      color: const Color(0xffFF4A31), fontSize: 27.sp),
+                      color: const Color(0xffEE7A1D), fontSize: 27.sp),
                 ),
               ),
               5.verticalSpace,
@@ -64,7 +64,7 @@ class _RegisterScreenState extends State<RegisterScreen>
                       child: Text(
                         "Signin",
                         style: TextStyle(
-                            color: const Color(0xffFF4A31),
+                            color: const Color(0xffEE7A1D),
                             fontWeight: FontWeight.bold,
                             fontSize: 14.sp),
                       ),
@@ -92,7 +92,7 @@ class _RegisterScreenState extends State<RegisterScreen>
                     borderRadius: BorderRadius.circular(20.0),
                   ),
                   indicatorColor: Colors.blueGrey,
-                  unselectedLabelColor: const Color(0xffFF4A31),
+                  unselectedLabelColor: const Color(0xffEE7A1D),
                   labelColor: Colors.white,
                 ),
               ),
@@ -227,7 +227,7 @@ class _RegisterScreenState extends State<RegisterScreen>
                     alignment: Alignment.centerRight,
                     child: Icon(
                       Icons.check,
-                      color: const Color(0xffFF4A31),
+                      color: const Color(0xffEE7A1D),
                       size: 42.w,
                     ),
                   ),

@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class GlobalButton extends StatelessWidget {
   final text;
-  const GlobalButton({super.key, this.text});
+  final color;
+  const GlobalButton({super.key, required this.text, required this.color});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color: Color(0xffFF4A31),
-          borderRadius: BorderRadius.all(Radius.circular(100))),
+          color: color,
+          borderRadius: const BorderRadius.all(Radius.circular(100))),
       child: Center(
         child: Padding(
           padding: EdgeInsets.all(11.w),

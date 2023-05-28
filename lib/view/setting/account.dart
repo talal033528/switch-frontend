@@ -15,12 +15,12 @@ class AccountScreen extends StatelessWidget {
             onTap: () {
               context.pop();
             },
-            child: const Icon(Icons.arrow_back_ios, color: Color(0xffFF4A31))),
+            child: const Icon(Icons.arrow_back_ios, color: Color(0xffEE7A1D))),
         elevation: 0,
         backgroundColor: Colors.white,
         title: Text(
           "Account",
-          style: TextStyle(color: const Color(0xffFF4A31), fontSize: 21.sp),
+          style: TextStyle(color: const Color(0xffEE7A1D), fontSize: 21.sp),
         ),
       ),
       body: SizedBox(
@@ -34,7 +34,7 @@ class AccountScreen extends StatelessWidget {
                 child: Text(
                   "Notification Settings",
                   style: TextStyle(
-                      color: const Color(0xffFF4A31),
+                      color: const Color(0xffEE7A1D),
                       fontSize: 18.sp,
                       fontWeight: FontWeight.bold),
                 ),
@@ -82,11 +82,11 @@ class _SettingWidgetState extends State<SettingWidget> {
               borderRadius: 100.0,
               value: _switchValue,
               showOnOff: true,
-              activeTextColor: const Color(0xffFF4A31),
+              activeTextColor: const Color(0xffEE7A1D),
               inactiveTextColor: Colors.grey,
               activeColor: Colors.white,
               inactiveColor: Colors.white,
-              toggleColor: _switchValue ? const Color(0xffFF4A31) : Colors.grey,
+              toggleColor: _switchValue ? const Color(0xffEE7A1D) : Colors.grey,
               switchBorder: Border.all(
                 color: Colors.grey,
                 width: 1.0,

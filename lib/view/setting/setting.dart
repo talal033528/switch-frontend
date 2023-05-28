@@ -15,7 +15,7 @@ class SettingScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         title: Text(
           "Settings",
-          style: TextStyle(color: const Color(0xffFF4A31), fontSize: 21.sp),
+          style: TextStyle(color: const Color(0xffEE7A1D), fontSize: 21.sp),
         ),
       ),
       body: SizedBox(
@@ -29,7 +29,7 @@ class SettingScreen extends StatelessWidget {
                 child: Text(
                   "General",
                   style: TextStyle(
-                      color: const Color(0xffFF4A31),
+                      color: const Color(0xffEE7A1D),
                       fontSize: 18.sp,
                       fontWeight: FontWeight.bold),
                 ),
@@ -37,7 +37,7 @@ class SettingScreen extends StatelessWidget {
               20.verticalSpace,
               GestureDetector(
                   onTap: () {
-                    context.push('/home/account');
+                    context.push('/home/child/account');
                   },
                   child: settingWidget(LucideIcons.user, 'Account')),
               settingWidget(LucideIcons.bell, 'Notifications'),
@@ -51,7 +51,7 @@ class SettingScreen extends StatelessWidget {
                 child: Text(
                   "Feedback",
                   style: TextStyle(
-                      color: const Color(0xffFF4A31),
+                      color: const Color(0xffEE7A1D),
                       fontSize: 18.sp,
                       fontWeight: FontWeight.bold),
                 ),

@@ -1,7 +1,8 @@
-import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:swish_basketball/widgets/button.dart';
 import 'package:swish_basketball/widgets/dropdown.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
 
 class ScoreAnalytics extends StatefulWidget {
   const ScoreAnalytics({super.key});
@@ -13,6 +14,29 @@ class ScoreAnalytics extends StatefulWidget {
 class _ScoreAnalyticsState extends State<ScoreAnalytics> {
   int touchedIndex = -1;
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  late List<_ChartData> data;
+  late TooltipBehavior _tooltip;
+
+  @override
+  void initState() {
+    data = [
+      _ChartData('Dec', 55),
+      _ChartData('Jan', 90),
+      _ChartData('Feb', 85),
+      _ChartData('Mar', 75),
+      _ChartData('Apr', 20),
+      _ChartData('May', 12),
+      _ChartData('Jun', 15),
+      _ChartData('Jul', 30),
+      _ChartData('Aug', 6.4),
+      _ChartData('Sep', 14),
+      _ChartData('Oct', 40),
+      _ChartData('Nov', 30)
+    ];
+    _tooltip = TooltipBehavior(enable: true);
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,262 +46,224 @@ class _ScoreAnalyticsState extends State<ScoreAnalytics> {
         backgroundColor: Colors.white,
         title: Text(
           "Score Analytics",
-          style: TextStyle(color: const Color(0xffFF4A31), fontSize: 21.sp),
+          style: TextStyle(color: const Color(0xffEE7A1D), fontSize: 21.sp),
         ),
       ),
       body: SizedBox(
         width: double.infinity,
-        child: Column(
-          children: [
-            25.verticalSpace,
-            SizedBox(
-              width: 350.w,
-              child: Text(
-                "Customized your analytics by selecting below  dropdown list.",
-                style:
-                    TextStyle(color: const Color(0xff7C8396), fontSize: 14.sp),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              25.verticalSpace,
+              SizedBox(
+                width: 350.w,
+                child: Text(
+                  "Customized your analytics by selecting below  dropdown list.",
+                  style: TextStyle(
+                      color: const Color(0xff7C8396), fontSize: 14.sp),
+                ),
               ),
-            ),
-            26.verticalSpace,
-            SizedBox(
-              width: 350.w,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  SizedBox(
-                    width: 202.w,
-                    child: MyDropdownWidget(
-                      options: const [
-                        'Shot Selection',
-                        'Total Shots',
-                        'Free Throw %'
-                      ],
-                      selectedValue: 'Shot Selection',
-                      onChanged: (newValue) {
-                        // setState(() {
-                        //   selectedValue = newValue;
-                        // });
-                      },
+              26.verticalSpace,
+              SizedBox(
+                width: 350.w,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    SizedBox(
+                      width: 202.w,
+                      child: MyDropdownWidget(
+                        options: const [
+                          'Shot Selection',
+                          'Total Shots',
+                          'Free Throw %'
+                        ],
+                        selectedValue: 'Shot Selection',
+                        onChanged: (newValue) {
+                          // setState(() {
+                          //   selectedValue = newValue;
+                          // });
+                        },
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    width: 132.w,
-                    child: MyDropdownWidget(
-                      options: const ['Frequency', 'Last Month', 'Last Year'],
-                      selectedValue: 'Frequency',
-                      onChanged: (newValue) {
-                        // setState(() {
-                        //   selectedValue = newValue;
-                        // });
-                      },
+                    SizedBox(
+                      width: 132.w,
+                      child: MyDropdownWidget(
+                        options: const ['Frequency', 'Last Month', 'Last Year'],
+                        selectedValue: 'Frequency',
+                        onChanged: (newValue) {
+                          // setState(() {
+                          //   selectedValue = newValue;
+                          // });
+                        },
+                      ),
                     ),
-                  ),
-                ],
-              ),
-            ),
-            25.verticalSpace,
-            Container(
-              height: 293.h,
-              width: 350.w,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10.r),
-                border: Border.all(
-                  color: Colors.grey,
-                  width: 1,
+                  ],
                 ),
               ),
-              child: Padding(
-                padding: EdgeInsets.all(15.w),
-                child: BarChart(
-                  mainBarData(),
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  BarChartGroupData makeGroupData(
-    int x,
-    double y, {
-    Color barColor = const Color(0xff8FE133),
-    double width = 15,
-    List<int> showTooltips = const [],
-  }) {
-    return BarChartGroupData(
-      x: x,
-      barRods: [
-        BarChartRodData(
-          toY: y,
-          color: barColor,
-          width: width,
-          borderSide: const BorderSide(color: Colors.white, width: 1),
-          backDrawRodData: BackgroundBarChartRodData(
-            show: true,
-            toY: 15,
-            color: Colors.grey,
-          ),
-        ),
-      ],
-      showingTooltipIndicators: showTooltips,
-    );
-  }
-
-  List<BarChartGroupData> showingGroups() => List.generate(7, (i) {
-        switch (i) {
-          case 0:
-            return makeGroupData(0, 5);
-          case 1:
-            return makeGroupData(1, 6.5);
-          case 2:
-            return makeGroupData(2, 5);
-          case 3:
-            return makeGroupData(3, 7.5);
-          case 4:
-            return makeGroupData(4, 9);
-          case 5:
-            return makeGroupData(5, 11.5);
-          case 6:
-            return makeGroupData(6, 6.5);
-          default:
-            return throw Error();
-        }
-      });
-
-  BarChartData mainBarData() {
-    return BarChartData(
-      barTouchData: BarTouchData(
-        touchTooltipData: BarTouchTooltipData(
-          tooltipBgColor: const Color(0xffFF4A31),
-          getTooltipItem: (group, groupIndex, rod, rodIndex) {
-            String weekDay;
-            switch (group.x) {
-              case 0:
-                weekDay = 'Jan';
-                break;
-              case 1:
-                weekDay = 'Feb';
-                break;
-              case 2:
-                weekDay = 'March';
-                break;
-              case 3:
-                weekDay = 'April';
-                break;
-              case 4:
-                weekDay = 'May';
-                break;
-              case 5:
-                weekDay = 'Jun';
-                break;
-              case 6:
-                weekDay = 'Jul';
-                break;
-              default:
-                throw Error();
-            }
-            return BarTooltipItem(
-              '$weekDay\n',
-              const TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 18,
-              ),
-              children: <TextSpan>[
-                TextSpan(
-                  text: (rod.toY - 1).toString(),
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
+              25.verticalSpace,
+              Container(
+                // height: 293.h,
+                width: 350.w,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.r),
+                  border: Border.all(
+                    color: const Color(0xffECEDEF),
+                    width: 1,
                   ),
                 ),
-              ],
-            );
-          },
-        ),
-        touchCallback: (FlTouchEvent event, barTouchResponse) {
-          setState(() {
-            if (!event.isInterestedForInteractions ||
-                barTouchResponse == null ||
-                barTouchResponse.spot == null) {
-              touchedIndex = -1;
-              return;
-            }
-            touchedIndex = barTouchResponse.spot!.touchedBarGroupIndex;
-          });
-        },
-      ),
-      titlesData: FlTitlesData(
-        show: true,
-        rightTitles: AxisTitles(
-          sideTitles: SideTitles(showTitles: false),
-        ),
-        topTitles: AxisTitles(
-          sideTitles: SideTitles(showTitles: false),
-        ),
-        bottomTitles: AxisTitles(
-          sideTitles: SideTitles(
-            showTitles: false,
-            getTitlesWidget: getTitles,
-            reservedSize: 30,
+                child: Padding(
+                  padding: EdgeInsets.all(5.w),
+                  child: Column(
+                    children: [
+                      10.verticalSpace,
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Text(
+                            "Day",
+                            style: TextStyle(
+                                color: const Color(0xff7C8396),
+                                fontSize: 14.sp),
+                          ),
+                          Text(
+                            "Week",
+                            style: TextStyle(
+                                color: const Color(0xffEE7A1D),
+                                fontSize: 14.sp,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            "Month",
+                            style: TextStyle(
+                                color: const Color(0xff7C8396),
+                                fontSize: 14.sp),
+                          ),
+                          Text(
+                            "Year",
+                            style: TextStyle(
+                                color: const Color(0xff7C8396),
+                                fontSize: 14.sp),
+                          )
+                        ],
+                      ),
+                      10.verticalSpace,
+                      SfCartesianChart(
+                          primaryXAxis: CategoryAxis(
+                              // interval: 1,
+                              ),
+                          primaryYAxis: NumericAxis(
+                              minimum: 0, maximum: 100, interval: 25),
+                          tooltipBehavior: _tooltip,
+                          series: <ChartSeries<_ChartData, String>>[
+                            ColumnSeries<_ChartData, String>(
+                                dataSource: data,
+                                xValueMapper: (_ChartData data, _) => data.x,
+                                yValueMapper: (_ChartData data, _) => data.y,
+                                name: 'Shot',
+                                color: const Color(0xffEE7A1D))
+                          ]),
+                    ],
+                  ),
+                ),
+              ),
+              20.verticalSpace,
+              SizedBox(
+                width: 350.w,
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: 167.w,
+                      height: 108.h,
+                      child: Card(
+                          elevation: 1,
+                          shape: RoundedRectangleBorder(
+                            side: const BorderSide(
+                                color: Color(0xffECEDEF), width: 1),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Container(
+                            color: const Color(0xffFAFAFB),
+                            child: Center(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "Percentage",
+                                    style: TextStyle(
+                                      color: const Color(0xff7C8396),
+                                      fontSize: 14.sp,
+                                    ),
+                                  ),
+                                  7.verticalSpace,
+                                  Text(
+                                    "55%",
+                                    style: TextStyle(
+                                        color: const Color(0xff649E24),
+                                        fontSize: 43.sp),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          )),
+                    ),
+                    SizedBox(
+                      width: 167.w,
+                      height: 108.h,
+                      child: Card(
+                          elevation: 1,
+                          shape: RoundedRectangleBorder(
+                            side: const BorderSide(
+                                color: Color(0xffECEDEF), width: 1),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Container(
+                            color: const Color(0xffFAFAFB),
+                            child: Center(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "# of Shots",
+                                    style: TextStyle(
+                                      color: const Color(0xff7C8396),
+                                      fontSize: 14.sp,
+                                    ),
+                                  ),
+                                  7.verticalSpace,
+                                  Text(
+                                    "206",
+                                    style: TextStyle(
+                                        color: const Color(0xffFF549A),
+                                        fontSize: 43.sp),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          )),
+                    ),
+                  ],
+                ),
+              ),
+              20.verticalSpace,
+              SizedBox(
+                  width: 333.w,
+                  child: const GlobalButton(
+                    color: Color(0xffEE7A1D),
+                    text: 'Share Best Score',
+                  ))
+            ],
           ),
         ),
-        leftTitles: AxisTitles(
-          sideTitles: SideTitles(
-            showTitles: false,
-          ),
-        ),
-      ),
-      borderData: FlBorderData(
-        show: false,
-      ),
-      barGroups: showingGroups(),
-      gridData: FlGridData(
-        show: false,
       ),
     );
   }
+}
 
-  Widget getTitles(double value, TitleMeta meta) {
-    const style = TextStyle(
-      color: Colors.white,
-      fontWeight: FontWeight.bold,
-      fontSize: 14,
-    );
-    Widget text;
-    switch (value.toInt()) {
-      case 0:
-        text = const Text('Jan', style: style);
-        break;
-      case 1:
-        text = const Text('Feb', style: style);
-        break;
-      case 2:
-        text = const Text('March', style: style);
-        break;
-      case 3:
-        text = const Text('April', style: style);
-        break;
-      case 4:
-        text = const Text('May', style: style);
-        break;
-      case 5:
-        text = const Text('Jun', style: style);
-        break;
-      case 6:
-        text = const Text('Jul', style: style);
-        break;
-      default:
-        text = const Text('', style: style);
-        break;
-    }
-    return SideTitleWidget(
-      axisSide: meta.axisSide,
-      space: 16,
-      child: text,
-    );
-  }
+class _ChartData {
+  _ChartData(this.x, this.y);
+
+  final String x;
+  final double y;
 }

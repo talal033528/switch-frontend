@@ -14,7 +14,7 @@ class VideoLibraryView extends StatelessWidget {
         backgroundColor: Colors.white,
         title: Text(
           "Swish Video Library",
-          style: TextStyle(color: const Color(0xffFF4A31), fontSize: 21.sp),
+          style: TextStyle(color: const Color(0xffEE7A1D), fontSize: 21.sp),
         ),
       ),
       body: SizedBox(

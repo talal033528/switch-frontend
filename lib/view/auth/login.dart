@@ -27,13 +27,13 @@ class _LoginScreenState extends State<LoginScreen> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              70.verticalSpace,
+              90.verticalSpace,
               SizedBox(
                 width: 333.w,
                 child: Text(
                   "Login",
                   style: TextStyle(
-                      color: const Color(0xffFF4A31), fontSize: 27.sp),
+                      color: const Color(0xffEE7A1D), fontSize: 27.sp),
                 ),
               ),
               5.verticalSpace,
@@ -52,7 +52,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: Text(
                         "Register Now",
                         style: TextStyle(
-                            color: const Color(0xffFF4A31),
+                            color: const Color(0xffEE7A1D),
                             fontWeight: FontWeight.bold,
                             fontSize: 14.sp),
                       ),
@@ -89,7 +89,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   children: [
                     const Icon(
                       Icons.check_circle_outline,
-                      color: Color(0xffFF4A31),
+                      color: Color(0xffEE7A1D),
                     ),
                     5.horizontalSpace,
                     Text(
@@ -108,6 +108,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: SizedBox(
                     width: 333.w,
                     child: const GlobalButton(
+                      color: Color(0xffEE7A1D),
                       text: 'Login',
                     )),
               ),

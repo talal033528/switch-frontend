@@ -16,7 +16,7 @@ class CommunityScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         title: Text(
           "Community",
-          style: TextStyle(color: const Color(0xffFF4A31), fontSize: 21.sp),
+          style: TextStyle(color: const Color(0xffEE7A1D), fontSize: 21.sp),
         ),
       ),
       body: SizedBox(
@@ -54,11 +54,11 @@ class CommunityScreen extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () {
-                      context.push('/home/addcommunity');
+                      context.push('/home/child/addcommunity');
                     },
                     child: const Icon(
                       LucideIcons.plusCircle,
-                      color: Color(0xffFF4A31),
+                      color: Color(0xffEE7A1D),
                     ),
                   )
                 ],
@@ -69,6 +69,7 @@ class CommunityScreen extends StatelessWidget {
               width: 352.w,
               child: const GlobalButton(
                 text: 'Allow Phone Book Access',
+                color: Color(0xffEE7A1D),
               ),
             ),
             36.verticalSpace,

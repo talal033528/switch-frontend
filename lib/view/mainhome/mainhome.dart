@@ -62,12 +62,12 @@ class _HomeMainScreenState extends State<HomeMainScreen> {
 
 navbaritem(icon) {
   return BottomNavigationBarItem(
-    icon: Icon(icon, color: const Color(0xffFF4A31)),
+    icon: Icon(icon, color: const Color(0xffEE7A1D)),
     label: '',
     tooltip: 'home',
     activeIcon: Container(
         decoration: BoxDecoration(
-            color: const Color(0xffFF4A31),
+            color: const Color(0xffEE7A1D),
             borderRadius: BorderRadius.circular(10)),
         padding: const EdgeInsets.all(15),
         child: Icon(
