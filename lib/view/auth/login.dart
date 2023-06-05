@@ -13,6 +13,7 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   final int _selectedIndex = 0;
+  final TextEditingController emailController = TextEditingController();
 
   @override
   void initState() {
@@ -65,12 +66,13 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: Column(
                     children: [
                       44.verticalSpace,
-                      const AuthTextField(
+                      AuthTextField(
+                        controller: emailController,
                         hinttext: 'Type Full Name',
                         headertext: 'E-mail Address',
                         obsecure: false,
                         showsuffixicon: false,
-                        suffixicon: SizedBox(),
+                        suffixicon: const SizedBox(),
                       ),
                       25.verticalSpace,
                       const AuthTextField(
@@ -103,7 +105,11 @@ class _LoginScreenState extends State<LoginScreen> {
               21.verticalSpace,
               GestureDetector(
                 onTap: () {
-                  context.goNamed('home', pathParameters: {"type": "child"});
+                  if (emailController.text == "parent") {
+                    context.goNamed('home', pathParameters: {"type": "parent"});
+                  } else {
+                    context.goNamed('home', pathParameters: {"type": "child"});
+                  }
                 },
                 child: SizedBox(
                     width: 333.w,

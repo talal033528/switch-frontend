@@ -7,6 +7,7 @@ class AuthTextField extends StatelessWidget {
   final obsecure;
   final suffixicon;
   final showsuffixicon;
+  final controller;
 
   const AuthTextField(
       {super.key,
@@ -14,6 +15,7 @@ class AuthTextField extends StatelessWidget {
       required this.hinttext,
       required this.suffixicon,
       required this.showsuffixicon,
+      this.controller,
       required this.obsecure});
 
   @override
@@ -21,12 +23,14 @@ class AuthTextField extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          headertext,
-          style: TextStyle(color: const Color(0xff5F677E), fontSize: 14.sp),
-        ),
-        9.verticalSpace,
+        if (headertext != "")
+          Text(
+            headertext,
+            style: TextStyle(color: const Color(0xff5F677E), fontSize: 14.sp),
+          ),
+        if (headertext != "") 9.verticalSpace,
         TextFormField(
+          controller: controller,
           obscureText: obsecure,
           decoration: InputDecoration(
               suffixIcon: showsuffixicon

@@ -48,11 +48,16 @@ class ShooingScreen extends StatelessWidget {
                   )),
             ),
             25.verticalSpace,
-            SizedBox(
-              width: 352.w,
-              child: const GlobalButton(
-                text: 'Start Shooting',
-                color: Color(0xff5F677E),
+            GestureDetector(
+              onTap: () {
+                context.push('/home/child/shooting/criteriaselection');
+              },
+              child: SizedBox(
+                width: 352.w,
+                child: const GlobalButton(
+                  text: 'Start Shooting',
+                  color: Color(0xff5F677E),
+                ),
               ),
             ),
             25.verticalSpace,

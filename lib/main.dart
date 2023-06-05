@@ -12,6 +12,9 @@ import 'package:swish_basketball/view/mainhome/mainhome.dart';
 import 'package:swish_basketball/view/notifications/notification.dart';
 import 'package:swish_basketball/view/setting/account.dart';
 import 'package:swish_basketball/view/shooting/shooting.dart';
+import 'package:swish_basketball/view/shooting/throwandselection.dart';
+
+import 'view/shooting/criteriaselection.dart';
 
 void main() {
   runApp(const MyApp());
@@ -72,11 +75,24 @@ final GoRouter _router = GoRouter(
             },
           ),
           GoRoute(
-            path: 'shooting',
-            builder: (BuildContext context, GoRouterState state) {
-              return const ShooingScreen();
-            },
-          ),
+              path: 'shooting',
+              builder: (BuildContext context, GoRouterState state) {
+                return const ShooingScreen();
+              },
+              routes: [
+                GoRoute(
+                  path: 'criteriaselection',
+                  builder: (BuildContext context, GoRouterState state) {
+                    return const CriteriaSelectionScreen();
+                  },
+                ),
+                GoRoute(
+                  path: 'throwandspot',
+                  builder: (BuildContext context, GoRouterState state) {
+                    return const ThrowAndSpotSelectionScreen();
+                  },
+                ),
+              ]),
           GoRoute(
             path: 'noitification',
             builder: (BuildContext context, GoRouterState state) {
@@ -96,20 +112,6 @@ final GoRouter _router = GoRouter(
             },
           ),
         ]),
-    // GoRoute(
-    //   path: '/',
-    //   builder: (BuildContext context, GoRouterState state) {
-    //     return const LoginScreen();
-    //   },
-    // ),
-    // GoRoute(
-    //   path: '/home/:type',
-    //   builder: (BuildContext context, GoRouterState state) {
-    //     return HomeMainScreen(
-    //       type: state.pathParameters["name"]!,
-    //     );
-    //   },
-    // ),
     GoRoute(
       path: '/register',
       builder: (BuildContext context, GoRouterState state) {

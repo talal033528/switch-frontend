@@ -88,7 +88,7 @@ class _RegisterScreenState extends State<RegisterScreen>
                     });
                   },
                   indicator: BoxDecoration(
-                    color: Colors.red,
+                    color: const Color(0xffEE7A1D),
                     borderRadius: BorderRadius.circular(20.0),
                   ),
                   indicatorColor: Colors.blueGrey,
