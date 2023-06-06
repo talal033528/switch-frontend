@@ -11,6 +11,7 @@ import 'package:swish_basketball/view/goals/setmygoals.dart';
 import 'package:swish_basketball/view/mainhome/mainhome.dart';
 import 'package:swish_basketball/view/notifications/notification.dart';
 import 'package:swish_basketball/view/setting/account.dart';
+import 'package:swish_basketball/view/shooting/matchresult.dart';
 import 'package:swish_basketball/view/shooting/shooting.dart';
 import 'package:swish_basketball/view/shooting/throwandselection.dart';
 
@@ -90,6 +91,12 @@ final GoRouter _router = GoRouter(
                   path: 'throwandspot',
                   builder: (BuildContext context, GoRouterState state) {
                     return const ThrowAndSpotSelectionScreen();
+                  },
+                ),
+                GoRoute(
+                  path: 'matchresult',
+                  builder: (BuildContext context, GoRouterState state) {
+                    return const MatchResultScreen();
                   },
                 ),
               ]),

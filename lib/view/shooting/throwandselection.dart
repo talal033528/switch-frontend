@@ -253,7 +253,7 @@ class _ThrowAndSpotSelectionScreenState
                     19.verticalSpace,
                     GestureDetector(
                       onTap: () {
-                        context.push('/home/child/shooting/throwandspot');
+                        context.push('/home/child/shooting/matchresult');
                       },
                       child: SizedBox(
                         width: 333.w,
