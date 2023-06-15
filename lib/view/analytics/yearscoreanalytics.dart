@@ -5,14 +5,14 @@ import 'package:swish_basketball/widgets/button.dart';
 import 'package:swish_basketball/widgets/dropdown.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
-class ScoreAnalytics extends StatefulWidget {
-  const ScoreAnalytics({super.key});
+class yearScoreAnalytics extends StatefulWidget {
+  const yearScoreAnalytics({super.key});
 
   @override
-  State<ScoreAnalytics> createState() => _ScoreAnalyticsState();
+  State<yearScoreAnalytics> createState() => _ScoreAnalyticsState();
 }
 
-class _ScoreAnalyticsState extends State<ScoreAnalytics> {
+class _ScoreAnalyticsState extends State<yearScoreAnalytics> {
   int touchedIndex = -1;
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   late List<_ChartData> data;
@@ -21,18 +21,18 @@ class _ScoreAnalyticsState extends State<ScoreAnalytics> {
   @override
   void initState() {
     data = [
-      _ChartData('Dec', 55),
-      _ChartData('Jan', 90),
-      _ChartData('Feb', 85),
-      _ChartData('Mar', 75),
-      _ChartData('Apr', 20),
-      _ChartData('May', 12),
-      _ChartData('Jun', 15),
-      _ChartData('Jul', 30),
-      _ChartData('Aug', 6.4),
-      _ChartData('Sep', 14),
-      _ChartData('Oct', 40),
-      _ChartData('Nov', 30)
+      _ChartData('2023', 55),
+      _ChartData('2022', 90),
+      _ChartData('2021', 85),
+      // _ChartData('Mar', 75),
+      // _ChartData('Apr', 20),
+      // _ChartData('May', 12),
+      // _ChartData('Jun', 15),
+      // _ChartData('Jul', 30),
+      // _ChartData('Aug', 6.4),
+      // _ChartData('Sep', 14),
+      // _ChartData('Oct', 40),
+      // _ChartData('Nov', 30)
     ];
     _tooltip = TooltipBehavior(enable: true);
     super.initState();
@@ -134,12 +134,17 @@ class _ScoreAnalyticsState extends State<ScoreAnalytics> {
                               ),
                             ),
                           ),
-                          Text(
-                            "Week",
-                            style: TextStyle(
-                                color: const Color(0xffEE7A1D),
-                                fontSize: 14.sp,
-                                fontWeight: FontWeight.bold),
+                          GestureDetector(
+                            onTap: () {
+                              context.push('/home/child/ScoreAnalytics');
+                            },
+                            child: Text(
+                              "Week",
+                              style: TextStyle(
+                                  color: const Color(0xff7C8396),
+                                  fontSize: 14.sp,
+                                  fontWeight: FontWeight.bold),
+                            ),
                           ),
                           GestureDetector(
                             onTap: () {
@@ -152,23 +157,18 @@ class _ScoreAnalyticsState extends State<ScoreAnalytics> {
                                   fontSize: 14.sp),
                             ),
                           ),
-                          GestureDetector(
-                            onTap: () {
-                              context.push('/home/child/yearScoreAnalytics');
-                            },
-                            child: Text(
-                              "Year",
-                              style: TextStyle(
-                                  color: const Color(0xff7C8396),
-                                  fontSize: 14.sp),
-                            ),
+                          Text(
+                            "Year",
+                            style: TextStyle(
+                                color: const Color(0xffEE7A1D),
+                                fontSize: 14.sp),
                           ),
                           10.verticalSpace,
                           Image.asset("assets/images/button.png")
                         ],
                       ),
                       10.verticalSpace,
-                      Image.asset("assets/images/week2.png")
+                      Image.asset("assets/images/year.png")
                     ],
                   ),
                 ),
@@ -205,9 +205,9 @@ class _ScoreAnalyticsState extends State<ScoreAnalytics> {
                                   ),
                                   7.verticalSpace,
                                   Text(
-                                    "55%",
+                                    "28%",
                                     style: TextStyle(
-                                        color: const Color(0xff649E24),
+                                        color: const Color(0xffFF4A31),
                                         fontSize: 43.sp),
                                   ),
                                 ],
@@ -241,9 +241,9 @@ class _ScoreAnalyticsState extends State<ScoreAnalytics> {
                                   ),
                                   7.verticalSpace,
                                   Text(
-                                    "206",
+                                    "2054",
                                     style: TextStyle(
-                                        color: const Color(0xffFF549A),
+                                        color: const Color(0xff649E24),
                                         fontSize: 43.sp),
                                   ),
                                 ],

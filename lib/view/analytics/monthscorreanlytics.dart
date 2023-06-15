@@ -5,14 +5,14 @@ import 'package:swish_basketball/widgets/button.dart';
 import 'package:swish_basketball/widgets/dropdown.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
-class ScoreAnalytics extends StatefulWidget {
-  const ScoreAnalytics({super.key});
+class monthScoreAnalytics extends StatefulWidget {
+  const monthScoreAnalytics({super.key});
 
   @override
-  State<ScoreAnalytics> createState() => _ScoreAnalyticsState();
+  State<monthScoreAnalytics> createState() => _ScoreAnalyticsState();
 }
 
-class _ScoreAnalyticsState extends State<ScoreAnalytics> {
+class _ScoreAnalyticsState extends State<monthScoreAnalytics> {
   int touchedIndex = -1;
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   late List<_ChartData> data;
@@ -21,18 +21,18 @@ class _ScoreAnalyticsState extends State<ScoreAnalytics> {
   @override
   void initState() {
     data = [
-      _ChartData('Dec', 55),
-      _ChartData('Jan', 90),
-      _ChartData('Feb', 85),
-      _ChartData('Mar', 75),
-      _ChartData('Apr', 20),
-      _ChartData('May', 12),
-      _ChartData('Jun', 15),
-      _ChartData('Jul', 30),
-      _ChartData('Aug', 6.4),
-      _ChartData('Sep', 14),
-      _ChartData('Oct', 40),
-      _ChartData('Nov', 30)
+      _ChartData('May', 55),
+      _ChartData('April', 90),
+      _ChartData('March', 85),
+      _ChartData('Feb', 75),
+      _ChartData('Jan', 20),
+      _ChartData('Dec', 12),
+      // _ChartData('Jun', 15),
+      // _ChartData('Jul', 30),
+      // _ChartData('Aug', 6.4),
+      // _ChartData('Sep', 14),
+      // _ChartData('Oct', 40),
+      // _ChartData('Nov', 30)
     ];
     _tooltip = TooltipBehavior(enable: true);
     super.initState();
@@ -118,39 +118,36 @@ class _ScoreAnalyticsState extends State<ScoreAnalytics> {
                     children: [
                       10.verticalSpace,
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 10),
-                            child: GestureDetector(
-                              onTap: () {
-                                context.push('/home/child/dayScoreAnalytics');
-                              },
-                              child: Text(
-                                "Day",
-                                style: TextStyle(
-                                    color: const Color(0xff7C8396),
-                                    fontSize: 14.sp),
-                              ),
-                            ),
-                          ),
-                          Text(
-                            "Week",
-                            style: TextStyle(
-                                color: const Color(0xffEE7A1D),
-                                fontSize: 14.sp,
-                                fontWeight: FontWeight.bold),
-                          ),
                           GestureDetector(
                             onTap: () {
-                              context.push('/home/child/monthScoreAnalytics');
+                              context.push('/home/child/dayScoreAnalytics');
                             },
                             child: Text(
-                              "Month",
+                              "Day",
                               style: TextStyle(
                                   color: const Color(0xff7C8396),
                                   fontSize: 14.sp),
                             ),
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              context.push('/home/child/ScoreAnalytics');
+                            },
+                            child: Text(
+                              "Week",
+                              style: TextStyle(
+                                  color: const Color(0xff7C8396),
+                                  fontSize: 14.sp,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                          Text(
+                            "Month",
+                            style: TextStyle(
+                                color: const Color(0xffEE7A1D),
+                                fontSize: 14.sp),
                           ),
                           GestureDetector(
                             onTap: () {
@@ -159,7 +156,7 @@ class _ScoreAnalyticsState extends State<ScoreAnalytics> {
                             child: Text(
                               "Year",
                               style: TextStyle(
-                                  color: const Color(0xff7C8396),
+                                  color: const Color(0xffEE7A1D),
                                   fontSize: 14.sp),
                             ),
                           ),
@@ -205,9 +202,9 @@ class _ScoreAnalyticsState extends State<ScoreAnalytics> {
                                   ),
                                   7.verticalSpace,
                                   Text(
-                                    "55%",
+                                    "35%",
                                     style: TextStyle(
-                                        color: const Color(0xff649E24),
+                                        color: const Color(0xffFF4A31),
                                         fontSize: 43.sp),
                                   ),
                                 ],
@@ -241,9 +238,9 @@ class _ScoreAnalyticsState extends State<ScoreAnalytics> {
                                   ),
                                   7.verticalSpace,
                                   Text(
-                                    "206",
+                                    "801",
                                     style: TextStyle(
-                                        color: const Color(0xffFF549A),
+                                        color: const Color(0xff649E24),
                                         fontSize: 43.sp),
                                   ),
                                 ],

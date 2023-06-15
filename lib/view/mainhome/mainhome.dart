@@ -1,10 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:lucide_icons/lucide_icons.dart';
+import 'package:swish_basketball/view/analytics/daysscorreanalytics.dart';
+import 'package:swish_basketball/view/analytics/monthscorreanlytics.dart';
 import 'package:swish_basketball/view/analytics/scoreanalytics.dart';
+import 'package:swish_basketball/view/analytics/yearscoreanalytics.dart';
 import 'package:swish_basketball/view/community/community.dart';
+import 'package:swish_basketball/view/goals/activityanalytics.dart';
+import 'package:swish_basketball/view/goals/congratulation.dart';
+import 'package:swish_basketball/view/goals/downloadscreen.dart';
+import 'package:swish_basketball/view/goals/freethrow.dart';
+import 'package:swish_basketball/view/goals/shortatempts.dart';
+import 'package:swish_basketball/view/goals/shortchart.dart';
+import 'package:swish_basketball/view/goals/workout.dart';
 import 'package:swish_basketball/view/home/childhomescreen.dart';
 import 'package:swish_basketball/view/home/parenthomescreen.dart';
+import 'package:swish_basketball/view/kids/kidsactivityanalytics.dart';
+import 'package:swish_basketball/view/kids/kidshomescreen.dart';
+import 'package:swish_basketball/view/kids/kidshotchart.dart';
 import 'package:swish_basketball/view/setting/setting.dart';
+import 'package:swish_basketball/view/video/swichvideolibrary.dart';
 import 'package:swish_basketball/view/video/videolibrary.dart';
 
 class HomeMainScreen extends StatefulWidget {
@@ -21,16 +35,16 @@ class _HomeMainScreenState extends State<HomeMainScreen> {
   List parentscreens = [
     const HomeScreen(),
     const CommunityScreen(),
-    const VideoLibraryView(),
+    const swishvideo(),
     const ScoreAnalytics(),
-    const SettingScreen()
+    const SettingScreen(),
   ];
   List childscreens = [
     const ChildHomeScreen(),
     const CommunityScreen(),
-    const VideoLibraryView(),
+    const swishvideo(),
     const ScoreAnalytics(),
-    const SettingScreen()
+    const SettingScreen(),
   ];
   @override
   Widget build(BuildContext context) {
