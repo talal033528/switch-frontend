@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:lucide_icons/lucide_icons.dart';
 import 'package:swish_basketball/view/home/childhomescreen.dart';
 
 class swishvideo extends StatelessWidget {
@@ -19,17 +18,16 @@ class swishvideo extends StatelessWidget {
           style: TextStyle(
               fontSize: 18.sp,
               fontWeight: FontWeight.w400,
-              color: Color(0xffEE7A1D)),
+              color: const Color(0xffEE7A1D)),
         ),
       ),
       body: SizedBox(
         width: double.infinity,
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   GestureDetector(
                     onTap: () {
@@ -37,7 +35,7 @@ class swishvideo extends StatelessWidget {
                     },
                     child: SizedBox(
                       width: 167.w,
-                      height: 128.h,
+                      height: 140.h,
                       child: GreyBG(
                           child: Padding(
                         padding: const EdgeInsets.all(20),
@@ -50,7 +48,7 @@ class swishvideo extends StatelessWidget {
                               style: TextStyle(
                                   fontSize: 14.sp,
                                   fontWeight: FontWeight.w400,
-                                  color: Color(0xffEE7A1D)),
+                                  color: const Color(0xffEE7A1D)),
                             )
                           ],
                         ),
@@ -60,7 +58,7 @@ class swishvideo extends StatelessWidget {
                   20.horizontalSpace,
                   SizedBox(
                     width: 167.w,
-                    height: 128.h,
+                    height: 140.h,
                     child: GreyBG(
                         child: Padding(
                       padding: const EdgeInsets.all(15),
@@ -73,7 +71,7 @@ class swishvideo extends StatelessWidget {
                             style: TextStyle(
                                 fontSize: 14.sp,
                                 fontWeight: FontWeight.w400,
-                                color: Color(0xffEE7A1D)),
+                                color: const Color(0xffEE7A1D)),
                           )
                         ],
                       ),
@@ -81,16 +79,13 @@ class swishvideo extends StatelessWidget {
                   ),
                 ],
               ),
-            ),
-            24.verticalSpace,
-            Padding(
-              padding: const EdgeInsets.all(20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
+              24.verticalSpace,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(
                     width: 167.w,
-                    height: 128.h,
+                    height: 140.h,
                     child: GreyBG(
                         child: Padding(
                       padding: const EdgeInsets.all(20),
@@ -103,7 +98,7 @@ class swishvideo extends StatelessWidget {
                             style: TextStyle(
                                 fontSize: 14.sp,
                                 fontWeight: FontWeight.w400,
-                                color: Color(0xffEE7A1D)),
+                                color: const Color(0xffEE7A1D)),
                           )
                         ],
                       ),
@@ -112,7 +107,7 @@ class swishvideo extends StatelessWidget {
                   20.horizontalSpace,
                   SizedBox(
                     width: 167.w,
-                    height: 128.h,
+                    height: 140.h,
                     child: GreyBG(
                         child: Padding(
                       padding: const EdgeInsets.all(15),
@@ -125,7 +120,7 @@ class swishvideo extends StatelessWidget {
                             style: TextStyle(
                                 fontSize: 14.sp,
                                 fontWeight: FontWeight.w400,
-                                color: Color(0xffEE7A1D)),
+                                color: const Color(0xffEE7A1D)),
                           )
                         ],
                       ),
@@ -133,16 +128,13 @@ class swishvideo extends StatelessWidget {
                   ),
                 ],
               ),
-            ),
-            24.verticalSpace,
-            Padding(
-              padding: const EdgeInsets.all(20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
+              24.verticalSpace,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(
                     width: 167.w,
-                    height: 128.h,
+                    height: 140.h,
                     child: GreyBG(
                         child: Padding(
                       padding: const EdgeInsets.all(20),
@@ -155,7 +147,7 @@ class swishvideo extends StatelessWidget {
                             style: TextStyle(
                                 fontSize: 14.sp,
                                 fontWeight: FontWeight.w400,
-                                color: Color(0xffEE7A1D)),
+                                color: const Color(0xffEE7A1D)),
                           )
                         ],
                       ),
@@ -164,7 +156,7 @@ class swishvideo extends StatelessWidget {
                   20.horizontalSpace,
                   SizedBox(
                     width: 167.w,
-                    height: 128.h,
+                    height: 140.h,
                     child: GreyBG(
                         child: Padding(
                       padding: const EdgeInsets.all(20),
@@ -177,7 +169,7 @@ class swishvideo extends StatelessWidget {
                             style: TextStyle(
                                 fontSize: 14.sp,
                                 fontWeight: FontWeight.w400,
-                                color: Color(0xffEE7A1D)),
+                                color: const Color(0xffEE7A1D)),
                           )
                         ],
                       ),
@@ -185,30 +177,31 @@ class swishvideo extends StatelessWidget {
                   ),
                 ],
               ),
-            ),
-            SizedBox(
-              width: 353.w,
-              height: 128.h,
-              child: GreyBG(
-                child: Padding(
-                  padding: const EdgeInsets.all(15),
-                  child: Column(
-                    children: [
-                      Image.asset("assets/images/mental.png"),
-                      10.verticalSpace,
-                      Text(
-                        "Mental Strenght",
-                        style: TextStyle(
-                            fontSize: 14.sp,
-                            fontWeight: FontWeight.w400,
-                            color: Color(0xffEE7A1D)),
-                      )
-                    ],
+              24.verticalSpace,
+              SizedBox(
+                width: 353.w,
+                height: 140.h,
+                child: GreyBG(
+                  child: Padding(
+                    padding: const EdgeInsets.all(15),
+                    child: Column(
+                      children: [
+                        Image.asset("assets/images/mental.png"),
+                        10.verticalSpace,
+                        Text(
+                          "Mental Strenght",
+                          style: TextStyle(
+                              fontSize: 14.sp,
+                              fontWeight: FontWeight.w400,
+                              color: const Color(0xffEE7A1D)),
+                        )
+                      ],
+                    ),
                   ),
                 ),
-              ),
-            )
-          ],
+              )
+            ],
+          ),
         ),
       ),
     );

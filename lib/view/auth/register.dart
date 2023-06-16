@@ -59,7 +59,7 @@ class _RegisterScreenState extends State<RegisterScreen>
                             color: const Color(0xff7C8396), fontSize: 14.sp)),
                     GestureDetector(
                       onTap: () {
-                        context.go('/');
+                        context.push('/login');
                       },
                       child: Text(
                         "Signin",

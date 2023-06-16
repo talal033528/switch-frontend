@@ -1,13 +1,9 @@
-import 'dart:ffi';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_switch/flutter_switch.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lucide_icons/lucide_icons.dart';
-import 'package:swish_basketball/widgets/skillscard.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
-import '';
 
 class ChildHomeScreen extends StatefulWidget {
   const ChildHomeScreen({super.key});
@@ -17,7 +13,9 @@ class ChildHomeScreen extends StatefulWidget {
 }
 
 class _ChildHomeScreenState extends State<ChildHomeScreen> {
-  int touchedIndex = -1;
+  int touchedIndex = 1;
+  bool _switchValue = false;
+
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   late List<_ChartData> data;
   late TooltipBehavior _tooltip;
@@ -341,7 +339,7 @@ class _ChildHomeScreenState extends State<ChildHomeScreen> {
                             padding: const EdgeInsets.only(left: 10),
                             child: GestureDetector(
                               onTap: () {
-                                context.push('/home/child/dayScoreAnalytics');
+                                context.push('/home/child/ScoreAnalytics');
                               },
                               child: Text(
                                 "Day",
@@ -365,7 +363,7 @@ class _ChildHomeScreenState extends State<ChildHomeScreen> {
                           ),
                           GestureDetector(
                             onTap: () {
-                              context.push('/home/child/monthScoreAnalytics');
+                              context.push('/home/child/ScoreAnalytics');
                             },
                             child: Text(
                               "Month",
@@ -376,7 +374,7 @@ class _ChildHomeScreenState extends State<ChildHomeScreen> {
                           ),
                           GestureDetector(
                             onTap: () {
-                              context.push('/home/child/yearScoreAnalytics');
+                              context.push('/home/child/ScoreAnalytics');
                             },
                             child: Text(
                               "Year",
@@ -385,11 +383,41 @@ class _ChildHomeScreenState extends State<ChildHomeScreen> {
                                   fontSize: 14.sp),
                             ),
                           ),
-                          Image.asset("assets/images/button.png")
+                          FlutterSwitch(
+                            height: 35.h,
+                            width: 114.w,
+                            padding: 4.0,
+                            toggleSize: 20.0,
+                            borderRadius: 100.0,
+                            value: _switchValue,
+                            activeText: "Shot Chart",
+                            activeTextFontWeight: FontWeight.normal,
+                            inactiveText: "Bar Graph",
+                            inactiveTextFontWeight: FontWeight.normal,
+                            valueFontSize: 14.sp,
+                            showOnOff: true,
+                            activeTextColor: const Color(0xffEE7A1D),
+                            inactiveTextColor: const Color(0xff5F677E),
+                            activeColor: Colors.white,
+                            inactiveColor: Colors.white,
+                            toggleColor: const Color(0xffEE7A1D),
+                            inactiveToggleColor: const Color(0xff5F677E),
+                            switchBorder: Border.all(
+                              color: Colors.grey,
+                              width: 1.0,
+                            ),
+                            onToggle: (value) {
+                              setState(() {
+                                _switchValue = value;
+                              });
+                            },
+                          ),
                         ],
                       ),
                       10.verticalSpace,
-                      Image.asset("assets/images/week2.png")
+                      Image.asset(_switchValue
+                          ? "assets/images/Group 457.png"
+                          : "assets/images/week2.png")
                     ],
                   ),
                 ),
@@ -399,9 +427,9 @@ class _ChildHomeScreenState extends State<ChildHomeScreen> {
                 width: 353.w,
                 height: 148.h,
                 decoration: BoxDecoration(
-                  color: Color(0xFF000000), // Black background color
+                  color: const Color(0xFF000000), // Black background color
                   border: Border.all(
-                    color: Color(0xFFECEDEF),
+                    color: const Color(0xFFECEDEF),
                     width: 1,
                   ),
                   borderRadius: BorderRadius.circular(13),
@@ -423,7 +451,7 @@ class _ChildHomeScreenState extends State<ChildHomeScreen> {
                           style: TextStyle(
                               fontSize: 18.sp,
                               fontWeight: FontWeight.w400,
-                              color: Color(0xffFFFFFF)),
+                              color: const Color(0xffFFFFFF)),
                         ),
                       )
                     ],
@@ -477,7 +505,7 @@ class _ChildHomeScreenState extends State<ChildHomeScreen> {
                         Icon(
                           LucideIcons.bookDown,
                           size: 18.h,
-                          color: Color(0xffEE7A1D),
+                          color: const Color(0xffEE7A1D),
                         ),
                         10.horizontalSpace,
                         Text(
@@ -485,7 +513,7 @@ class _ChildHomeScreenState extends State<ChildHomeScreen> {
                           style: TextStyle(
                               fontWeight: FontWeight.w400,
                               fontSize: 18.sp,
-                              color: Color(0xffEE7A1D)),
+                              color: const Color(0xffEE7A1D)),
                         ),
                       ],
                     ),

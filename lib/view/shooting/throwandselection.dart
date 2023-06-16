@@ -58,11 +58,11 @@ class _ThrowAndSpotSelectionScreenState
         width: double.infinity,
         child: Stack(
           children: [
-            Image.asset('assets/images/playground1.png'),
+            Image.asset('assets/images/Group 504.png'),
             Align(
               alignment: Alignment.bottomCenter,
               child: Container(
-                height: 425.h,
+                height: 435.h,
                 width: double.infinity,
                 color: Colors.white,
                 child: Column(

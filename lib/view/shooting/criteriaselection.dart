@@ -43,7 +43,7 @@ class CriteriaSelectionScreen extends StatelessWidget {
                     FractionalTranslation(
                         translation: const Offset(0.0, 0.05),
                         child: Image.asset(
-                          'assets/images/player.png',
+                          'assets/images/BASKETBALL_PLAYER-1.png',
                         ))
                   ],
                 ),

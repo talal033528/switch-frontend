@@ -12,7 +12,7 @@ class workoutscreen extends StatefulWidget {
 }
 
 class _shotsatemptState extends State<workoutscreen> {
-  double _activeSliderValue = 60;
+  final double _activeSliderValue = 60;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +25,7 @@ class _shotsatemptState extends State<workoutscreen> {
           onTap: () {
             context.pop();
           },
-          child: Icon(
+          child: const Icon(
             LucideIcons.arrowLeft,
             color: Color(0xffEE7A1D),
           ),
@@ -33,7 +33,7 @@ class _shotsatemptState extends State<workoutscreen> {
         title: Text(
           "Workout Time",
           style: TextStyle(
-              color: Color(0xffEE7A1D),
+              color: const Color(0xffEE7A1D),
               fontSize: 18.sp,
               fontWeight: FontWeight.w700),
         ),
@@ -58,13 +58,13 @@ class _shotsatemptState extends State<workoutscreen> {
                         style: TextStyle(
                             fontSize: 14.sp,
                             fontWeight: FontWeight.w700,
-                            color: Color(0xff5F677E)),
+                            color: const Color(0xff5F677E)),
                       ),
                     ),
                     15.verticalSpace,
                     SizedBox(
                       width: 360.w,
-                      child: CustomContainerBlue(
+                      child: const CustomContainerBlue(
                         subtext: "",
                         data: "00:20:01 ",
                         text: '00:20:01',
@@ -80,11 +80,11 @@ class _shotsatemptState extends State<workoutscreen> {
                         style: TextStyle(
                             fontSize: 14.sp,
                             fontWeight: FontWeight.w400,
-                            color: Color(0xffB4B8C3)),
+                            color: const Color(0xffB4B8C3)),
                       ),
                     ),
                     10.verticalSpace,
-                    CustomContainerBlue(
+                    const CustomContainerBlue(
                       subtext: "",
                       data: "00:20:01 ",
                       text: '00:20:01',
@@ -92,7 +92,7 @@ class _shotsatemptState extends State<workoutscreen> {
                       date: 'June 4,2023',
                     ),
                     5.verticalSpace,
-                    CustomContainerBlue(
+                    const CustomContainerBlue(
                       subtext: " ",
                       data: "00:23:58 ",
                       text: '00:20:01',
@@ -100,7 +100,7 @@ class _shotsatemptState extends State<workoutscreen> {
                       date: 'June 4,2023',
                     ),
                     5.verticalSpace,
-                    CustomContainerBlue(
+                    const CustomContainerBlue(
                       subtext: "",
                       data: "00:23:58 ",
                       text: '00:20:01',
@@ -108,7 +108,7 @@ class _shotsatemptState extends State<workoutscreen> {
                       date: 'June 2,2023',
                     ),
                     5.verticalSpace,
-                    CustomContainerBlue(
+                    const CustomContainerBlue(
                       subtext: "",
                       data: "00:20:55 ",
                       text: '00:20:01',
@@ -124,11 +124,11 @@ class _shotsatemptState extends State<workoutscreen> {
                         style: TextStyle(
                             fontSize: 14.sp,
                             fontWeight: FontWeight.w400,
-                            color: Color(0xffB4B8C3)),
+                            color: const Color(0xffB4B8C3)),
                       ),
                     ),
                     15.verticalSpace,
-                    CustomContainerBlue(
+                    const CustomContainerBlue(
                       subtext: "",
                       data: "00:20:01 ",
                       text: '00:20:01',
@@ -136,7 +136,7 @@ class _shotsatemptState extends State<workoutscreen> {
                       date: 'May 28,2023',
                     ),
                     5.verticalSpace,
-                    CustomContainerBlue(
+                    const CustomContainerBlue(
                       subtext: "",
                       data: "00:20:01 ",
                       text: '00:20:01',
@@ -144,7 +144,7 @@ class _shotsatemptState extends State<workoutscreen> {
                       date: 'May 27,2023',
                     ),
                     5.verticalSpace,
-                    CustomContainerBlue(
+                    const CustomContainerBlue(
                       subtext: "",
                       data: "00:20:01 ",
                       text: '00:20:01',
@@ -152,7 +152,7 @@ class _shotsatemptState extends State<workoutscreen> {
                       date: 'May 27,2023',
                     ),
                     5.verticalSpace,
-                    CustomContainerBlue(
+                    const CustomContainerBlue(
                       subtext: "",
                       data: "00:20:01 ",
                       text: '00:20:01',
@@ -160,7 +160,7 @@ class _shotsatemptState extends State<workoutscreen> {
                       date: 'May 25,2023',
                     ),
                     5.verticalSpace,
-                    CustomContainerBlue(
+                    const CustomContainerBlue(
                       subtext: "",
                       data: "00:20:01 ",
                       text: '00:20:01',
@@ -168,7 +168,7 @@ class _shotsatemptState extends State<workoutscreen> {
                       date: 'May 25,2023',
                     ),
                     5.verticalSpace,
-                    CustomContainerBlue(
+                    const CustomContainerBlue(
                       subtext: "",
                       data: "00:20:01 ",
                       text: '00:20:01',
@@ -176,7 +176,7 @@ class _shotsatemptState extends State<workoutscreen> {
                       date: 'May 25,2023',
                     ),
                     5.verticalSpace,
-                    CustomContainerBlue(
+                    const CustomContainerBlue(
                       subtext: "",
                       data: "00:20:01 ",
                       text: '00:20:01',
@@ -184,7 +184,7 @@ class _shotsatemptState extends State<workoutscreen> {
                       date: 'May 25,2023',
                     ),
                     5.verticalSpace,
-                    CustomContainerBlue(
+                    const CustomContainerBlue(
                       subtext: "",
                       data: "00:20:01 ",
                       text: '00:20:01',

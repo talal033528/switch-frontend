@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:swish_basketball/view/analytics/daysscorreanalytics.dart';
-import 'package:swish_basketball/view/analytics/monthscorreanlytics.dart';
+import 'package:swish_basketball/splash.dart';
+
 import 'package:swish_basketball/view/analytics/scoreanalytics.dart';
-import 'package:swish_basketball/view/analytics/yearscoreanalytics.dart';
 import 'package:swish_basketball/view/auth/login.dart';
 import 'package:swish_basketball/view/auth/otp.dart';
 import 'package:swish_basketball/view/auth/payment.dart';
@@ -18,18 +17,16 @@ import 'package:swish_basketball/view/goals/freethrow.dart';
 import 'package:swish_basketball/view/goals/setmygoals.dart';
 import 'package:swish_basketball/view/goals/shortatempts.dart';
 import 'package:swish_basketball/view/goals/shortchart.dart';
-import 'package:swish_basketball/view/goals/shotschart.dart';
 import 'package:swish_basketball/view/goals/workout.dart';
 import 'package:swish_basketball/view/home/childhomescreen.dart';
-import 'package:swish_basketball/view/home/parenthomescreen.dart';
 import 'package:swish_basketball/view/kids/kidsactivityanalytics.dart';
 import 'package:swish_basketball/view/kids/kidshomescreen.dart';
 import 'package:swish_basketball/view/kids/kidshotchart.dart';
 import 'package:swish_basketball/view/mainhome/mainhome.dart';
 import 'package:swish_basketball/view/notifications/notification.dart';
-import 'package:swish_basketball/view/paymentmethod/dave.dart';
+import 'package:swish_basketball/view/paymentmethod/analytics.dart';
+import 'package:swish_basketball/view/paymentmethod/analytics1.dart';
 import 'package:swish_basketball/view/paymentmethod/inviteuser.dart';
-import 'package:swish_basketball/view/paymentmethod/mikeottrando.dart';
 import 'package:swish_basketball/view/paymentmethod/paymentmethod.dart';
 
 import 'package:swish_basketball/view/setting/account.dart';
@@ -74,6 +71,12 @@ final GoRouter _router = GoRouter(
   routes: <RouteBase>[
     GoRoute(
       path: '/',
+      builder: (BuildContext context, GoRouterState state) {
+        return const SpashScreen();
+      },
+    ),
+    GoRoute(
+      path: '/login',
       builder: (BuildContext context, GoRouterState state) {
         return const LoginScreen();
       },
@@ -142,27 +145,9 @@ final GoRouter _router = GoRouter(
             },
           ),
           GoRoute(
-            path: 'dayScoreAnalytics',
-            builder: (BuildContext context, GoRouterState state) {
-              return const dayScoreAnalytics();
-            },
-          ),
-          GoRoute(
             path: 'ScoreAnalytics',
             builder: (BuildContext context, GoRouterState state) {
               return const ScoreAnalytics();
-            },
-          ),
-          GoRoute(
-            path: 'monthScoreAnalytics',
-            builder: (BuildContext context, GoRouterState state) {
-              return const monthScoreAnalytics();
-            },
-          ),
-          GoRoute(
-            path: 'yearScoreAnalytics',
-            builder: (BuildContext context, GoRouterState state) {
-              return const yearScoreAnalytics();
             },
           ),
           GoRoute(
@@ -273,24 +258,6 @@ final GoRouter _router = GoRouter(
           path: 'activityanalytic',
           builder: (BuildContext context, GoRouterState state) {
             return const activityanalytic();
-          },
-        ),
-        GoRoute(
-          path: 'ayScoreAnalytics',
-          builder: (BuildContext context, GoRouterState state) {
-            return const dayScoreAnalytics();
-          },
-        ),
-        GoRoute(
-          path: 'yearScoreAnalytics',
-          builder: (BuildContext context, GoRouterState state) {
-            return const yearScoreAnalytics();
-          },
-        ),
-        GoRoute(
-          path: 'monthScoreAnalytics',
-          builder: (BuildContext context, GoRouterState state) {
-            return const monthScoreAnalytics();
           },
         ),
         GoRoute(

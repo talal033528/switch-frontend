@@ -37,50 +37,49 @@ class _CustomContainerState extends State<CustomContainer> {
             Color(0xffFFFFFF),
           ],
         ),
-        borderRadius: BorderRadius.all(Radius.circular(10)),
+        borderRadius: const BorderRadius.all(Radius.circular(10)),
         border: Border.all(color: const Color(0xffB4B8C3), width: 1),
       ),
       width: 353,
       child: Column(
         children: [
           Padding(
-            padding: EdgeInsets.only(left: 0, right: 8, top: 10),
+            padding: EdgeInsets.only(left: 10.w, right: 10.w, top: 10.w),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                20.horizontalSpace,
-                Text(
-                  widget.date,
-                  style: TextStyle(
-                    color: const Color(0xff5F677E),
-                    fontSize: 14,
-                  ),
+                Row(
+                  children: [
+                    Text(
+                      widget.date,
+                      style: const TextStyle(
+                        color: Color(0xff5F677E),
+                        fontSize: 14,
+                      ),
+                    ),
+                    15.horizontalSpace,
+                    const Icon(
+                      Icons.circle,
+                      color: Color(0xff5F677E),
+                      size: 8,
+                    ),
+                    5.horizontalSpace,
+                    const Text(
+                      "02:29 PM",
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        color: Color(0xffB4B8C3),
+                      ),
+                    ),
+                  ],
                 ),
-                15.horizontalSpace,
-                Text(
-                  "•",
-                  style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w400,
-                    color: Color(0xff5F677E),
-                  ),
-                ),
-                5.horizontalSpace,
-                Text(
-                  "02:29 PM",
-                  style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w400,
-                    color: Color(0xffB4B8C3),
-                  ),
-                ),
-                173.horizontalSpace,
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Text(
                       widget.data,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w400,
                         color: Color(0xff273251),
@@ -99,15 +98,14 @@ class _CustomContainerState extends State<CustomContainer> {
               ],
             ),
           ),
-          10.verticalSpace,
           Padding(
-            padding: const EdgeInsets.fromLTRB(20, 0, 10, 0),
+            padding: EdgeInsets.only(left: 10.w, right: 10.w, top: 10.w),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
                   widget.text,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w700,
                     color: Color(0xff649E24),
@@ -115,7 +113,7 @@ class _CustomContainerState extends State<CustomContainer> {
                 ),
                 Text(
                   widget.value,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w400,
                     color: Color(0xffB4B8C3),
@@ -170,6 +168,7 @@ class CustomContainerBlue extends StatefulWidget {
   final _activeSliderValue = "";
 
   const CustomContainerBlue({
+    super.key,
     required this.data,
     required this.text,
     required this.value,
@@ -197,7 +196,7 @@ class _CustomContainerBlueState extends State<CustomContainerBlue> {
             Color(0xffFFFFFF),
           ],
         ),
-        borderRadius: BorderRadius.all(Radius.circular(10)),
+        borderRadius: const BorderRadius.all(Radius.circular(10)),
         border: Border.all(color: const Color(0xffB4B8C3), width: 1),
       ),
       width: 353,
@@ -205,54 +204,42 @@ class _CustomContainerBlueState extends State<CustomContainerBlue> {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.fromLTRB(
-                0,
-                5,
-                33,
-                5,
-              ),
+              padding: EdgeInsets.only(left: 10.w, right: 10.w, top: 10.w),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  15.horizontalSpace,
-                  Text(
-                    widget.date,
-                    style: TextStyle(
-                      color: const Color(0xff5F677E),
-                      fontSize: 14,
-                    ),
-                  ),
-                  10.horizontalSpace,
-                  Text(
-                    "•",
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w400,
-                      color: Color(0xff5F677E),
-                    ),
-                  ),
-                  Text(
-                    "02:29 PM",
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w400,
-                      color: Color(0xffB4B8C3),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(130, 5, 0, 0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          widget.data,
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 11,
-                          ),
+                  Row(
+                    children: [
+                      Text(
+                        widget.date,
+                        style: const TextStyle(
+                          color: Color(0xff5F677E),
+                          fontSize: 14,
                         ),
-                      ],
+                      ),
+                      10.horizontalSpace,
+                      const Icon(
+                        Icons.circle,
+                        size: 8,
+                        color: Color(0xff5F677E),
+                      ),
+                      10.horizontalSpace,
+                      const Text(
+                        "02:29 PM",
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                          color: Color(0xffB4B8C3),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Text(
+                    widget.data,
+                    style: const TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 11,
                     ),
                   )
                 ],
@@ -260,16 +247,14 @@ class _CustomContainerBlueState extends State<CustomContainerBlue> {
             ),
             10.verticalSpace,
             Padding(
-              padding: const EdgeInsets.fromLTRB(0, 5, 30, 5),
+              padding: EdgeInsets.only(left: 10.w, right: 10.w),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  10.horizontalSpace,
                   SizedBox(
-                    width: 250.w,
                     child: Text(
                       widget.text,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.w700,
                         color: Color(0xff5484FF),
@@ -279,7 +264,7 @@ class _CustomContainerBlueState extends State<CustomContainerBlue> {
                   SizedBox(
                     child: Text(
                       widget.value,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w400,
                         color: Color(0xffB4B8C3),
@@ -318,6 +303,7 @@ class CustomContainerOrange extends StatefulWidget {
   final String subtext;
 
   const CustomContainerOrange({
+    super.key,
     required this.data,
     required this.text,
     required this.value,
@@ -345,94 +331,90 @@ class _CustomContainerOrangeState extends State<CustomContainerOrange> {
             Color(0xffFFFFFF),
           ],
         ),
-        borderRadius: BorderRadius.all(Radius.circular(10)),
+        borderRadius: const BorderRadius.all(Radius.circular(10)),
         border: Border.all(color: const Color(0xffB4B8C3), width: 1),
       ),
       child: Column(
         children: [
           Padding(
-            padding: EdgeInsets.only(left: 0, right: 10, top: 10),
+            padding: EdgeInsets.only(left: 10.w, right: 10.w, top: 10.w),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                SizedBox(width: 18),
-                Text(
-                  widget.date,
-                  style: TextStyle(
-                    color: const Color(0xff5F677E),
-                    fontSize: 14,
-                  ),
-                ),
-                SizedBox(width: 15),
-                Text(
-                  "•",
-                  style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w400,
-                    color: Color(0xff5F677E),
-                  ),
-                ),
-                Text(
-                  "02:29 PM",
-                  style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w400,
-                    color: Color(0xffB4B8C3),
-                  ),
-                ),
-                140.horizontalSpace,
-                Padding(
-                  padding: const EdgeInsets.only(
-                      left: 0, bottom: 0, top: 0, right: 10),
-                  child: SizedBox(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Text(
-                          widget.data,
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w400,
-                            color: Color(0xffB4B8C3),
-                          ),
-                        ),
-                        5.horizontalSpace,
-                        Text(
-                          widget.subtext,
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 11,
-                          ),
-                        ),
-                      ],
+                Row(
+                  children: [
+                    Text(
+                      widget.date,
+                      style: const TextStyle(
+                        color: Color(0xff5F677E),
+                        fontSize: 14,
+                      ),
                     ),
+                    const SizedBox(width: 15),
+                    const Text(
+                      "•",
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        color: Color(0xff5F677E),
+                      ),
+                    ),
+                    const Text(
+                      "02:29 PM",
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        color: Color(0xffB4B8C3),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Text(
+                        widget.data,
+                        style: const TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                          color: Color(0xffB4B8C3),
+                        ),
+                      ),
+                      5.horizontalSpace,
+                      Text(
+                        widget.subtext,
+                        style: const TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 11,
+                        ),
+                      ),
+                    ],
                   ),
                 )
               ],
             ),
           ),
-          10.verticalSpace,
           Padding(
-            padding:
-                const EdgeInsets.only(left: 20, bottom: 0, top: 0, right: 23),
+            padding: EdgeInsets.only(left: 10.w, right: 10.w, top: 4.w),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
                   widget.text,
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 14.sp,
                     fontWeight: FontWeight.w700,
-                    color: Color(0xffEE7A1D),
+                    color: const Color(0xffEE7A1D),
                   ),
                 ),
                 Text(
                   widget.value,
                   style: TextStyle(
-                    fontSize: 14,
+                    fontSize: 14.sp,
                     fontWeight: FontWeight.w400,
-                    color: Color(0xffB4B8C3),
+                    color: const Color(0xffB4B8C3),
                   ),
                 ),
               ],

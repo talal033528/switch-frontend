@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
 import 'package:swish_basketball/widgets/button.dart';
 import 'package:swish_basketball/widgets/dropdown.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
@@ -13,7 +12,7 @@ class ScoreAnalytics extends StatefulWidget {
 }
 
 class _ScoreAnalyticsState extends State<ScoreAnalytics> {
-  int touchedIndex = -1;
+  int touchedIndex = 1;
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   late List<_ChartData> data;
   late TooltipBehavior _tooltip;
@@ -124,47 +123,65 @@ class _ScoreAnalyticsState extends State<ScoreAnalytics> {
                             padding: const EdgeInsets.only(left: 10),
                             child: GestureDetector(
                               onTap: () {
-                                context.push('/home/child/dayScoreAnalytics');
+                                setState(() {
+                                  touchedIndex = 0;
+                                });
                               },
                               child: Text(
                                 "Day",
                                 style: TextStyle(
-                                    color: const Color(0xff7C8396),
+                                    color: touchedIndex == 0
+                                        ? const Color(0xffEE7A1D)
+                                        : const Color(0xff7C8396),
                                     fontSize: 14.sp),
                               ),
                             ),
                           ),
-                          Text(
-                            "Week",
-                            style: TextStyle(
-                                color: const Color(0xffEE7A1D),
-                                fontSize: 14.sp,
-                                fontWeight: FontWeight.bold),
+                          GestureDetector(
+                            onTap: () {
+                              setState(() {
+                                touchedIndex = 1;
+                              });
+                            },
+                            child: Text(
+                              "Week",
+                              style: TextStyle(
+                                  color: touchedIndex == 1
+                                      ? const Color(0xffEE7A1D)
+                                      : const Color(0xff7C8396),
+                                  fontSize: 14.sp),
+                            ),
                           ),
                           GestureDetector(
                             onTap: () {
-                              context.push('/home/child/monthScoreAnalytics');
+                              setState(() {
+                                touchedIndex = 2;
+                              });
                             },
                             child: Text(
                               "Month",
                               style: TextStyle(
-                                  color: const Color(0xff7C8396),
+                                  color: touchedIndex == 2
+                                      ? const Color(0xffEE7A1D)
+                                      : const Color(0xff7C8396),
                                   fontSize: 14.sp),
                             ),
                           ),
                           GestureDetector(
                             onTap: () {
-                              context.push('/home/child/yearScoreAnalytics');
+                              setState(() {
+                                touchedIndex = 3;
+                              });
                             },
                             child: Text(
                               "Year",
                               style: TextStyle(
-                                  color: const Color(0xff7C8396),
+                                  color: touchedIndex == 3
+                                      ? const Color(0xffEE7A1D)
+                                      : const Color(0xff7C8396),
                                   fontSize: 14.sp),
                             ),
                           ),
-                          10.verticalSpace,
-                          Image.asset("assets/images/button.png")
                         ],
                       ),
                       10.verticalSpace,
