@@ -26,12 +26,13 @@ class HomeScreen extends StatelessWidget {
         ),
         actions: [
           Padding(
-            padding: EdgeInsets.all(13.0),
+            padding: const EdgeInsets.all(13.0),
             child: GestureDetector(
                 onTap: () {
                   context.push('/home/child/NoitifcationScreen');
                 },
-                child: Icon(LucideIcons.bellRing, color: Color(0xffEE7A1D))),
+                child:
+                    const Icon(LucideIcons.bellRing, color: Color(0xffEE7A1D))),
           )
         ],
       ),
@@ -51,11 +52,11 @@ class HomeScreen extends StatelessWidget {
             20.verticalSpace,
             GestureDetector(
               onTap: () {
-                context.push('/home/child/childhomescreen');
+                context.goNamed('home', pathParameters: {"type": "kid"});
               },
               child: SizedBox(
                 width: 353.w,
-                height: 60.h,
+                height: 67.h,
                 child: Card(
                   color: const Color(0xffEE7A1D),
                   shape: RoundedRectangleBorder(
@@ -85,11 +86,11 @@ class HomeScreen extends StatelessWidget {
             10.verticalSpace,
             GestureDetector(
               onTap: () {
-                context.push('/home/child/kidshomescreen');
+                context.goNamed('home', pathParameters: {"type": "kid"});
               },
               child: SizedBox(
                 width: 353.w,
-                height: 60.h,
+                height: 67.h,
                 child: Card(
                   color: const Color(0xffEE7A1D),
                   shape: RoundedRectangleBorder(

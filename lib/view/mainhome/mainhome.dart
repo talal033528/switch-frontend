@@ -5,6 +5,7 @@ import 'package:swish_basketball/view/analytics/scoreanalytics.dart';
 import 'package:swish_basketball/view/community/community.dart';
 import 'package:swish_basketball/view/home/childhomescreen.dart';
 import 'package:swish_basketball/view/home/parenthomescreen.dart';
+import 'package:swish_basketball/view/kids/kidshomescreen.dart';
 import 'package:swish_basketball/view/setting/setting.dart';
 import 'package:swish_basketball/view/video/swichvideolibrary.dart';
 
@@ -26,6 +27,13 @@ class _HomeMainScreenState extends State<HomeMainScreen> {
     const ScoreAnalytics(),
     const SettingScreen(),
   ];
+  List kidscreen = [
+    const kidshomescreen(),
+    const CommunityScreen(),
+    const swishvideo(),
+    const ScoreAnalytics(),
+    const SettingScreen(),
+  ];
   List childscreens = [
     const ChildHomeScreen(),
     const CommunityScreen(),
@@ -35,6 +43,7 @@ class _HomeMainScreenState extends State<HomeMainScreen> {
   ];
   @override
   Widget build(BuildContext context) {
+    print(widget.type);
     return Scaffold(
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: _currentIndex,
@@ -57,7 +66,9 @@ class _HomeMainScreenState extends State<HomeMainScreen> {
         ),
         body: widget.type == "parent"
             ? parentscreens[_currentIndex]
-            : childscreens[_currentIndex]);
+            : widget.type == "kid"
+                ? kidscreen[_currentIndex]
+                : childscreens[_currentIndex]);
   }
 }
 
