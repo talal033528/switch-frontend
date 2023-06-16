@@ -423,38 +423,43 @@ class _ChildHomeScreenState extends State<ChildHomeScreen> {
                 ),
               ),
               10.verticalSpace,
-              Container(
-                width: 353.w,
-                height: 148.h,
-                decoration: BoxDecoration(
-                  color: const Color(0xFF000000), // Black background color
-                  border: Border.all(
-                    color: const Color(0xFFECEDEF),
-                    width: 1,
+              GestureDetector(
+                onTap: () {
+                  context.push('/home/child/activityanalytic');
+                },
+                child: Container(
+                  width: 353.w,
+                  height: 148.h,
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF000000), // Black background color
+                    border: Border.all(
+                      color: const Color(0xFFECEDEF),
+                      width: 1,
+                    ),
+                    borderRadius: BorderRadius.circular(13),
                   ),
-                  borderRadius: BorderRadius.circular(13),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(15),
-                  child: Row(
-                    children: [
-                      SizedBox(
-                          width: 113.w,
-                          height: 113.h,
-                          child: Image.asset("assets/images/activity2.png")),
-                      24.horizontalSpace,
-                      SizedBox(
-                        width: 167.w,
-                        height: 27.h,
-                        child: Text(
-                          "Activity Analytics",
-                          style: TextStyle(
-                              fontSize: 18.sp,
-                              fontWeight: FontWeight.w400,
-                              color: const Color(0xffFFFFFF)),
-                        ),
-                      )
-                    ],
+                  child: Padding(
+                    padding: const EdgeInsets.all(15),
+                    child: Row(
+                      children: [
+                        SizedBox(
+                            width: 113.w,
+                            height: 113.h,
+                            child: Image.asset("assets/images/activity2.png")),
+                        24.horizontalSpace,
+                        SizedBox(
+                          width: 167.w,
+                          height: 27.h,
+                          child: Text(
+                            "Activity Analytics",
+                            style: TextStyle(
+                                fontSize: 18.sp,
+                                fontWeight: FontWeight.w400,
+                                color: const Color(0xffFFFFFF)),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -494,28 +499,33 @@ class _ChildHomeScreenState extends State<ChildHomeScreen> {
                 ),
               ),
               22.verticalSpace,
-              SizedBox(
-                width: 360.w,
-                height: 65.h,
-                child: GreyBG(
-                  child: Padding(
-                    padding: const EdgeInsets.all(15),
-                    child: Row(
-                      children: [
-                        Icon(
-                          LucideIcons.bookDown,
-                          size: 18.h,
-                          color: const Color(0xffEE7A1D),
-                        ),
-                        10.horizontalSpace,
-                        Text(
-                          "Download Built-in-Guide",
-                          style: TextStyle(
-                              fontWeight: FontWeight.w400,
-                              fontSize: 18.sp,
-                              color: const Color(0xffEE7A1D)),
-                        ),
-                      ],
+              GestureDetector(
+                onTap: () {
+                  context.push('/home/child/downloadscreen');
+                },
+                child: SizedBox(
+                  width: 360.w,
+                  height: 65.h,
+                  child: GreyBG(
+                    child: Padding(
+                      padding: const EdgeInsets.all(15),
+                      child: Row(
+                        children: [
+                          Icon(
+                            LucideIcons.bookDown,
+                            size: 18.h,
+                            color: const Color(0xffEE7A1D),
+                          ),
+                          10.horizontalSpace,
+                          Text(
+                            "Download Built-in-Guide",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 18.sp,
+                                color: const Color(0xffEE7A1D)),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),

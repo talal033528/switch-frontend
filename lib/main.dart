@@ -145,6 +145,24 @@ final GoRouter _router = GoRouter(
             },
           ),
           GoRoute(
+            path: 'kidactivityanalytics',
+            builder: (BuildContext context, GoRouterState state) {
+              return const kidactivityanalytics();
+            },
+          ),
+          GoRoute(
+            path: 'activityanalytic',
+            builder: (BuildContext context, GoRouterState state) {
+              return const activityanalytic();
+            },
+          ),
+          GoRoute(
+            path: 'downloadscreen',
+            builder: (BuildContext context, GoRouterState state) {
+              return const downloadscreen();
+            },
+          ),
+          GoRoute(
             path: 'ScoreAnalytics',
             builder: (BuildContext context, GoRouterState state) {
               return const ScoreAnalytics();

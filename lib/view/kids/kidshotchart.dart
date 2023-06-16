@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import 'package:swish_basketball/view/home/childhomescreen.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
@@ -12,7 +13,8 @@ class kidshotchart extends StatefulWidget {
   State<kidshotchart> createState() => _kidshomescreenState();
 }
 
-bool switchValue = true;
+int touchedIndex = 1;
+bool _switchValue = false;
 
 class _kidshomescreenState extends State<kidshotchart> {
   int touchedIndex = -1;
@@ -140,7 +142,7 @@ class _kidshomescreenState extends State<kidshotchart> {
                                 color: const Color(0xff7C8396),
                                 fontSize: 14.sp),
                           ),
-                          Image.asset("assets/images/button1.png")
+                          // Image.asset("assets/images/button1.png")
                         ],
                       ),
                       10.verticalSpace,
@@ -150,54 +152,59 @@ class _kidshomescreenState extends State<kidshotchart> {
                 ),
               ),
               22.verticalSpace,
-              SizedBox(
-                width: 350.w,
-                child:
-                    //  Image.asset(
-                    //   "assets/images/65.png",
-                    //   fit: BoxFit.cover,
-                    // )
-                    GreyBG(
-                  child: Padding(
-                    padding: const EdgeInsets.all(15),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        8.horizontalSpace,
-                        Align(
-                          alignment: Alignment.center,
-                          child: Text(
-                            "Free Throw",
-                            style: TextStyle(
-                                fontSize: 18.sp,
-                                fontWeight: FontWeight.w700,
-                                color: Color(0xff5F677E)),
+              GestureDetector(
+                onTap: () {
+                  context.push('/home/child/kidactivityanalytics');
+                },
+                child: SizedBox(
+                  width: 350.w,
+                  child:
+                      //  Image.asset(
+                      //   "assets/images/65.png",
+                      //   fit: BoxFit.cover,
+                      // )
+                      GreyBG(
+                    child: Padding(
+                      padding: const EdgeInsets.all(15),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          8.horizontalSpace,
+                          Align(
+                            alignment: Alignment.center,
+                            child: Text(
+                              "Free Throw",
+                              style: TextStyle(
+                                  fontSize: 18.sp,
+                                  fontWeight: FontWeight.w700,
+                                  color: Color(0xff5F677E)),
+                            ),
                           ),
-                        ),
-                        Image.asset(
-                          "assets/images/66.png",
-                          width: 112.w,
-                          height: 112.h,
-                          fit: BoxFit.contain,
-                        )
-                        // Container(
-                        //   width: 112.w,
-                        //   height: 112.h,
-                        //   decoration: BoxDecoration(
-                        //     border:
-                        //         Border.all(width: 10, color: Color(0xff8FE133)),
-                        //     shape: BoxShape.circle,
-                        //   ),
-                        //   child: Center(
-                        //       child: Text(
-                        //     "64%",
-                        //     style: TextStyle(
-                        //         fontSize: 27.sp,
-                        //         fontWeight: FontWeight.w700,
-                        //         color: Color(0xff5F677E)),
-                        //   )),
-                        // )
-                      ],
+                          // Image.asset(
+                          //   "assets/images/66.png",
+                          //   width: 112.w,
+                          //   height: 112.h,
+                          //   fit: BoxFit.contain,
+                          // )
+                          Container(
+                            width: 112.w,
+                            height: 112.h,
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                  width: 10, color: Color(0xff8FE133)),
+                              shape: BoxShape.circle,
+                            ),
+                            child: Center(
+                                child: Text(
+                              "64%",
+                              style: TextStyle(
+                                  fontSize: 27.sp,
+                                  fontWeight: FontWeight.w700,
+                                  color: Color(0xff5F677E)),
+                            )),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),

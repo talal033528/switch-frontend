@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_switch/flutter_switch.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import 'package:swish_basketball/view/home/childhomescreen.dart';
 
@@ -11,7 +12,8 @@ class kidshomescreen extends StatefulWidget {
   State<kidshomescreen> createState() => _kidshomescreenState();
 }
 
-bool switchValue = true;
+int touchedIndex = 1;
+bool _switchValue = false;
 
 class _kidshomescreenState extends State<kidshomescreen> {
   @override
@@ -111,9 +113,41 @@ class _kidshomescreenState extends State<kidshomescreen> {
                                 color: const Color(0xff7C8396),
                                 fontSize: 14.sp),
                           ),
-                          Image.asset("assets/images/button.png")
+                          FlutterSwitch(
+                            height: 35.h,
+                            width: 114.w,
+                            padding: 4.0,
+                            toggleSize: 20.0,
+                            borderRadius: 100.0,
+                            value: _switchValue,
+                            activeText: "Shot Chart",
+                            activeTextFontWeight: FontWeight.normal,
+                            inactiveText: "Bar Graph",
+                            inactiveTextFontWeight: FontWeight.normal,
+                            valueFontSize: 14.sp,
+                            showOnOff: true,
+                            activeTextColor: const Color(0xffEE7A1D),
+                            inactiveTextColor: const Color(0xff5F677E),
+                            activeColor: Colors.white,
+                            inactiveColor: Colors.white,
+                            toggleColor: const Color(0xffEE7A1D),
+                            inactiveToggleColor: const Color(0xff5F677E),
+                            switchBorder: Border.all(
+                              color: Colors.grey,
+                              width: 1.0,
+                            ),
+                            onToggle: (value) {
+                              setState(() {
+                                _switchValue = value;
+                              });
+                            },
+                          ),
                         ],
                       ),
+                      10.verticalSpace,
+                      Image.asset(_switchValue
+                          ? "assets/images/homecoat.png"
+                          : "assets/images/122.png"),
                       SizedBox(
                           width: 363.w,
                           child: Divider(
@@ -121,11 +155,11 @@ class _kidshomescreenState extends State<kidshomescreen> {
                             color: Color(0xffECEDEF),
                           )),
                       15.verticalSpace,
-                      Image.asset(
-                        "assets/images/homecoat.png",
-                        // width: 350.w,
-                        // height: 350.h,
-                      )
+                      // Image.asset(
+                      //   "assets/images/homecoat.png",
+                      //   // width: 350.w,
+                      //   // height: 350.h,
+                      // )
                     ],
                   ),
                 ),
