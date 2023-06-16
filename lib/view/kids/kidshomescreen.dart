@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_switch/flutter_switch.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import 'package:swish_basketball/view/home/childhomescreen.dart';
 
@@ -14,24 +14,26 @@ class kidshomescreen extends StatefulWidget {
 bool switchValue = true;
 
 class _kidshomescreenState extends State<kidshomescreen> {
+  bool _switchValue = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Color(0xffEE7A1D),
+        backgroundColor: const Color(0xffEE7A1D),
         leading: Image.asset("assets/images/hidave.png"),
         title: Text(
           "Hi Dave",
           style: TextStyle(
               fontWeight: FontWeight.w700,
               fontSize: 18.sp,
-              color: Color(0xffFFFFFF)),
+              color: const Color(0xffFFFFFF)),
         ),
-        actions: [
+        actions: const [
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: EdgeInsets.all(8.0),
             child: Icon(LucideIcons.bellRing, color: Color(0xffFFFFFF)),
           ),
         ],
@@ -42,28 +44,40 @@ class _kidshomescreenState extends State<kidshomescreen> {
           child: Column(
             children: [
               19.verticalSpace,
-              Container(
-                width: 350.w,
-                decoration: BoxDecoration(
-                    color: const Color(0xff8E2B00),
-                    borderRadius: BorderRadius.all(Radius.circular(10.r))),
-                child: Row(
+              SizedBox(
+                height: 100.h,
+                child: Stack(
                   children: [
-                    Image.asset("assets/images/basketball.png"),
-                    30.horizontalSpace,
-                    Text(
-                      "Start Shooting",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w700,
-                          fontSize: 22.sp,
-                          color: Color(0xffFFFFFF)),
+                    Container(
+                      width: 350.w,
+                      height: 71.h,
+                      decoration: BoxDecoration(
+                          color: const Color(0xff8E2B00),
+                          borderRadius:
+                              BorderRadius.all(Radius.circular(10.r))),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Text(
+                            "Start Shooting",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w700,
+                                fontSize: 22.sp,
+                                color: const Color(0xffFFFFFF)),
+                          ),
+                          40.horizontalSpace,
+                          Icon(
+                            LucideIcons.arrowRightCircle,
+                            size: 26.w,
+                            color: const Color(0xffEE7A1D),
+                          ),
+                          15.horizontalSpace,
+                        ],
+                      ),
                     ),
-                    70.horizontalSpace,
-                    Icon(
-                      LucideIcons.arrowRightCircle,
-                      size: 26.w,
-                      color: Color(0xffEE7A1D),
-                    )
+                    Positioned(
+                        top: 15.h,
+                        child: Image.asset("assets/images/basketball.png")),
                   ],
                 ),
               ),
@@ -111,12 +125,40 @@ class _kidshomescreenState extends State<kidshomescreen> {
                                 color: const Color(0xff7C8396),
                                 fontSize: 14.sp),
                           ),
-                          Image.asset("assets/images/button.png")
+                          FlutterSwitch(
+                            height: 35.h,
+                            width: 114.w,
+                            padding: 4.0,
+                            toggleSize: 20.0,
+                            borderRadius: 100.0,
+                            value: _switchValue,
+                            activeText: "Shot Chart",
+                            activeTextFontWeight: FontWeight.normal,
+                            inactiveText: "Bar Graph",
+                            inactiveTextFontWeight: FontWeight.normal,
+                            valueFontSize: 14.sp,
+                            showOnOff: true,
+                            activeTextColor: const Color(0xffEE7A1D),
+                            inactiveTextColor: const Color(0xff5F677E),
+                            activeColor: Colors.white,
+                            inactiveColor: Colors.white,
+                            toggleColor: const Color(0xffEE7A1D),
+                            inactiveToggleColor: const Color(0xff5F677E),
+                            switchBorder: Border.all(
+                              color: Colors.grey,
+                              width: 1.0,
+                            ),
+                            onToggle: (value) {
+                              setState(() {
+                                _switchValue = value;
+                              });
+                            },
+                          ),
                         ],
                       ),
                       SizedBox(
                           width: 363.w,
-                          child: Divider(
+                          child: const Divider(
                             thickness: 1,
                             color: Color(0xffECEDEF),
                           )),
@@ -151,15 +193,15 @@ class _kidshomescreenState extends State<kidshomescreen> {
                             style: TextStyle(
                                 fontSize: 18.sp,
                                 fontWeight: FontWeight.w400,
-                                color: Color(0xff5F677E)),
+                                color: const Color(0xff5F677E)),
                           ),
                         ),
                         Container(
                           width: 112.w,
                           height: 112.h,
                           decoration: BoxDecoration(
-                            border:
-                                Border.all(width: 5, color: Color(0xff8FE133)),
+                            border: Border.all(
+                                width: 5, color: const Color(0xff8FE133)),
                             shape: BoxShape.circle,
                           ),
                           child: Center(
@@ -168,7 +210,7 @@ class _kidshomescreenState extends State<kidshomescreen> {
                             style: TextStyle(
                                 fontSize: 27.sp,
                                 fontWeight: FontWeight.w400,
-                                color: Color(0xff5F677E)),
+                                color: const Color(0xff5F677E)),
                           )),
                         )
                       ],
