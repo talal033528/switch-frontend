@@ -343,60 +343,65 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(
-                    width: 167.w,
-                    height: 113.h,
-                    child: Card(
-                      elevation: 2,
-                      shape: RoundedRectangleBorder(
-                        side: const BorderSide(
-                            color: Color(0xffFFBDB5), width: 2),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Container(
-                        decoration: BoxDecoration(
+                  GestureDetector(
+                    onTap: () {
+                      context.push('/home/child/swishvideo');
+                    },
+                    child: SizedBox(
+                      width: 167.w,
+                      height: 113.h,
+                      child: Card(
+                        elevation: 2,
+                        shape: RoundedRectangleBorder(
+                          side: const BorderSide(
+                              color: Color(0xffFFBDB5), width: 2),
                           borderRadius: BorderRadius.circular(10),
-                          gradient: const LinearGradient(
-                            begin: Alignment.topCenter,
-                            end: Alignment.bottomCenter,
-                            colors: [
-                              Color(0xFFFAFAFA),
-                              Color(0xFFD2D2D2),
-                              Color(0xFFFFFFFF),
-                            ],
-                          ),
                         ),
-                        child: Center(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(
-                                LucideIcons.youtube,
-                                color: const Color(0xffEE7A1D),
-                                size: 30.h,
-                              ),
-                              10.verticalSpace,
-                              Column(
-                                children: [
-                                  Text(
-                                    "SWISH VIDEO",
-                                    style: TextStyle(
-                                        color: const Color(0xffEE7A1D),
-                                        fontSize: 14.sp,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  3.verticalSpace,
-                                  Text(
-                                    "LIBRARY",
-                                    style: TextStyle(
-                                        color: const Color(0xffEE7A1D),
-                                        fontSize: 14.sp,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                ],
-                              )
-                            ],
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            gradient: const LinearGradient(
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                              colors: [
+                                Color(0xFFFAFAFA),
+                                Color(0xFFD2D2D2),
+                                Color(0xFFFFFFFF),
+                              ],
+                            ),
+                          ),
+                          child: Center(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  LucideIcons.youtube,
+                                  color: const Color(0xffEE7A1D),
+                                  size: 30.h,
+                                ),
+                                10.verticalSpace,
+                                Column(
+                                  children: [
+                                    Text(
+                                      "SWISH VIDEO",
+                                      style: TextStyle(
+                                          color: const Color(0xffEE7A1D),
+                                          fontSize: 14.sp,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    3.verticalSpace,
+                                    Text(
+                                      "LIBRARY",
+                                      style: TextStyle(
+                                          color: const Color(0xffEE7A1D),
+                                          fontSize: 14.sp,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                )
+                              ],
+                            ),
                           ),
                         ),
                       ),

@@ -145,6 +145,12 @@ final GoRouter _router = GoRouter(
             },
           ),
           GoRoute(
+            path: 'daveottrando',
+            builder: (BuildContext context, GoRouterState state) {
+              return const daveottrando();
+            },
+          ),
+          GoRoute(
             path: 'freethrow',
             builder: (BuildContext context, GoRouterState state) {
               return const freethrow();
