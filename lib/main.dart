@@ -19,6 +19,7 @@ import 'package:swish_basketball/view/goals/shortatempts.dart';
 import 'package:swish_basketball/view/goals/shortchart.dart';
 import 'package:swish_basketball/view/goals/workout.dart';
 import 'package:swish_basketball/view/home/childhomescreen.dart';
+import 'package:swish_basketball/view/home/parenthomescreen.dart';
 import 'package:swish_basketball/view/kids/kidsactivityanalytics.dart';
 import 'package:swish_basketball/view/kids/kidshomescreen.dart';
 import 'package:swish_basketball/view/kids/kidshotchart.dart';
@@ -148,6 +149,12 @@ final GoRouter _router = GoRouter(
             path: 'daveottrando',
             builder: (BuildContext context, GoRouterState state) {
               return const daveottrando();
+            },
+          ),
+          GoRoute(
+            path: 'HomeScreen',
+            builder: (BuildContext context, GoRouterState state) {
+              return const HomeScreen();
             },
           ),
           GoRoute(
