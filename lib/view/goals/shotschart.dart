@@ -113,7 +113,7 @@ class shotschart extends StatelessWidget {
                       color: Color(0xffB4B8C3),
                     ),
                     20.verticalSpace,
-                    Image.asset("assets/images/coat3.png"),
+                    Image.asset("assets/images/coat4.png"),
                   ],
                 ),
               ),

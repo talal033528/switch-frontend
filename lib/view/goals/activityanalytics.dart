@@ -229,12 +229,17 @@ class _activityanalyticState extends State<activityanalytic>
                             ),
                           ),
                           19.verticalSpace,
-                          SizedBox(
-                            width: 319.w,
-                            height: 50.h,
-                            child: GlobalButton(
-                                text: "Change Weekly Goal",
-                                color: Color(0xffEE7A1D)),
+                          GestureDetector(
+                            onTap: () {
+                              context.push('/home/child/CreateYourGoals');
+                            },
+                            child: SizedBox(
+                              width: 319.w,
+                              height: 50.h,
+                              child: GlobalButton(
+                                  text: "Change Weekly Goal",
+                                  color: Color(0xffEE7A1D)),
+                            ),
                           ),
                           71.verticalSpace,
                           SizedBox(
