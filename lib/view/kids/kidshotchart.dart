@@ -210,108 +210,118 @@ class _kidshomescreenState extends State<kidshotchart> {
                 ),
               ),
               22.verticalSpace,
-              SizedBox(
-                width: 353.w,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    SizedBox(
-                      width: 167.w,
-                      height: 155.h,
-                      child: Card(
-                        elevation: 2,
-                        shape: RoundedRectangleBorder(
-                          side: const BorderSide(
-                              color: Color(0xffB4B8C3), width: 2),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Container(
-                          decoration: BoxDecoration(
+              GestureDetector(
+                onTap: () {
+                  context.push('/home/child/swishvideo');
+                },
+                child: SizedBox(
+                  width: 353.w,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SizedBox(
+                        width: 167.w,
+                        height: 155.h,
+                        child: Card(
+                          elevation: 2,
+                          shape: RoundedRectangleBorder(
+                            side: const BorderSide(
+                                color: Color(0xffB4B8C3), width: 2),
                             borderRadius: BorderRadius.circular(10),
-                            gradient: const LinearGradient(
-                              begin: Alignment.topCenter,
-                              end: Alignment.bottomCenter,
-                              colors: [
-                                Color(0xFFFAFAFA),
-                                Color(0xFFD2D2D2),
-                                Color(0xFFFFFFFF),
-                              ],
-                            ),
                           ),
-                          child: Center(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Image.asset(
-                                  "assets/images/swish3.png",
-                                  width: 90,
-                                  height: 95,
-                                  fit: BoxFit.cover,
-                                ),
-                                5.verticalSpace,
-                                Text(
-                                  "SWISH Video Library",
-                                  style: TextStyle(
-                                      color: const Color(0xff5F677E),
-                                      fontSize: 14.sp,
-                                      fontWeight: FontWeight.w300),
-                                )
-                              ],
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              gradient: const LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: [
+                                  Color(0xFFFAFAFA),
+                                  Color(0xFFD2D2D2),
+                                  Color(0xFFFFFFFF),
+                                ],
+                              ),
+                            ),
+                            child: Center(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image.asset(
+                                    "assets/images/swish3.png",
+                                    width: 90,
+                                    height: 95,
+                                    fit: BoxFit.cover,
+                                  ),
+                                  5.verticalSpace,
+                                  Text(
+                                    "SWISH Video Library",
+                                    style: TextStyle(
+                                        color: const Color(0xff5F677E),
+                                        fontSize: 14.sp,
+                                        fontWeight: FontWeight.w300),
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                         ),
                       ),
-                    ),
-                    SizedBox(
-                      width: 167.w,
-                      height: 155.h,
-                      child: Card(
-                        elevation: 2,
-                        shape: RoundedRectangleBorder(
-                          side: const BorderSide(
-                              color: Color(0xffB4B8C3), width: 2),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            gradient: const LinearGradient(
-                              begin: Alignment.topCenter,
-                              end: Alignment.bottomCenter,
-                              colors: [
-                                Color(0xFFFAFAFA),
-                                Color(0xFFD2D2D2),
-                                Color(0xFFFFFFFF),
-                              ],
+                      GestureDetector(
+                        onTap: () {
+                          context.push('/home/child/ScoreAnalytics');
+                        },
+                        child: SizedBox(
+                          width: 167.w,
+                          height: 155.h,
+                          child: Card(
+                            elevation: 2,
+                            shape: RoundedRectangleBorder(
+                              side: const BorderSide(
+                                  color: Color(0xffB4B8C3), width: 2),
+                              borderRadius: BorderRadius.circular(10),
                             ),
-                          ),
-                          child: Center(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Image.asset(
-                                  "assets/images/swish2.png",
-                                  width: 90,
-                                  height: 95,
-                                  fit: BoxFit.cover,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                gradient: const LinearGradient(
+                                  begin: Alignment.topCenter,
+                                  end: Alignment.bottomCenter,
+                                  colors: [
+                                    Color(0xFFFAFAFA),
+                                    Color(0xFFD2D2D2),
+                                    Color(0xFFFFFFFF),
+                                  ],
                                 ),
-                                5.verticalSpace,
-                                Text(
-                                  "Shooting Stats",
-                                  style: TextStyle(
-                                      color: const Color(0xff5F677E),
-                                      fontSize: 14.sp,
-                                      fontWeight: FontWeight.w300),
-                                )
-                              ],
+                              ),
+                              child: Center(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset(
+                                      "assets/images/swish2.png",
+                                      width: 90,
+                                      height: 95,
+                                      fit: BoxFit.cover,
+                                    ),
+                                    5.verticalSpace,
+                                    Text(
+                                      "Shooting Stats",
+                                      style: TextStyle(
+                                          color: const Color(0xff5F677E),
+                                          fontSize: 14.sp,
+                                          fontWeight: FontWeight.w300),
+                                    )
+                                  ],
+                                ),
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    )
-                  ],
+                      )
+                    ],
+                  ),
                 ),
               )
             ],

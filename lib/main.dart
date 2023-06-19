@@ -133,6 +133,12 @@ final GoRouter _router = GoRouter(
             },
           ),
           GoRoute(
+            path: 'swishvideo',
+            builder: (BuildContext context, GoRouterState state) {
+              return const swishvideo();
+            },
+          ),
+          GoRoute(
             path: 'workoutscreen',
             builder: (BuildContext context, GoRouterState state) {
               return const workoutscreen();
@@ -142,6 +148,12 @@ final GoRouter _router = GoRouter(
             path: 'freethrow',
             builder: (BuildContext context, GoRouterState state) {
               return const freethrow();
+            },
+          ),
+          GoRoute(
+            path: 'congratulationscreen',
+            builder: (BuildContext context, GoRouterState state) {
+              return const congratulationscreen();
             },
           ),
           GoRoute(
