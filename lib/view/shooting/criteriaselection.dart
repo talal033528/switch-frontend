@@ -68,8 +68,8 @@ class CriteriaSelectionScreen extends StatelessWidget {
                 child: MyDropdownWidget(
                   options: const [
                     'Select type game or practice ',
-                    'Last Month',
-                    'Last Year'
+                    'Game',
+                    'Practice'
                   ],
                   selectedValue: 'Select type game or practice ',
                   onChanged: (newValue) {
@@ -97,7 +97,12 @@ class CriteriaSelectionScreen extends StatelessWidget {
               SizedBox(
                 width: 333.w,
                 child: MyDropdownWidget(
-                  options: const ['Select Method', 'Last Month', 'Last Year'],
+                  options: const [
+                    'Select Method',
+                    'Single Shot Entry',
+                    'Bulk Entry',
+                    'Voice Command'
+                  ],
                   selectedValue: 'Select Method',
                   onChanged: (newValue) {
                     // setState(() {

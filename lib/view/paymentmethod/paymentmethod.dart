@@ -59,21 +59,66 @@ class _paymentmethodState extends State<paymentmethod> {
                   padding: const EdgeInsets.all(15),
                   child: Row(
                     children: [
-                      Image.asset("assets/images/card.png"),
-                      Image.asset("assets/images/card2.png"),
-                      Image.asset("assets/images/card4.png"),
-                      Image.asset("assets/images/card5.png"),
-                      Image.asset("assets/images/card6.png"),
-                      Image.asset("assets/images/card7.png"),
-                      Image.asset("assets/images/card8.png"),
-                      Image.asset("assets/images/card9.png"),
+                      Image.asset(
+                        "assets/images/card.png",
+                        height: 80.h,
+                        width: 120.w,
+                      ),
+                      23.horizontalSpace,
+                      Image.asset(
+                        "assets/images/card2.png",
+                        height: 80.h,
+                        width: 120.w,
+                      ),
+                      23.horizontalSpace,
+
+                      Image.asset(
+                        "assets/images/card4.png",
+                        height: 80.h,
+                        width: 120.w,
+                      ),
+                      23.horizontalSpace,
+
+                      Image.asset(
+                        "assets/images/card5.png",
+                        height: 80.h,
+                        width: 120.w,
+                      ),
+                      23.horizontalSpace,
+
+                      Image.asset(
+                        "assets/images/card6.png",
+                        height: 80.h,
+                        width: 120.w,
+                      ),
+                      23.horizontalSpace,
+
+                      Image.asset(
+                        "assets/images/card7.png",
+                        height: 80.h,
+                        width: 120.w,
+                      ),
+                      23.horizontalSpace,
+
+                      Image.asset(
+                        "assets/images/card8.png",
+                        height: 80.h,
+                        width: 120.w,
+                      ),
+                      23.horizontalSpace,
+
+                      Image.asset(
+                        "assets/images/card9.png",
+                        height: 80.h,
+                        width: 120.w,
+                      ),
 
                       // Add more images here
                     ],
                   ),
                 ),
               ),
-              30.verticalSpace,
+              25.verticalSpace,
               SizedBox(
                 width: 333.w,
                 child: Column(

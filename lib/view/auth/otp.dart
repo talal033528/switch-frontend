@@ -159,7 +159,7 @@ class _OtpScreenState extends State<OtpScreen> {
               21.verticalSpace,
               GestureDetector(
                 onTap: () {
-                  context.go('/');
+                  context.go('/login');
                 },
                 child: SizedBox(
                     width: 333.w,

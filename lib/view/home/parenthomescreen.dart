@@ -52,18 +52,17 @@ class HomeScreen extends StatelessWidget {
             20.verticalSpace,
             GestureDetector(
               onTap: () {
-                context.goNamed('home', pathParameters: {"type": "kid"});
+                context.goNamed('home', pathParameters: {"type": "child"});
               },
               child: SizedBox(
                 width: 353.w,
                 height: 67.h,
-                child: Card(
-                  color: const Color(0xffEE7A1D),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15.0),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.only(bottom: 20),
+                child: Center(
+                  child: Card(
+                    color: const Color(0xffEE7A1D),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                    ),
                     child: ListTile(
                       leading: Image.asset(
                         'assets/images/childph.png',
@@ -96,17 +95,25 @@ class HomeScreen extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.only(bottom: 20),
+                  child: Center(
                     child: ListTile(
                       leading: Image.asset(
                         'assets/images/dave.png',
                         width: 40.w,
                         height: 40.h,
                       ),
-                      title: const Text(
-                        "Dave Ottrando                     (Kid account)    ",
-                        style: TextStyle(color: Colors.white),
+                      title: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Dave Ottrando",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          Text(
+                            "(Kid account)",
+                            style: TextStyle(color: Colors.white),
+                          )
+                        ],
                       ),
                       trailing: const Icon(
                         Icons.arrow_forward_ios,
@@ -345,7 +352,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () {
-                      context.push('/home/child/swishvideo');
+                      // context.push('/home/child/swishvideo');
                     },
                     child: SizedBox(
                       width: 167.w,
