@@ -17,6 +17,7 @@ class _shortchartState extends State<shortchart> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         centerTitle: false,
         elevation: 0,

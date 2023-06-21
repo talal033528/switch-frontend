@@ -10,6 +10,7 @@ class PracticeResult extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.white,
@@ -56,7 +57,7 @@ class PracticeResult extends StatelessWidget {
                             style: TextStyle(
                                 color: const Color(0xffEE7A1D),
                                 fontSize: 53.sp,
-                                fontWeight: FontWeight.bold),
+                                fontWeight: FontWeight.w400),
                           ),
                           7.verticalSpace,
                         ],
@@ -116,13 +117,19 @@ class PracticeResult extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
-                      "Workout Time: 01:38:37",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          color: const Color(0xff7C8396),
-                          fontSize: 14.sp,
-                          fontWeight: FontWeight.w400),
+                    25.verticalSpace,
+                    Container(
+                      alignment: Alignment.center,
+                      width: 294.w,
+                      height: 29.h,
+                      child: Text(
+                        "Workout Time: 01:38:37",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: const Color(0xff7C8396),
+                            fontSize: 14.sp,
+                            fontWeight: FontWeight.w400),
+                      ),
                     ),
                     5.verticalSpace,
                     Text(
@@ -220,7 +227,7 @@ class PracticeResult extends StatelessWidget {
                 ),
               ),
             ),
-            10.verticalSpace,
+            20.verticalSpace,
             GestureDetector(
               onTap: () {
                 context.goNamed('home', pathParameters: {"type": "kid"});

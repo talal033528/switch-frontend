@@ -269,7 +269,7 @@ class _voicecommandState extends State<voicecommand>
                         children: [
                           Column(
                             children: [
-                              10.verticalSpace,
+                              5.verticalSpace,
                               SizedBox(
                                   width: double.infinity,
                                   height: 274.h,
