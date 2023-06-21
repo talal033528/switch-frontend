@@ -236,23 +236,24 @@ class _kidshomescreenState extends State<kidshomescreen> {
                                   color: const Color(0xff5F677E)),
                             ),
                           ),
-                          Container(
-                            width: 112.w,
-                            height: 112.h,
-                            decoration: BoxDecoration(
-                              border: Border.all(
-                                  width: 5, color: const Color(0xff8FE133)),
-                              shape: BoxShape.circle,
-                            ),
-                            child: Center(
-                                child: Text(
-                              "64%",
-                              style: TextStyle(
-                                  fontSize: 27.sp,
-                                  fontWeight: FontWeight.w400,
-                                  color: const Color(0xff5F677E)),
-                            )),
-                          )
+                          Image.asset("assets/images/64.png"),
+                          // Container(
+                          //   width: 112.w,
+                          //   height: 112.h,
+                          //   decoration: BoxDecoration(
+                          //     border: Border.all(
+                          //         width: 5, color: const Color(0xff8FE133)),
+                          //     shape: BoxShape.circle,
+                          //   ),
+                          //   child: Center(
+                          //       child: Text(
+                          //     "64%",
+                          //     style: TextStyle(
+                          //         fontSize: 27.sp,
+                          //         fontWeight: FontWeight.w400,
+                          //         color: const Color(0xff5F677E)),
+                          //   )),
+                          // )
                         ],
                       ),
                     ),

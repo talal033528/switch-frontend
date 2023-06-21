@@ -186,23 +186,8 @@ class _kidshomescreenState extends State<kidshotchart> {
                           //   height: 112.h,
                           //   fit: BoxFit.contain,
                           // )
-                          Container(
-                            width: 112.w,
-                            height: 112.h,
-                            decoration: BoxDecoration(
-                              border: Border.all(
-                                  width: 10, color: Color(0xff8FE133)),
-                              shape: BoxShape.circle,
-                            ),
-                            child: Center(
-                                child: Text(
-                              "64%",
-                              style: TextStyle(
-                                  fontSize: 27.sp,
-                                  fontWeight: FontWeight.w700,
-                                  color: Color(0xff5F677E)),
-                            )),
-                          )
+                          //
+                          Image.asset("assets/images/64.png"),
                         ],
                       ),
                     ),
