@@ -77,7 +77,7 @@ final GoRouter _router = GoRouter(
     GoRoute(
       path: '/',
       builder: (BuildContext context, GoRouterState state) {
-        return const LoginScreen();
+        return const SpashScreen();
       },
     ),
     GoRoute(
@@ -258,7 +258,7 @@ final GoRouter _router = GoRouter(
                   },
                 ),
                 GoRoute(
-                  path: 'criteriaselection',
+                  path: 'CriteriaSelectionScreen',
                   builder: (BuildContext context, GoRouterState state) {
                     return const CriteriaSelectionScreen();
                   },

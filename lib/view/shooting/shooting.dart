@@ -50,7 +50,7 @@ class ShooingScreen extends StatelessWidget {
             25.verticalSpace,
             GestureDetector(
               onTap: () {
-                context.push('/home/child/shooting/criteriaselection');
+                context.push('/home/child/shooting/CriteriaSelectionScreen');
               },
               child: SizedBox(
                 width: 352.w,
@@ -116,7 +116,6 @@ class ShooingScreen extends StatelessWidget {
                 ),
               )),
             ),
-          
           ],
         ),
       ),

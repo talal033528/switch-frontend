@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:swish_basketball/widgets/button.dart';
 
 class voicecommand extends StatefulWidget {
@@ -107,11 +108,128 @@ class _voicecommandState extends State<voicecommand>
                                       ),
                                     ),
                                     15.verticalSpace,
-                                    SizedBox(
-                                        width: 393.w,
-                                        height: 90.h,
-                                        child: Image.asset(
-                                            "assets/images/rca2.png")),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
+                                        Container(
+                                          width: 210.w,
+                                          height: 90.h,
+                                          decoration: BoxDecoration(
+                                            color: Color(0xffEE7A1D),
+                                          ),
+                                          child: Center(
+                                            child: Row(
+                                              mainAxisAlignment: MainAxisAlignment
+                                                  .center, // Aligns children at the start of the row
+                                              children: [
+                                                Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.center,
+                                                  children: [
+                                                    Text(
+                                                      'Make',
+                                                      style: GoogleFonts
+                                                          .jetBrainsMono(
+                                                        color: Colors.white,
+                                                        fontSize: 18.sp,
+                                                        fontWeight:
+                                                            FontWeight.w400,
+                                                      ),
+                                                    ),
+                                                    3.verticalSpace,
+                                                    Container(
+                                                      width: 73.w,
+                                                      alignment:
+                                                          Alignment.center,
+                                                      padding:
+                                                          const EdgeInsets.all(
+                                                              3.0),
+                                                      decoration: BoxDecoration(
+                                                        color: Colors.black,
+                                                        border: Border.all(
+                                                            color: Colors.white,
+                                                            width: 2),
+                                                        borderRadius:
+                                                            BorderRadius.all(
+                                                                Radius.circular(
+                                                                    10.r)),
+                                                      ),
+                                                      child: Text(
+                                                        '01',
+                                                        style: GoogleFonts
+                                                            .jetBrainsMono(
+                                                          color: Colors.white,
+                                                          fontSize: 34.sp,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                                5.horizontalSpace,
+                                                Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.center,
+                                                  children: [
+                                                    Text(
+                                                      'Attempts',
+                                                      style: GoogleFonts
+                                                          .jetBrainsMono(
+                                                        color: Colors.white,
+                                                        fontSize: 18.sp,
+                                                        fontWeight:
+                                                            FontWeight.w400,
+                                                      ),
+                                                    ),
+                                                    3.verticalSpace,
+                                                    Container(
+                                                      alignment:
+                                                          Alignment.center,
+                                                      width: 73.w,
+                                                      padding:
+                                                          const EdgeInsets.all(
+                                                              3.0),
+                                                      decoration: BoxDecoration(
+                                                        color:
+                                                            Color(0xffEE7A1D),
+                                                        border: Border.all(
+                                                            color: Colors.white,
+                                                            width: 2),
+                                                        borderRadius:
+                                                            BorderRadius.all(
+                                                                Radius.circular(
+                                                                    10.r)),
+                                                      ),
+                                                      child: Text(
+                                                        '05',
+                                                        style: GoogleFonts
+                                                            .jetBrainsMono(
+                                                          color: Colors.white,
+                                                          fontSize: 34.sp,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                        Container(
+                                          width: 183.w,
+                                          height: 90.h,
+                                          decoration: BoxDecoration(
+                                            color: Color(0xffC2C6CE),
+                                          ),
+                                          child: Image.asset(
+                                              "assets/images/rca3.png"),
+                                        )
+                                      ],
+                                    ),
                                     15.verticalSpace,
                                     Row(
                                       mainAxisAlignment: MainAxisAlignment.end,
@@ -196,12 +314,128 @@ class _voicecommandState extends State<voicecommand>
                                         ),
                                       ),
                                     ),
-                                    20.verticalSpace,
-                                    SizedBox(
-                                        width: 393.w,
-                                        height: 90.h,
-                                        child: Image.asset(
-                                            "assets/images/rca2.png")),
+                                    15.verticalSpace,
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
+                                        Container(
+                                          width: 210.w,
+                                          height: 90.h,
+                                          decoration: BoxDecoration(
+                                            color: Color(0xffEE7A1D),
+                                          ),
+                                          child: Center(
+                                            child: Row(
+                                              mainAxisAlignment: MainAxisAlignment
+                                                  .center, // Aligns children at the start of the row
+                                              children: [
+                                                Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.center,
+                                                  children: [
+                                                    Text(
+                                                      'Make',
+                                                      style: GoogleFonts
+                                                          .jetBrainsMono(
+                                                        color: Colors.white,
+                                                        fontSize: 18.sp,
+                                                        fontWeight:
+                                                            FontWeight.w400,
+                                                      ),
+                                                    ),
+                                                    3.verticalSpace,
+                                                    Container(
+                                                      width: 73.w,
+                                                      alignment:
+                                                          Alignment.center,
+                                                      padding:
+                                                          const EdgeInsets.all(
+                                                              3.0),
+                                                      decoration: BoxDecoration(
+                                                        color: Colors.black,
+                                                        border: Border.all(
+                                                            color: Colors.white,
+                                                            width: 2),
+                                                        borderRadius:
+                                                            BorderRadius.all(
+                                                                Radius.circular(
+                                                                    10.r)),
+                                                      ),
+                                                      child: Text(
+                                                        '01',
+                                                        style: GoogleFonts
+                                                            .jetBrainsMono(
+                                                          color: Colors.white,
+                                                          fontSize: 34.sp,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                                5.horizontalSpace,
+                                                Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.center,
+                                                  children: [
+                                                    Text(
+                                                      'Attempts',
+                                                      style: GoogleFonts
+                                                          .jetBrainsMono(
+                                                        color: Colors.white,
+                                                        fontSize: 18.sp,
+                                                        fontWeight:
+                                                            FontWeight.w400,
+                                                      ),
+                                                    ),
+                                                    3.verticalSpace,
+                                                    Container(
+                                                      alignment:
+                                                          Alignment.center,
+                                                      width: 73.w,
+                                                      padding:
+                                                          const EdgeInsets.all(
+                                                              3.0),
+                                                      decoration: BoxDecoration(
+                                                        color:
+                                                            Color(0xffEE7A1D),
+                                                        border: Border.all(
+                                                            color: Colors.white,
+                                                            width: 2),
+                                                        borderRadius:
+                                                            BorderRadius.all(
+                                                                Radius.circular(
+                                                                    10.r)),
+                                                      ),
+                                                      child: Text(
+                                                        '05',
+                                                        style: GoogleFonts
+                                                            .jetBrainsMono(
+                                                          color: Colors.white,
+                                                          fontSize: 34.sp,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                        Container(
+                                          height: 90.h,
+                                          decoration: BoxDecoration(
+                                            color: Color(0xffC2C6CE),
+                                          ),
+                                          child: Image.asset(
+                                              "assets/images/rca3.png"),
+                                        )
+                                      ],
+                                    ),
                                     15.verticalSpace,
                                     Row(
                                       mainAxisAlignment: MainAxisAlignment.end,

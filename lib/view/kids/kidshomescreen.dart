@@ -45,42 +45,47 @@ class _kidshomescreenState extends State<kidshomescreen> {
           child: Column(
             children: [
               19.verticalSpace,
-              Container(
-                height: 95.h,
-                width: 350.w,
-                child: Stack(
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(
-                          color: const Color(0xff8E2B00),
-                          borderRadius:
-                              BorderRadius.all(Radius.circular(10.r))),
-                      height: 71.h,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Text(
-                            "Start Shooting",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w700,
-                                fontSize: 22.sp,
-                                color: Color(0xffFFFFFF)),
-                          ),
-                          35.horizontalSpace,
-                          Icon(
-                            LucideIcons.arrowRightCircle,
-                            size: 26.w,
-                            color: Color(0xffEE7A1D),
-                          ),
-                          21.horizontalSpace,
-                        ],
+              GestureDetector(
+                onTap: () {
+                  context.push('/home/child/shooting');
+                },
+                child: Container(
+                  height: 95.h,
+                  width: 350.w,
+                  child: Stack(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                            color: const Color(0xff8E2B00),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10.r))),
+                        height: 71.h,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Text(
+                              "Start Shooting",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 22.sp,
+                                  color: Color(0xffFFFFFF)),
+                            ),
+                            35.horizontalSpace,
+                            Icon(
+                              LucideIcons.arrowRightCircle,
+                              size: 26.w,
+                              color: Color(0xffEE7A1D),
+                            ),
+                            21.horizontalSpace,
+                          ],
+                        ),
                       ),
-                    ),
-                    Positioned(
-                        left: 15,
-                        top: 20,
-                        child: Image.asset("assets/images/basketball.png")),
-                  ],
+                      Positioned(
+                          left: 15,
+                          top: 20,
+                          child: Image.asset("assets/images/basketball.png")),
+                    ],
+                  ),
                 ),
               )
               // Container(
