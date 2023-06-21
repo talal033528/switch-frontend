@@ -22,17 +22,22 @@ class _shotschartState extends State<shotschart> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Color(0xffEE7A1D),
-        leading: Icon(
-          LucideIcons.arrowLeft,
-          color: Color(0xffFFFFFF),
+        backgroundColor: const Color(0xffEE7A1D),
+        leading: GestureDetector(
+          onTap: () {
+            context.pop();
+          },
+          child: const Icon(
+            LucideIcons.arrowLeft,
+            color: Color(0xffFFFFFF),
+          ),
         ),
         title: Text(
           "Shots Charts",
           style: TextStyle(
               fontSize: 18.sp,
               fontWeight: FontWeight.w700,
-              color: Color(0xffFFFFFF)),
+              color: const Color(0xffFFFFFF)),
         ),
       ),
       body: SizedBox(
@@ -45,14 +50,14 @@ class _shotschartState extends State<shotschart> {
                 style: TextStyle(
                     fontSize: 14.sp,
                     fontWeight: FontWeight.w400,
-                    color: Color(0xff7C8396)),
+                    color: const Color(0xff7C8396)),
               ),
               subtitle: Text(
                 "below dropdown list.",
                 style: TextStyle(
                     fontSize: 14.sp,
                     fontWeight: FontWeight.w400,
-                    color: Color(0xff7C8396)),
+                    color: const Color(0xff7C8396)),
               ),
             ),
             10.verticalSpace,
@@ -145,7 +150,7 @@ class _shotschartState extends State<shotschart> {
                       ],
                     ),
                     10.verticalSpace,
-                    Divider(
+                    const Divider(
                       thickness: 1,
                       color: Color(0xffB4B8C3),
                     ),
@@ -165,7 +170,7 @@ class _shotschartState extends State<shotschart> {
               child: SizedBox(
                 width: 350.w,
                 height: 45.h,
-                child: GlobalButton(
+                child: const GlobalButton(
                     text: "Return to Dashboard", color: Color(0xff040A1C)),
               ),
             ),

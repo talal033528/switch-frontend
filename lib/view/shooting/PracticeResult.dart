@@ -65,7 +65,7 @@ class PracticeResult extends StatelessWidget {
                   ),
                   Center(
                     child: SizedBox(
-                      width: 181.w,
+                      width: 190.w,
                       height: 106.h,
                       child: GreyBG(
                           child: Column(
@@ -137,22 +137,23 @@ class PracticeResult extends StatelessWidget {
                       width: 98.w,
                       height: 98.h,
                       decoration: BoxDecoration(
+                          color: Colors.white,
                           shape: BoxShape.circle,
-                          border:
-                              Border.all(width: 2, color: Color(0xff57891F))),
+                          border: Border.all(
+                              width: 2, color: const Color(0xff57891F))),
                       child: Center(
                         child: Text(
                           "43",
                           style: TextStyle(
                               fontSize: 43.sp,
                               fontWeight: FontWeight.w400,
-                              color: Color(0xff57891F)),
+                              color: const Color(0xff57891F)),
                         ),
                       ),
                     ),
                     5.verticalSpace,
                     Text(
-                      "Congratulation!.",
+                      "Congratulation!",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           color: const Color(0xff273251),
@@ -168,7 +169,7 @@ class PracticeResult extends StatelessWidget {
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               color: const Color(0xff7C8396),
-                              fontSize: 27.sp,
+                              fontSize: 18.sp,
                               fontWeight: FontWeight.w400),
                         ),
                         Text(
@@ -176,7 +177,7 @@ class PracticeResult extends StatelessWidget {
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               color: const Color(0xffFF4A31),
-                              fontSize: 27.sp,
+                              fontSize: 18.sp,
                               fontWeight: FontWeight.w400),
                         ),
                         Text(
@@ -184,7 +185,7 @@ class PracticeResult extends StatelessWidget {
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               color: const Color(0xff7C8396),
-                              fontSize: 27.sp,
+                              fontSize: 18.sp,
                               fontWeight: FontWeight.w400),
                         ),
                       ],
@@ -197,7 +198,7 @@ class PracticeResult extends StatelessWidget {
                       child: SizedBox(
                         width: 274.w,
                         child: const GlobalButton(
-                          text: 'Set your Goals!',
+                          text: 'View My Shot Charts',
                           color: Color(0xff5F677E),
                         ),
                       ),
@@ -222,7 +223,9 @@ class PracticeResult extends StatelessWidget {
             10.verticalSpace,
             GestureDetector(
               onTap: () {
-                context.push('/home/shooting/ChildHomeScreen');
+                context.goNamed('home', pathParameters: {"type": "kid"});
+
+                // context.push('/home/shooting/ChildHomeScreen');
               },
               child: SizedBox(
                 width: 351.w,
