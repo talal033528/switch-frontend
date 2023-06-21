@@ -58,7 +58,7 @@ class _ThrowAndSpotSelectionScreenState
         width: double.infinity,
         child: Stack(
           children: [
-            Image.asset('assets/images/Group 504.png'),
+            Image.asset('assets/images/adlutcoat.png'),
             Align(
               alignment: Alignment.bottomCenter,
               child: Container(
@@ -253,7 +253,7 @@ class _ThrowAndSpotSelectionScreenState
                     19.verticalSpace,
                     GestureDetector(
                       onTap: () {
-                        context.push('/home/child/shooting/matchresult');
+                        context.push('/home/shooting/PracticeResult');
                       },
                       child: SizedBox(
                         width: 333.w,

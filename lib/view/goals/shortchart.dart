@@ -236,6 +236,16 @@ class _shortchartState extends State<shortchart> {
                         ],
                       ),
                       10.verticalSpace,
+                      //  Image.asset(_switchValue
+                      //     ? "assets/images/homecoat.png"
+                      //     : "assets/images/122.png"),
+                      SizedBox(
+                          width: 363.w,
+                          child: Divider(
+                            thickness: 1,
+                            color: Color(0xffECEDEF),
+                          )),
+                      15.verticalSpace,
                       Container(
                         width: 298.77.w,
                         height: 219.66.h,

@@ -9,6 +9,7 @@ class CriteriaSelectionScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    String selectedValue = "";
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -105,9 +106,7 @@ class CriteriaSelectionScreen extends StatelessWidget {
                   ],
                   selectedValue: 'Select Method',
                   onChanged: (newValue) {
-                    // setState(() {
-                    //   selectedValue = newValue;
-                    // });
+                    selectedValue = newValue;
                   },
                 ),
               ),
@@ -116,7 +115,16 @@ class CriteriaSelectionScreen extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  context.push('/home/child/shooting/throwandspot');
+                  print(selectedValue);
+                  if (selectedValue == "Bulk Entry") {
+                    context.push('/home/child/shooting/throwandspot');
+                  }
+                  if (selectedValue == "Single Shot Entry") {
+                    context.push('/home/child/shooting/singleshot');
+                  }
+                  if (selectedValue == "Voice Command") {
+                    context.push('/home/child/shooting/voicecommand');
+                  }
                 },
                 child: SizedBox(
                   width: 333.w,

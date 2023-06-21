@@ -17,6 +17,7 @@ import 'package:swish_basketball/view/goals/freethrow.dart';
 import 'package:swish_basketball/view/goals/setmygoals.dart';
 import 'package:swish_basketball/view/goals/shortatempts.dart';
 import 'package:swish_basketball/view/goals/shortchart.dart';
+import 'package:swish_basketball/view/goals/shotschart.dart';
 import 'package:swish_basketball/view/goals/workout.dart';
 import 'package:swish_basketball/view/home/childhomescreen.dart';
 import 'package:swish_basketball/view/home/parenthomescreen.dart';
@@ -31,9 +32,12 @@ import 'package:swish_basketball/view/paymentmethod/inviteuser.dart';
 import 'package:swish_basketball/view/paymentmethod/paymentmethod.dart';
 
 import 'package:swish_basketball/view/setting/account.dart';
+import 'package:swish_basketball/view/shooting/PracticeResult.dart';
 import 'package:swish_basketball/view/shooting/matchresult.dart';
 import 'package:swish_basketball/view/shooting/shooting.dart';
+import 'package:swish_basketball/view/shooting/singleshot.dart';
 import 'package:swish_basketball/view/shooting/throwandselection.dart';
+import 'package:swish_basketball/view/shooting/voicecommand.dart';
 import 'package:swish_basketball/view/video/swichvideolibrary.dart';
 import 'package:swish_basketball/view/video/videolibrary.dart';
 
@@ -73,7 +77,7 @@ final GoRouter _router = GoRouter(
     GoRoute(
       path: '/',
       builder: (BuildContext context, GoRouterState state) {
-        return const SpashScreen();
+        return const LoginScreen();
       },
     ),
     GoRoute(
@@ -104,6 +108,24 @@ final GoRouter _router = GoRouter(
             },
           ),
           GoRoute(
+            path: 'shotschart',
+            builder: (BuildContext context, GoRouterState state) {
+              return const shotschart();
+            },
+          ),
+          GoRoute(
+            path: 'CriteriaSelectionScreen',
+            builder: (BuildContext context, GoRouterState state) {
+              return const CriteriaSelectionScreen();
+            },
+          ),
+          GoRoute(
+            path: 'voicecommand',
+            builder: (BuildContext context, GoRouterState state) {
+              return const voicecommand();
+            },
+          ),
+          GoRoute(
             path: 'kidshomescreen',
             builder: (BuildContext context, GoRouterState state) {
               return const kidshomescreen();
@@ -119,6 +141,12 @@ final GoRouter _router = GoRouter(
             path: 'VideoLibraryView',
             builder: (BuildContext context, GoRouterState state) {
               return const VideoLibraryView();
+            },
+          ),
+          GoRoute(
+            path: 'PracticeResult',
+            builder: (BuildContext context, GoRouterState state) {
+              return const PracticeResult();
             },
           ),
           GoRoute(
@@ -217,6 +245,18 @@ final GoRouter _router = GoRouter(
                 return const ShooingScreen();
               },
               routes: [
+                GoRoute(
+                  path: 'singleshot',
+                  builder: (BuildContext context, GoRouterState state) {
+                    return const singleshot();
+                  },
+                ),
+                GoRoute(
+                  path: 'voicecommand',
+                  builder: (BuildContext context, GoRouterState state) {
+                    return const voicecommand();
+                  },
+                ),
                 GoRoute(
                   path: 'criteriaselection',
                   builder: (BuildContext context, GoRouterState state) {
@@ -367,6 +407,12 @@ final GoRouter _router = GoRouter(
           path: 'daveottrando',
           builder: (BuildContext context, GoRouterState state) {
             return const daveottrando();
+          },
+        ),
+        GoRoute(
+          path: 'PracticeResult',
+          builder: (BuildContext context, GoRouterState state) {
+            return const PracticeResult();
           },
         ),
       ],
