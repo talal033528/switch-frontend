@@ -60,7 +60,11 @@ class _kidshomescreenState extends State<kidshotchart> {
         actions: [
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Icon(LucideIcons.bellRing, color: Color(0xffFFFFFF)),
+            child: GestureDetector(
+                onTap: () {
+                  context.push('/home/child/noitification');
+                },
+                child: Icon(LucideIcons.bellRing, color: Color(0xffFFFFFF))),
           ),
         ],
       ),

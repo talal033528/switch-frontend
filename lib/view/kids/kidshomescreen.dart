@@ -31,10 +31,14 @@ class _kidshomescreenState extends State<kidshomescreen> {
               fontSize: 18.sp,
               color: const Color(0xffFFFFFF)),
         ),
-        actions: const [
+        actions: [
           Padding(
             padding: EdgeInsets.all(8.0),
-            child: Icon(LucideIcons.bellRing, color: Color(0xffFFFFFF)),
+            child: GestureDetector(
+                onTap: () {
+                  context.push('/home/child/noitification');
+                },
+                child: Icon(LucideIcons.bellRing, color: Color(0xffFFFFFF))),
           ),
         ],
       ),

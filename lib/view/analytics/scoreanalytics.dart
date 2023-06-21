@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+import 'package:lucide_icons/lucide_icons.dart';
 import 'package:swish_basketball/widgets/button.dart';
 import 'package:swish_basketball/widgets/dropdown.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
@@ -44,6 +46,15 @@ class _ScoreAnalyticsState extends State<ScoreAnalytics> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.white,
+        leading: GestureDetector(
+          onTap: () {
+            context.pop();
+          },
+          child: Icon(
+            LucideIcons.arrowLeft,
+            color: Color(0xffEE7A1D),
+          ),
+        ),
         title: Text(
           "Score Analytics",
           style: TextStyle(color: const Color(0xffEE7A1D), fontSize: 21.sp),
