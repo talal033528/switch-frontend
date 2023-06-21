@@ -19,7 +19,7 @@ class CriteriaSelectionScreen extends StatelessWidget {
             },
             child: const Icon(Icons.arrow_back_ios, color: Color(0xffFFFFFF))),
         elevation: 0,
-        backgroundColor: Color(0xffEE7A1D),
+        backgroundColor: const Color(0xffEE7A1D),
         centerTitle: true,
         title: Text(
           "SWISH - Smart Hoops, Smart Result",
@@ -44,13 +44,13 @@ class CriteriaSelectionScreen extends StatelessWidget {
                     FractionalTranslation(
                         translation: const Offset(0.0, 0.05),
                         child: Image.asset(
-                          'assets/images/player1.png',
+                          'assets/images/Group 352.png',
                         ))
                   ],
                 ),
               ),
               SizedBox(
-                height: 40.h,
+                height: 50.h,
               ),
               SizedBox(
                   width: 333.w,

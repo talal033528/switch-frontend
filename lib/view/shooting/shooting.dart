@@ -19,7 +19,7 @@ class ShooingScreen extends StatelessWidget {
             },
             child: const Icon(LucideIcons.arrowLeft, color: Color(0xffFFFFFF))),
         elevation: 0,
-        backgroundColor: Color(0xffEE7A1D),
+        backgroundColor: const Color(0xffEE7A1D),
         centerTitle: true,
         title: Text(
           "SWISH - Smart Hoops, Smart Result",
