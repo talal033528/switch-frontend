@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lucide_icons/lucide_icons.dart';
 import 'package:swish_basketball/widgets/authtextfield.dart';
 import 'package:swish_basketball/widgets/button.dart';
 import 'package:swish_basketball/widgets/dropdown.dart';
@@ -17,6 +18,7 @@ class ThrowAndSpotSelectionScreen extends StatefulWidget {
 class _ThrowAndSpotSelectionScreenState
     extends State<ThrowAndSpotSelectionScreen> with TickerProviderStateMixin {
   int _selectedIndex = 0;
+  bool _switchValue = false;
 
   final List<Widget> _tabs = [
     const Tab(
@@ -44,13 +46,13 @@ class _ThrowAndSpotSelectionScreenState
             onTap: () {
               context.pop();
             },
-            child: const Icon(Icons.arrow_back_ios, color: Color(0xffEE7A1D))),
+            child: const Icon(LucideIcons.arrowLeft, color: Color(0xffFFFFFF))),
         elevation: 0,
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xffEE7A1D),
         centerTitle: true,
         title: Text(
           "Bulk Entry > Free Throw",
-          style: TextStyle(color: const Color(0xffEE7A1D), fontSize: 14.sp),
+          style: TextStyle(color: const Color(0xffFFFFFF), fontSize: 14.sp),
         ),
       ),
       body: SizedBox(
@@ -58,7 +60,21 @@ class _ThrowAndSpotSelectionScreenState
         width: double.infinity,
         child: Stack(
           children: [
-            Image.asset('assets/images/adlutcoat.png'),
+            // _switchValue
+            //     ? Image.asset(
+            //         "assets/images/adlut1.png",
+            //         width: 336.w,
+            //         height: 247.h,
+            //         fit: BoxFit.contain,
+            //       )
+
+            //     :
+            Image.asset(
+              'assets/images/adlutcoat.png',
+              width: 500.w,
+              height: 247.h,
+              fit: BoxFit.contain,
+            ),
             Align(
               alignment: Alignment.bottomCenter,
               child: Container(
@@ -147,7 +163,7 @@ class _ThrowAndSpotSelectionScreenState
                                   child: SizedBox(
                                     width: 120.w,
                                     child: const GlobalButton(
-                                      text: 'Start',
+                                      text: 'Submit',
                                       color: Color(0xffEE7A1D),
                                     ),
                                   ),
@@ -167,13 +183,15 @@ class _ThrowAndSpotSelectionScreenState
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceEvenly,
                                     children: [
-                                      Text(
-                                        "Shot\n#",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 20.sp),
-                                      ),
+                                      // Text(
+                                      //   "Shot\n#",
+                                      //   style: TextStyle(
+                                      //       color: Colors.white,
+                                      //       fontSize: 20.sp),
+                                      // ),
                                       Container(
+                                        width: 73.w,
+                                        alignment: Alignment.center,
                                         padding: const EdgeInsets.all(3.0),
                                         decoration: BoxDecoration(
                                           color: Colors.black,
@@ -190,6 +208,8 @@ class _ThrowAndSpotSelectionScreenState
                                         ),
                                       ),
                                       Container(
+                                        alignment: Alignment.center,
+                                        width: 73.w,
                                         padding: const EdgeInsets.all(3.0),
                                         decoration: BoxDecoration(
                                           border: Border.all(
@@ -212,18 +232,20 @@ class _ThrowAndSpotSelectionScreenState
                                       const EdgeInsets.only(top: 3, bottom: 5),
                                   child: Container(
                                     width: 183.w,
-                                    color: Colors.black,
+                                    color: Color(0xffEE7A1D),
                                     child: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
                                       children: [
-                                        Text(
-                                          "Score\n%",
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 20.sp),
-                                        ),
+                                        // Text(
+                                        //   "Score\n%",
+                                        //   style: TextStyle(
+                                        //       color: Colors.white,
+                                        //       fontSize: 20.sp),
+                                        // ),
                                         Container(
+                                          width: 152.w,
+                                          alignment: Alignment.center,
                                           margin: const EdgeInsets.all(15.0),
                                           padding: const EdgeInsets.all(3.0),
                                           decoration: BoxDecoration(

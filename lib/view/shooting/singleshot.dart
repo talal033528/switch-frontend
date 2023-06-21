@@ -17,13 +17,13 @@ class singleshot extends StatelessWidget {
             onTap: () {
               context.pop();
             },
-            child: const Icon(Icons.arrow_back_ios, color: Color(0xffEE7A1D))),
+            child: const Icon(LucideIcons.arrowLeft, color: Color(0xffFFFFFF))),
         elevation: 0,
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xffEE7A1D),
         centerTitle: true,
         title: Text(
           "Single Shot Entry",
-          style: TextStyle(color: const Color(0xffEE7A1D), fontSize: 14.sp),
+          style: TextStyle(color: const Color(0xffFFFFFF), fontSize: 14.sp),
         ),
       ),
       body: SizedBox(
@@ -31,7 +31,7 @@ class singleshot extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(
-                width: 373.w,
+                width: 375.w,
                 height: 274.h,
                 child: Image.asset(
                   "assets/images/adlutcoat.png",
@@ -101,6 +101,8 @@ class singleshot extends StatelessWidget {
                         //       TextStyle(color: Colors.white, fontSize: 20.sp),
                         // ),
                         Container(
+                          width: 73.w,
+                          alignment: Alignment.center,
                           padding: const EdgeInsets.all(3.0),
                           decoration: BoxDecoration(
                             color: Colors.black,
@@ -115,6 +117,8 @@ class singleshot extends StatelessWidget {
                           ),
                         ),
                         Container(
+                          width: 73.w,
+                          alignment: Alignment.center,
                           padding: const EdgeInsets.all(3.0),
                           decoration: BoxDecoration(
                             border: Border.all(color: Colors.white, width: 2),
@@ -134,7 +138,7 @@ class singleshot extends StatelessWidget {
                     padding: const EdgeInsets.only(top: 3, bottom: 5),
                     child: Container(
                       width: 183.w,
-                      color: Colors.black,
+                      color: Color(0xffEE7A1D),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -144,6 +148,8 @@ class singleshot extends StatelessWidget {
                           //       TextStyle(color: Colors.white, fontSize: 20.sp),
                           // ),
                           Container(
+                            width: 152.w,
+                            alignment: Alignment.center,
                             margin: const EdgeInsets.all(15.0),
                             padding: const EdgeInsets.all(3.0),
                             decoration: BoxDecoration(

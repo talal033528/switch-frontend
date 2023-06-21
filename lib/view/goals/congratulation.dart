@@ -29,7 +29,7 @@ class congratulationscreen extends StatelessWidget {
               height: 264.h,
               child: Image.asset("assets/images/Congratulations.png"),
             ),
-            25.verticalSpace,
+            36.verticalSpace,
             GestureDetector(
               onTap: () {
                 context.push('/home/child/ChildHomeScreen');

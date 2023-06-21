@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+import 'package:lucide_icons/lucide_icons.dart';
 import 'package:swish_basketball/widgets/authtextfield.dart';
 import 'package:swish_basketball/widgets/skillscard.dart';
 
@@ -111,7 +112,7 @@ class _RegisterScreenState extends State<RegisterScreen>
                           ),
                           25.verticalSpace,
                           const AuthTextField(
-                            hinttext: 'Type Full Name',
+                            hinttext: 'stevenottrando@gmail.com',
                             headertext: 'E-mail Address',
                             obsecure: false,
                             showsuffixicon: false,
@@ -119,7 +120,7 @@ class _RegisterScreenState extends State<RegisterScreen>
                           ),
                           25.verticalSpace,
                           const AuthTextField(
-                            hinttext: 'Type Full Name',
+                            hinttext: '+1 (457) 000 0000',
                             headertext: 'Mobile Number',
                             obsecure: false,
                             showsuffixicon: false,
@@ -127,11 +128,11 @@ class _RegisterScreenState extends State<RegisterScreen>
                           ),
                           25.verticalSpace,
                           const AuthTextField(
-                            hinttext: '*************',
-                            headertext: 'Password',
-                            obsecure: true,
-                            showsuffixicon: false,
-                            suffixicon: SizedBox(),
+                            hinttext: '***************',
+                            headertext: "Set your child's password",
+                            obsecure: false,
+                            showsuffixicon: true,
+                            suffixicon: Icons.visibility_off,
                           ),
                         ],
                       )
@@ -158,7 +159,7 @@ class _RegisterScreenState extends State<RegisterScreen>
                             headertext: 'Select Basketball Court',
                             obsecure: false,
                             showsuffixicon: true,
-                            suffixicon: Icons.calendar_month,
+                            suffixicon: Icons.arrow_drop_down,
                           ),
                           25.verticalSpace,
                           Column(
@@ -224,13 +225,12 @@ class _RegisterScreenState extends State<RegisterScreen>
                     context.go('/register/payment');
                   },
                   child: Align(
-                    alignment: Alignment.centerRight,
-                    child: Icon(
-                      Icons.check,
-                      color: const Color(0xffEE7A1D),
-                      size: 42.w,
-                    ),
-                  ),
+                      alignment: Alignment.centerRight,
+                      child: Icon(
+                        LucideIcons.arrowRight,
+                        size: 36,
+                        color: Color(0xffEE7A1D),
+                      )),
                 ),
               ),
               5.verticalSpace,

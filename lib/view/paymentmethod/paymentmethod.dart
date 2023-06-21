@@ -164,7 +164,7 @@ class _paymentmethodState extends State<paymentmethod> {
                           width: 76.w,
                           child: const AuthTextField(
                             hinttext: '245',
-                            headertext: 'CVV',
+                            headertext: 'CVV code',
                             obsecure: false,
                             showsuffixicon: false,
                             suffixicon: SizedBox(),

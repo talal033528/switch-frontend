@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lucide_icons/lucide_icons.dart';
 import 'package:swish_basketball/widgets/button.dart';
 
 class voicecommand extends StatefulWidget {
@@ -41,13 +42,13 @@ class _voicecommandState extends State<voicecommand>
                 context.pop();
               },
               child:
-                  const Icon(Icons.arrow_back_ios, color: Color(0xffEE7A1D))),
+                  const Icon(LucideIcons.arrowLeft, color: Color(0xffFFFFFF))),
           elevation: 0,
-          backgroundColor: Colors.white,
+          backgroundColor: Color(0xffEE7A1D),
           centerTitle: true,
           title: Text(
             "Voice Command > Free Throw",
-            style: TextStyle(color: const Color(0xffEE7A1D), fontSize: 14.sp),
+            style: TextStyle(color: const Color(0xffFFFFFF), fontSize: 14.sp),
           ),
         ),
         body: SizedBox(
@@ -127,7 +128,7 @@ class _voicecommandState extends State<voicecommand>
                                                   mainAxisAlignment:
                                                       MainAxisAlignment.center,
                                                   crossAxisAlignment:
-                                                      CrossAxisAlignment.center,
+                                                      CrossAxisAlignment.start,
                                                   children: [
                                                     Text(
                                                       'Make',
@@ -173,7 +174,7 @@ class _voicecommandState extends State<voicecommand>
                                                   mainAxisAlignment:
                                                       MainAxisAlignment.center,
                                                   crossAxisAlignment:
-                                                      CrossAxisAlignment.center,
+                                                      CrossAxisAlignment.start,
                                                   children: [
                                                     Text(
                                                       'Attempts',
@@ -268,6 +269,7 @@ class _voicecommandState extends State<voicecommand>
                         children: [
                           Column(
                             children: [
+                              10.verticalSpace,
                               SizedBox(
                                   width: double.infinity,
                                   height: 274.h,
@@ -334,7 +336,7 @@ class _voicecommandState extends State<voicecommand>
                                                   mainAxisAlignment:
                                                       MainAxisAlignment.center,
                                                   crossAxisAlignment:
-                                                      CrossAxisAlignment.center,
+                                                      CrossAxisAlignment.start,
                                                   children: [
                                                     Text(
                                                       'Make',
@@ -380,7 +382,7 @@ class _voicecommandState extends State<voicecommand>
                                                   mainAxisAlignment:
                                                       MainAxisAlignment.center,
                                                   crossAxisAlignment:
-                                                      CrossAxisAlignment.center,
+                                                      CrossAxisAlignment.start,
                                                   children: [
                                                     Text(
                                                       'Attempts',

@@ -300,7 +300,7 @@ class HomeScreen extends StatelessWidget {
                       elevation: 2,
                       shape: RoundedRectangleBorder(
                         side: const BorderSide(
-                            color: Color(0xffFFBDB5), width: 2),
+                            color: Color(0xffB4B8C3), width: 2),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Container(
@@ -361,7 +361,7 @@ class HomeScreen extends StatelessWidget {
                         elevation: 2,
                         shape: RoundedRectangleBorder(
                           side: const BorderSide(
-                              color: Color(0xffFFBDB5), width: 2),
+                              color: Color(0xffB4B8C3), width: 2),
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Container(

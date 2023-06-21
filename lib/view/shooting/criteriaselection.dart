@@ -17,13 +17,13 @@ class CriteriaSelectionScreen extends StatelessWidget {
             onTap: () {
               context.pop();
             },
-            child: const Icon(Icons.arrow_back_ios, color: Color(0xffEE7A1D))),
+            child: const Icon(Icons.arrow_back_ios, color: Color(0xffFFFFFF))),
         elevation: 0,
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xffEE7A1D),
         centerTitle: true,
         title: Text(
           "SWISH - Smart Hoops, Smart Result",
-          style: TextStyle(color: const Color(0xffEE7A1D), fontSize: 14.sp),
+          style: TextStyle(color: const Color(0xffFFFFFF), fontSize: 14.sp),
         ),
       ),
       body: SingleChildScrollView(
@@ -32,19 +32,19 @@ class CriteriaSelectionScreen extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(
-                height: 300.h,
+                height: 350.h,
                 child: Stack(
-                  alignment: Alignment.centerRight,
+                  alignment: Alignment.topCenter,
                   children: [
                     Container(
-                      height: 287.h,
+                      height: 296.h,
                       width: double.infinity,
-                      decoration: const BoxDecoration(color: Color(0xffFFBDB5)),
+                      decoration: const BoxDecoration(color: Color(0xff000000)),
                     ),
                     FractionalTranslation(
                         translation: const Offset(0.0, 0.05),
                         child: Image.asset(
-                          'assets/images/BASKETBALL_PLAYER-1.png',
+                          'assets/images/player1.png',
                         ))
                   ],
                 ),
