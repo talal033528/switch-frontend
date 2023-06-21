@@ -220,7 +220,7 @@ class _voicecommandState extends State<voicecommand>
                                           ),
                                         ),
                                         Container(
-                                          width: 183.w,
+                                          width: 179.w,
                                           height: 90.h,
                                           decoration: BoxDecoration(
                                             color: Color(0xffC2C6CE),
@@ -428,6 +428,7 @@ class _voicecommandState extends State<voicecommand>
                                         ),
                                         Container(
                                           height: 90.h,
+                                          width: 179.w,
                                           decoration: BoxDecoration(
                                             color: Color(0xffC2C6CE),
                                           ),
