@@ -69,11 +69,14 @@ class _ThrowAndSpotSelectionScreenState
             //       )
 
             //     :
-            Image.asset(
-              'assets/images/adlutcoat.png',
-              width: 500.w,
-              height: 247.h,
-              fit: BoxFit.contain,
+            10.verticalSpace,
+            SizedBox(
+              width: 406.w,
+              height: 274.h,
+              child: Image.asset(
+                'assets/images/adlutcoat.png',
+                fit: BoxFit.contain,
+              ),
             ),
             Align(
               alignment: Alignment.bottomCenter,
@@ -92,7 +95,7 @@ class _ThrowAndSpotSelectionScreenState
                             width: 333.w,
                             decoration: BoxDecoration(
                               color: const Color(0xffECEDEF),
-                              borderRadius: BorderRadius.circular(20.0),
+                              borderRadius: BorderRadius.circular(100),
                             ),
                             child: TabBar(
                               controller: _controller,
@@ -104,7 +107,7 @@ class _ThrowAndSpotSelectionScreenState
                               },
                               indicator: BoxDecoration(
                                 color: const Color(0xffEE7A1D),
-                                borderRadius: BorderRadius.circular(20.0),
+                                borderRadius: BorderRadius.circular(100),
                               ),
                               indicatorColor: Colors.blueGrey,
                               unselectedLabelColor: const Color(0xffEE7A1D),

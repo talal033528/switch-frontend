@@ -135,19 +135,19 @@ class HomeScreen extends StatelessWidget {
                 child: Card(
                   elevation: 2,
                   shape: RoundedRectangleBorder(
-                    side: const BorderSide(color: Color(0xffFFBDB5), width: 2),
+                    side: const BorderSide(color: Color(0xffFFBDB5), width: 1),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      gradient: const LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
+                      gradient: LinearGradient(
+                        begin: Alignment(0.00, -1.00),
+                        end: Alignment(0, 1),
                         colors: [
-                          Color(0xFFFFFFFF),
-                          Color(0xFFD7D7D7),
-                          Color(0xFFFFFFFF),
+                          Color(0x75F9F9F9),
+                          Color(0xAAD2D2D2),
+                          Colors.white.withOpacity(0.5)
                         ],
                       ),
                     ),
@@ -182,19 +182,19 @@ class HomeScreen extends StatelessWidget {
                         elevation: 2,
                         shape: RoundedRectangleBorder(
                           side: const BorderSide(
-                              color: Color(0xffFFBDB5), width: 2),
+                              color: Color(0xffFFBDB5), width: 1),
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            gradient: const LinearGradient(
-                              begin: Alignment.topCenter,
-                              end: Alignment.bottomCenter,
+                            gradient: LinearGradient(
+                              begin: Alignment(0.00, -1.00),
+                              end: Alignment(0, 1),
                               colors: [
-                                Color(0xFFFAFAFA),
-                                Color(0xFFD2D2D2),
-                                Color(0xFFFFFFFF),
+                                Color(0x75F9F9F9),
+                                Color(0xAAD2D2D2),
+                                Colors.white.withOpacity(0.5)
                               ],
                             ),
                           ),
@@ -233,19 +233,19 @@ class HomeScreen extends StatelessWidget {
                           elevation: 2,
                           shape: RoundedRectangleBorder(
                             side: const BorderSide(
-                                color: Color(0xffFFBDB5), width: 2),
+                                color: Color(0xffFFBDB5), width: 1),
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Container(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              gradient: const LinearGradient(
-                                begin: Alignment.topCenter,
-                                end: Alignment.bottomCenter,
+                              gradient: LinearGradient(
+                                begin: Alignment(0.00, -1.00),
+                                end: Alignment(0, 1),
                                 colors: [
-                                  Color(0xFFFAFAFA),
-                                  Color(0xFFD2D2D2),
-                                  Color(0xFFFFFFFF),
+                                  Color(0x75F9F9F9),
+                                  Color(0xAAD2D2D2),
+                                  Colors.white.withOpacity(0.5)
                                 ],
                               ),
                             ),
@@ -300,19 +300,19 @@ class HomeScreen extends StatelessWidget {
                       elevation: 2,
                       shape: RoundedRectangleBorder(
                         side: const BorderSide(
-                            color: Color(0xffB4B8C3), width: 2),
+                            color: Color(0xffB4B8C3), width: 1),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          gradient: const LinearGradient(
-                            begin: Alignment.topCenter,
-                            end: Alignment.bottomCenter,
+                          gradient: LinearGradient(
+                            begin: Alignment(0.00, -1.00),
+                            end: Alignment(0, 1),
                             colors: [
-                              Color(0xFFFAFAFA),
-                              Color(0xFFD2D2D2),
-                              Color(0xFFFFFFFF),
+                              Color(0x75F9F9F9),
+                              Color(0xAAD2D2D2),
+                              Colors.white.withOpacity(0.5)
                             ],
                           ),
                         ),
@@ -361,19 +361,27 @@ class HomeScreen extends StatelessWidget {
                         elevation: 2,
                         shape: RoundedRectangleBorder(
                           side: const BorderSide(
-                              color: Color(0xffB4B8C3), width: 2),
+                              color: Color(0xffB4B8C3), width: 1),
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            gradient: const LinearGradient(
-                              begin: Alignment.topCenter,
-                              end: Alignment.bottomCenter,
+                            // boxShadow: [
+                            //   BoxShadow(
+                            //     color: Color(0x3F316AFF),
+                            //     blurRadius: 3,
+                            //     offset: Offset(0, 0),
+                            //     spreadRadius: 0,
+                            //   )
+                            // ],
+                            gradient: LinearGradient(
+                              begin: Alignment(0.00, -1.00),
+                              end: Alignment(0, 1),
                               colors: [
-                                Color(0xFFFAFAFA),
-                                Color(0xFFD2D2D2),
-                                Color(0xFFFFFFFF),
+                                Color(0x75F9F9F9),
+                                Color(0xAAD2D2D2),
+                                Colors.white.withOpacity(0.5)
                               ],
                             ),
                           ),

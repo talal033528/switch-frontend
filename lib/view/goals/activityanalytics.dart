@@ -257,7 +257,7 @@ class _activityanalyticState extends State<activityanalytic>
                             width: 333.w,
                             decoration: BoxDecoration(
                               color: const Color(0xffECEDEF),
-                              borderRadius: BorderRadius.circular(20.0),
+                              borderRadius: BorderRadius.circular(100),
                             ),
                             child: TabBar(
                               controller: _controller,
@@ -269,7 +269,7 @@ class _activityanalyticState extends State<activityanalytic>
                               },
                               indicator: BoxDecoration(
                                 color: const Color(0xffEE7A1D),
-                                borderRadius: BorderRadius.circular(20.0),
+                                borderRadius: BorderRadius.circular(100),
                               ),
                               indicatorColor: Colors.blueGrey,
                               unselectedLabelColor: const Color(0xffEE7A1D),
@@ -897,7 +897,7 @@ class _activityanalyticState extends State<activityanalytic>
                             width: 333.w,
                             decoration: BoxDecoration(
                               color: const Color(0xffECEDEF),
-                              borderRadius: BorderRadius.circular(20.0),
+                              borderRadius: BorderRadius.circular(100),
                             ),
                             child: TabBar(
                               controller: _controller,
@@ -909,7 +909,7 @@ class _activityanalyticState extends State<activityanalytic>
                               },
                               indicator: BoxDecoration(
                                 color: const Color(0xffEE7A1D),
-                                borderRadius: BorderRadius.circular(20.0),
+                                borderRadius: BorderRadius.circular(100),
                               ),
                               indicatorColor: Colors.blueGrey,
                               unselectedLabelColor: const Color(0xffEE7A1D),

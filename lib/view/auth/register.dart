@@ -15,6 +15,7 @@ class RegisterScreen extends StatefulWidget {
 class _RegisterScreenState extends State<RegisterScreen>
     with TickerProviderStateMixin {
   int _selectedIndex = 0;
+  bool color = true;
 
   final List<Widget> _tabs = [
     const Tab(
@@ -78,7 +79,7 @@ class _RegisterScreenState extends State<RegisterScreen>
                 width: 333.w,
                 decoration: BoxDecoration(
                   color: const Color(0xffECEDEF),
-                  borderRadius: BorderRadius.circular(20.0),
+                  borderRadius: BorderRadius.circular(100),
                 ),
                 child: TabBar(
                   controller: _controller,
@@ -90,7 +91,7 @@ class _RegisterScreenState extends State<RegisterScreen>
                   },
                   indicator: BoxDecoration(
                     color: const Color(0xffEE7A1D),
-                    borderRadius: BorderRadius.circular(20.0),
+                    borderRadius: BorderRadius.circular(100),
                   ),
                   indicatorColor: Colors.blueGrey,
                   unselectedLabelColor: const Color(0xffEE7A1D),

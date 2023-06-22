@@ -30,8 +30,9 @@ class singleshot extends StatelessWidget {
         width: double.infinity,
         child: Column(
           children: [
+            5.verticalSpace,
             SizedBox(
-                width: 375.w,
+                width: 407.w,
                 height: 274.h,
                 child: Image.asset(
                   "assets/images/adlutcoat.png",

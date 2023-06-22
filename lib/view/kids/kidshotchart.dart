@@ -221,13 +221,13 @@ class _kidshomescreenState extends State<kidshotchart> {
                           child: Container(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              gradient: const LinearGradient(
-                                begin: Alignment.topCenter,
-                                end: Alignment.bottomCenter,
+                              gradient: LinearGradient(
+                                begin: Alignment(0.00, -1.00),
+                                end: Alignment(0, 1),
                                 colors: [
-                                  Color(0xFFFAFAFA),
-                                  Color(0xFFD2D2D2),
-                                  Color(0xFFFFFFFF),
+                                  Color(0x75F9F9F9),
+                                  Color(0xAAD2D2D2),
+                                  Colors.white.withOpacity(0)
                                 ],
                               ),
                             ),
@@ -273,13 +273,13 @@ class _kidshomescreenState extends State<kidshotchart> {
                             child: Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
-                                gradient: const LinearGradient(
-                                  begin: Alignment.topCenter,
-                                  end: Alignment.bottomCenter,
+                                gradient: LinearGradient(
+                                  begin: Alignment(0.00, -1.00),
+                                  end: Alignment(0, 1),
                                   colors: [
-                                    Color(0xFFFAFAFA),
-                                    Color(0xFFD2D2D2),
-                                    Color(0xFFFFFFFF),
+                                    Color(0x75F9F9F9),
+                                    Color(0xAAD2D2D2),
+                                    Colors.white.withOpacity(0)
                                   ],
                                 ),
                               ),
