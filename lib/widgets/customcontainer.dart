@@ -7,21 +7,43 @@ class CustomContainer extends StatefulWidget {
   final String value;
   final String date;
   final String subtext;
-  final _activeSliderValue = "";
+  // final _activeSliderValue = "";
+  final String linevalue;
   const CustomContainer(
       {super.key,
       required this.data,
       required this.text,
       required this.value,
       required this.date,
-      required this.subtext});
+      required this.subtext,
+      required this.linevalue});
 
   @override
   _CustomContainerState createState() => _CustomContainerState();
 }
 
-class _CustomContainerState extends State<CustomContainer> {
+class _CustomContainerState extends State<CustomContainer>
+    with TickerProviderStateMixin {
   double _activeSliderValue = 60;
+  late AnimationController controller;
+  void initState() {
+    controller = AnimationController(
+      /// [AnimationController]s can be created with `vsync: this` because of
+      /// [TickerProviderStateMixin].
+      vsync: this,
+      duration: const Duration(seconds: 5),
+    )..addListener(() {
+        setState(() {});
+      });
+    controller.repeat(reverse: true);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
 
   // double _shotsSliderValue = 30;
   @override
@@ -122,22 +144,38 @@ class _CustomContainerState extends State<CustomContainer> {
               ],
             ),
           ),
-          Slider(
-            value: _activeSliderValue,
-            max: 100,
-            thumbColor: const Color(0xff649E24),
-            activeColor: const Color(0xff649E24),
-            secondaryActiveColor: const Color(0xff5484FF),
-            inactiveColor: const Color(0xffC2C6CE),
-            divisions: 100,
-            label: _activeSliderValue.round().toString(),
-            onChanged: (double value) {
-              setState(() {
-                _activeSliderValue = value;
-                // _activeSliderValue = 40;
-              });
-            },
-          ),
+          20.verticalSpace,
+          Container(
+            width: 335.w,
+            padding: EdgeInsets.only(bottom: 10),
+            child: LinearProgressIndicator(
+              backgroundColor: Colors.grey[300],
+              valueColor: AlwaysStoppedAnimation<Color>(Color(0xff649E24)),
+              value: double.parse(widget.linevalue) /
+                  100, // Set the progress value based on linevalue
+            ),
+          )
+
+          // LinearProgressIndicator(
+          //   value: controller.value,
+          //   semanticsLabel: 'Linear progress indicator',
+          // ),
+          // Slider(
+          //   value: _activeSliderValue,
+          //   max: 100,
+          //   thumbColor: const Color(0xff649E24),
+          //   activeColor: const Color(0xff649E24),
+          //   secondaryActiveColor: const Color(0xff5484FF),
+          //   inactiveColor: const Color(0xffC2C6CE),
+          //   divisions: 100,
+          //   label: _activeSliderValue.round().toString(),
+          //   onChanged: (double value) {
+          //     setState(() {
+          //       _activeSliderValue = value;
+          //       // _activeSliderValue = 40;
+          //     });
+          //   },
+          // ),
           // Slider(
           //   value: _shotsSliderValue,
           //   max: 100,
@@ -165,7 +203,7 @@ class CustomContainerBlue extends StatefulWidget {
   final String value;
   final String date;
   final String subtext;
-  final _activeSliderValue = "";
+  final String linevalue;
 
   const CustomContainerBlue({
     super.key,
@@ -174,14 +212,35 @@ class CustomContainerBlue extends StatefulWidget {
     required this.value,
     required this.date,
     required this.subtext,
+    required this.linevalue,
   });
 
   @override
   _CustomContainerBlueState createState() => _CustomContainerBlueState();
 }
 
-class _CustomContainerBlueState extends State<CustomContainerBlue> {
+class _CustomContainerBlueState extends State<CustomContainerBlue>
+    with TickerProviderStateMixin {
   double _activeSliderValue = 60;
+  late AnimationController controller;
+  void initState() {
+    controller = AnimationController(
+      /// [AnimationController]s can be created with `vsync: this` because of
+      /// [TickerProviderStateMixin].
+      vsync: this,
+      duration: const Duration(seconds: 5),
+    )..addListener(() {
+        setState(() {});
+      });
+    controller.repeat(reverse: true);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -274,20 +333,31 @@ class _CustomContainerBlueState extends State<CustomContainerBlue> {
                 ],
               ),
             ),
-            Slider(
-              value: _activeSliderValue,
-              max: 100,
-              thumbColor: const Color(0xff5484FF),
-              activeColor: const Color(0xff5484FF),
-              inactiveColor: const Color(0xffC2C6CE),
-              divisions: 100,
-              label: _activeSliderValue.round().toString(),
-              onChanged: (double value) {
-                setState(() {
-                  _activeSliderValue = value;
-                });
-              },
-            ),
+            20.verticalSpace,
+            Container(
+              width: 335.w,
+              padding: EdgeInsets.only(bottom: 10),
+              child: LinearProgressIndicator(
+                backgroundColor: Colors.grey[300],
+                valueColor: AlwaysStoppedAnimation<Color>(Color(0xff5484FF)),
+                value: double.parse(widget.linevalue) /
+                    100, // Set the progress value based on linevalue
+              ),
+            )
+            // Slider(
+            //   value: _activeSliderValue,
+            //   max: 100,
+            //   thumbColor: const Color(0xff5484FF),
+            //   activeColor: const Color(0xff5484FF),
+            //   inactiveColor: const Color(0xffC2C6CE),
+            //   divisions: 100,
+            //   label: _activeSliderValue.round().toString(),
+            //   onChanged: (double value) {
+            //     setState(() {
+            //       _activeSliderValue = value;
+            //     });
+            //   },
+            // ),
           ],
         ),
       ),
@@ -301,6 +371,7 @@ class CustomContainerOrange extends StatefulWidget {
   final String value;
   final String date;
   final String subtext;
+  final String linevalue;
 
   const CustomContainerOrange({
     super.key,
@@ -309,6 +380,7 @@ class CustomContainerOrange extends StatefulWidget {
     required this.value,
     required this.date,
     required this.subtext,
+    required this.linevalue,
   });
 
   @override
@@ -420,20 +492,31 @@ class _CustomContainerOrangeState extends State<CustomContainerOrange> {
               ],
             ),
           ),
-          Slider(
-            value: _activeSliderValue,
-            max: 100,
-            thumbColor: const Color(0xffEE7A1D),
-            activeColor: const Color(0xffEE7A1D),
-            inactiveColor: const Color(0xffC2C6CE),
-            divisions: 100,
-            label: _activeSliderValue.round().toString(),
-            onChanged: (double value) {
-              setState(() {
-                _activeSliderValue = value;
-              });
-            },
-          ),
+          20.verticalSpace,
+          Container(
+            width: 335.w,
+            padding: EdgeInsets.only(bottom: 10),
+            child: LinearProgressIndicator(
+              backgroundColor: Colors.grey[300],
+              valueColor: AlwaysStoppedAnimation<Color>(Color(0xffEE7A1D)),
+              value: double.parse(widget.linevalue) /
+                  100, // Set the progress value based on linevalue
+            ),
+          )
+          // Slider(
+          //   value: _activeSliderValue,
+          //   max: 100,
+          //   thumbColor: const Color(0xffEE7A1D),
+          //   activeColor: const Color(0xffEE7A1D),
+          //   inactiveColor: const Color(0xffC2C6CE),
+          //   divisions: 100,
+          //   label: _activeSliderValue.round().toString(),
+          //   onChanged: (double value) {
+          //     setState(() {
+          //       _activeSliderValue = value;
+          //     });
+          //   },
+          // ),
         ],
       ),
     );

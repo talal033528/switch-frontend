@@ -127,7 +127,7 @@ class HomeScreen extends StatelessWidget {
             7.verticalSpace,
             GestureDetector(
               onTap: () {
-                context.push('/home/child/inviteuser');
+                context.push('/home/child/kidsregisterscreen');
               },
               child: SizedBox(
                 width: 353.w,

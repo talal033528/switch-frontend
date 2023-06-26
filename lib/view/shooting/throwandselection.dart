@@ -135,30 +135,95 @@ class _ThrowAndSpotSelectionScreenState
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                const SizedBox(
-                                  width: 120,
-                                  child: AuthTextField(
-                                    hinttext: 'Buckets',
-                                    headertext: '',
-                                    obsecure: false,
-                                    showsuffixicon: false,
-                                    suffixicon: SizedBox(),
-                                  ),
-                                ),
                                 SizedBox(
+                                  width: 120,
+                                  child: Container(
+                                    alignment: Alignment.center,
+                                    width: 120.w,
+                                    decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius:
+                                            BorderRadius.circular(13)),
+                                    child: TextFormField(
+                                      keyboardType: TextInputType.number,
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        color: Color(
+                                            0xFF5F677E), // Set the desired text color
+                                      ),
+                                      decoration: InputDecoration(
+                                        contentPadding: EdgeInsets.only(
+                                            left: 15,
+                                            bottom: 15,
+                                            top: 0,
+                                            right: 15),
+                                        border: InputBorder.none,
+                                        hintText: 'MAKES',
+                                        labelText: '',
+                                        hintStyle: TextStyle(
+                                          color: Color(
+                                              0xFF5F677E), // Set the desired hint text color
+                                        ),
+                                        // suffixIcon: Icon(LucideIcons.chevronDown,
+                                        //     color: Color(0xFF5F677E)),
+                                      ),
+                                    ),
+                                  ),
+
+                                  // AuthTextField(
+                                  //   hinttext: 'Buckets',
+                                  //   headertext: '',
+                                  //   obsecure: false,
+                                  //   showsuffixicon: false,
+                                  //   suffixicon: SizedBox(),
+                                  // ),
+                                ),
+                                // SizedBox(
+                                //   width: 120.w,
+                                //   child: MyDropdownWidget(
+                                //     options: const [
+                                //       'Attempt',
+                                //     ],
+                                //     selectedValue: 'Attempt',
+                                //     onChanged: (newValue) {
+                                //       // setState(() {
+                                //       //   selectedValue = newValue;
+                                //       // });
+                                //     },
+                                //   ),
+                                // ),
+                                Container(
+                                  alignment: Alignment.center,
                                   width: 120.w,
-                                  child: MyDropdownWidget(
-                                    options: const [
-                                      'Attempt',
-                                    ],
-                                    selectedValue: 'Attempt',
-                                    onChanged: (newValue) {
-                                      // setState(() {
-                                      //   selectedValue = newValue;
-                                      // });
-                                    },
+                                  decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(13)),
+                                  child: TextFormField(
+                                    keyboardType: TextInputType.number,
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      color: Color(
+                                          0xFF5F677E), // Set the desired text color
+                                    ),
+                                    decoration: InputDecoration(
+                                      contentPadding: EdgeInsets.only(
+                                          left: 15,
+                                          bottom: 15,
+                                          top: 0,
+                                          right: 15),
+                                      border: InputBorder.none,
+                                      hintText: 'Attempts',
+                                      labelText: '',
+                                      hintStyle: TextStyle(
+                                        color: Color(
+                                            0xFF5F677E), // Set the desired hint text color
+                                      ),
+                                      // suffixIcon: Icon(LucideIcons.chevronDown,
+                                      //     color: Color(0xFF5F677E)),
+                                    ),
                                   ),
                                 ),
+
                                 GestureDetector(
                                   onTap: () {
                                     // context.push('/home/child/shooting/throwandspot');

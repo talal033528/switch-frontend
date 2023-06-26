@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:swish_basketball/splash.dart';
 
 import 'package:swish_basketball/view/analytics/scoreanalytics.dart';
+import 'package:swish_basketball/view/auth/kidsrigesterscreen.dart';
 import 'package:swish_basketball/view/auth/login.dart';
 import 'package:swish_basketball/view/auth/otp.dart';
 import 'package:swish_basketball/view/auth/payment.dart';
@@ -153,6 +154,12 @@ final GoRouter _router = GoRouter(
             path: 'mikeottrando',
             builder: (BuildContext context, GoRouterState state) {
               return const mikeottrando();
+            },
+          ),
+          GoRoute(
+            path: 'kidsregisterscreen',
+            builder: (BuildContext context, GoRouterState state) {
+              return const kidsregisterscreen();
             },
           ),
           GoRoute(

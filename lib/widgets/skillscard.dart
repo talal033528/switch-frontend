@@ -10,7 +10,7 @@ class SkillsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 105.w,
+      width: 111.w,
       height: 107.h,
       child: Card(
         elevation: 2,
@@ -45,7 +45,7 @@ class SkillsCard extends StatelessWidget {
                   "${title}",
                   style: TextStyle(
                       color: Color(0xffEE7A1D),
-                      fontSize: 14.sp,
+                      fontSize: 18.sp,
                       fontWeight: FontWeight.bold),
                 )
               ],

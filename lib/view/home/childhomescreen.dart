@@ -85,7 +85,7 @@ class _ChildHomeScreenState extends State<ChildHomeScreen> {
                 child: Container(
                   width: 353.w,
                   decoration: BoxDecoration(
-                      color: const Color(0xff8E2B00),
+                      color: const Color(0xff000000),
                       borderRadius: BorderRadius.all(Radius.circular(10.r))),
                   child: Padding(
                     padding: EdgeInsets.all(14.w),
@@ -416,8 +416,8 @@ class _ChildHomeScreenState extends State<ChildHomeScreen> {
                       ),
                       10.verticalSpace,
                       Image.asset(_switchValue
-                          ? "assets/images/Group 457.png"
-                          : "assets/images/week2.png")
+                          ? "assets/images/week2.png"
+                          : "assets/images/1screen.png")
                     ],
                   ),
                 ),

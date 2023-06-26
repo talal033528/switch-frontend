@@ -75,29 +75,29 @@ class _RegisterScreenState extends State<RegisterScreen>
                 ),
               ),
               31.verticalSpace,
-              Container(
-                width: 333.w,
-                decoration: BoxDecoration(
-                  color: const Color(0xffECEDEF),
-                  borderRadius: BorderRadius.circular(100),
-                ),
-                child: TabBar(
-                  controller: _controller,
-                  tabs: _tabs,
-                  onTap: (index) {
-                    setState(() {
-                      _selectedIndex = index;
-                    });
-                  },
-                  indicator: BoxDecoration(
-                    color: const Color(0xffEE7A1D),
-                    borderRadius: BorderRadius.circular(100),
-                  ),
-                  indicatorColor: Colors.blueGrey,
-                  unselectedLabelColor: const Color(0xffEE7A1D),
-                  labelColor: Colors.white,
-                ),
-              ),
+              // Container(
+              //   width: 333.w,
+              //   decoration: BoxDecoration(
+              //     color: const Color(0xffECEDEF),
+              //     borderRadius: BorderRadius.circular(100),
+              //   ),
+              //   child: TabBar(
+              //     controller: _controller,
+              //     tabs: _tabs,
+              //     onTap: (index) {
+              //       setState(() {
+              //         _selectedIndex = index;
+              //       });
+              //     },
+              //     indicator: BoxDecoration(
+              //       color: const Color(0xffEE7A1D),
+              //       borderRadius: BorderRadius.circular(100),
+              //     ),
+              //     indicatorColor: Colors.blueGrey,
+              //     unselectedLabelColor: const Color(0xffEE7A1D),
+              //     labelColor: Colors.white,
+              //   ),
+              // ),
               34.verticalSpace,
               SizedBox(
                 width: 333.w,
