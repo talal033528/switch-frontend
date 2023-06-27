@@ -230,7 +230,7 @@ class PracticeResult extends StatelessWidget {
             20.verticalSpace,
             GestureDetector(
               onTap: () {
-                context.goNamed('home', pathParameters: {"type": "kid"});
+                context.goNamed('home', pathParameters: {"type": "home"});
 
                 // context.push('/home/shooting/ChildHomeScreen');
               },

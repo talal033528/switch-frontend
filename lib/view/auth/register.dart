@@ -130,7 +130,7 @@ class _RegisterScreenState extends State<RegisterScreen>
                           25.verticalSpace,
                           const AuthTextField(
                             hinttext: '***************',
-                            headertext: "Set your child's password",
+                            headertext: " password",
                             obsecure: false,
                             showsuffixicon: true,
                             suffixicon: Icons.visibility_off,
@@ -139,82 +139,82 @@ class _RegisterScreenState extends State<RegisterScreen>
                       )
                     : Column(
                         children: [
-                          const AuthTextField(
-                            hinttext: 'Type Child Name',
-                            headertext: 'Child Name',
-                            obsecure: false,
-                            showsuffixicon: false,
-                            suffixicon: SizedBox(),
-                          ),
-                          25.verticalSpace,
-                          const AuthTextField(
-                            hinttext: 'Date of Birth',
-                            headertext: 'Age',
-                            obsecure: false,
-                            showsuffixicon: true,
-                            suffixicon: Icons.calendar_month,
-                          ),
-                          25.verticalSpace,
-                          const AuthTextField(
-                            hinttext: 'Court Size',
-                            headertext: 'Select Basketball Court',
-                            obsecure: false,
-                            showsuffixicon: true,
-                            suffixicon: Icons.arrow_drop_down,
-                          ),
-                          25.verticalSpace,
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Rate your Skills',
-                                style: TextStyle(
-                                    color: const Color(0xff5F677E),
-                                    fontSize: 14.sp),
-                              ),
-                              9.verticalSpace,
-                              const Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  SkillsCard(
-                                    title: 'Beginner',
-                                  ),
-                                  SkillsCard(
-                                    title: 'Intermediate',
-                                  ),
-                                  SkillsCard(
-                                    title: 'Expert',
-                                  )
-                                ],
-                              )
-                            ],
-                          ),
-                          25.verticalSpace,
-                          const AuthTextField(
-                            hinttext: 'example@gmail.com',
-                            headertext: 'E-mail Address',
-                            obsecure: false,
-                            showsuffixicon: false,
-                            suffixicon: SizedBox,
-                          ),
-                          25.verticalSpace,
-                          const AuthTextField(
-                            hinttext: '+1 (457) 000 0000',
-                            headertext: 'Your Child Mobile Number (if any)',
-                            obsecure: false,
-                            showsuffixicon: false,
-                            suffixicon: SizedBox,
-                          ),
-                          25.verticalSpace,
-                          const AuthTextField(
-                            hinttext: '***************',
-                            headertext: "Set your child's password",
-                            obsecure: false,
-                            showsuffixicon: true,
-                            suffixicon: Icons.visibility_off,
-                          ),
-                          25.verticalSpace,
+                          // const AuthTextField(
+                          //   hinttext: 'Type Child Name',
+                          //   headertext: 'Child Name',
+                          //   obsecure: false,
+                          //   showsuffixicon: false,
+                          //   suffixicon: SizedBox(),
+                          // ),
+                          // 25.verticalSpace,
+                          // const AuthTextField(
+                          //   hinttext: 'Date of Birth',
+                          //   headertext: 'Age',
+                          //   obsecure: false,
+                          //   showsuffixicon: true,
+                          //   suffixicon: Icons.calendar_month,
+                          // ),
+                          // 25.verticalSpace,
+                          // const AuthTextField(
+                          //   hinttext: 'Court Size',
+                          //   headertext: 'Select Basketball Court',
+                          //   obsecure: false,
+                          //   showsuffixicon: true,
+                          //   suffixicon: Icons.arrow_drop_down,
+                          // ),
+                          // 25.verticalSpace,
+                          // Column(
+                          //   crossAxisAlignment: CrossAxisAlignment.start,
+                          //   children: [
+                          //     Text(
+                          //       'Rate your Skills',
+                          //       style: TextStyle(
+                          //           color: const Color(0xff5F677E),
+                          //           fontSize: 14.sp),
+                          //     ),
+                          //     9.verticalSpace,
+                          //     const Row(
+                          //       mainAxisAlignment:
+                          //           MainAxisAlignment.spaceBetween,
+                          //       children: [
+                          //         SkillsCard(
+                          //           title: 'Beginner',
+                          //         ),
+                          //         SkillsCard(
+                          //           title: 'Intermediate',
+                          //         ),
+                          //         SkillsCard(
+                          //           title: 'Expert',
+                          //         )
+                          //       ],
+                          //     )
+                          //   ],
+                          // ),
+                          // 25.verticalSpace,
+                          // const AuthTextField(
+                          //   hinttext: 'example@gmail.com',
+                          //   headertext: 'E-mail Address',
+                          //   obsecure: false,
+                          //   showsuffixicon: false,
+                          //   suffixicon: SizedBox,
+                          // ),
+                          // 25.verticalSpace,
+                          // const AuthTextField(
+                          //   hinttext: '+1 (457) 000 0000',
+                          //   headertext: 'Your Child Mobile Number (if any)',
+                          //   obsecure: false,
+                          //   showsuffixicon: false,
+                          //   suffixicon: SizedBox,
+                          // ),
+                          // 25.verticalSpace,
+                          // const AuthTextField(
+                          //   hinttext: '***************',
+                          //   headertext: "Password",
+                          //   obsecure: false,
+                          //   showsuffixicon: true,
+                          //   suffixicon: Icons.visibility_off,
+                          // ),
+                          // 25.verticalSpace,
                         ],
                       ),
               ),

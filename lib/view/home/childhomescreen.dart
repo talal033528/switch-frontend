@@ -467,7 +467,7 @@ class _ChildHomeScreenState extends State<ChildHomeScreen> {
 
               GestureDetector(
                 onTap: () {
-                  context.push('/home/child/setmygoals');
+                  context.push('/home/child/createyourgoals');
                 },
                 child: Container(
                   width: 355.w,
