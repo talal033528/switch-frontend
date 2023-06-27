@@ -33,7 +33,7 @@ class ShooingScreen extends StatelessWidget {
             20.verticalSpace,
             Text("Shooting Instructions",
                 style: TextStyle(
-                  fontSize: 18.sp,
+                  fontSize: 22.sp,
                   color: const Color(0xffEE7A1D),
                   fontWeight: FontWeight.bold,
                 )),
@@ -44,7 +44,7 @@ class ShooingScreen extends StatelessWidget {
                   "Just click a spot on the court and start shooting, just click a new spot on the court!\n\nUse our cutting edge technology to log your shots using nothing but your voice.",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontSize: 14.sp,
+                    fontSize: 18.sp,
                     color: const Color(0xff5F677E),
                   )),
             ),
@@ -84,7 +84,7 @@ class ShooingScreen extends StatelessWidget {
                       "Set goals for your upcoming workout! ",
                       style: TextStyle(
                         color: const Color(0xff5F677E),
-                        fontSize: 14.sp,
+                        fontSize: 18.sp,
                       ),
                     ),
                     17.verticalSpace,
@@ -93,7 +93,7 @@ class ShooingScreen extends StatelessWidget {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: const Color(0xff5F677E),
-                        fontSize: 14.sp,
+                        fontSize: 18.sp,
                       ),
                     ),
                     28.verticalSpace,
@@ -106,13 +106,13 @@ class ShooingScreen extends StatelessWidget {
                       ),
                     ),
                     28.verticalSpace,
-                    SizedBox(
-                      width: 308.w,
-                      child: const GlobalButton(
-                        text: 'Set your Goals!',
-                        color: Color(0xffEE7A1D),
-                      ),
-                    ),
+                    // SizedBox(
+                    //   width: 308.w,
+                    //   child: const GlobalButton(
+                    //     text: 'Set your Goals!',
+                    //     color: Color(0xffEE7A1D),
+                    //   ),
+                    // ),
                   ],
                 ),
               )),

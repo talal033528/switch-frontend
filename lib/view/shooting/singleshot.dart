@@ -5,8 +5,33 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import 'package:swish_basketball/widgets/button.dart';
 
-class singleshot extends StatelessWidget {
+class singleshot extends StatefulWidget {
   const singleshot({super.key});
+
+  @override
+  State<singleshot> createState() => _singleshotState();
+}
+
+class _singleshotState extends State<singleshot> with TickerProviderStateMixin {
+  bool _switchValue = false;
+  int _selectedIndex = 0;
+
+  final List<Widget> _tabs = [
+    const Tab(
+      text: 'FREE THROW',
+    ),
+    const Tab(
+      text: 'SPOT SELECTION',
+    ),
+  ];
+
+  late TabController _controller;
+  @override
+  void initState() {
+    _controller = TabController(length: 2, vsync: this);
+
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -39,6 +64,46 @@ class singleshot extends StatelessWidget {
                   fit: BoxFit.contain,
                 )),
             100.verticalSpace,
+            Container(
+              width: 393.w,
+              height: 80.h,
+              decoration: BoxDecoration(
+                color: Color(0xff000000),
+                border: Border.all(width: 2.w, color: Color(0xff000000)),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 333.w,
+                    decoration: BoxDecoration(
+                      color: const Color(0xffECEDEF),
+                      borderRadius: BorderRadius.circular(100),
+                    ),
+                    child: TabBar(
+                      controller: _controller,
+                      tabs: _tabs,
+                      onTap: (index) {
+                        setState(() {
+                          _selectedIndex = index;
+                        });
+                      },
+                      indicator: BoxDecoration(
+                        color: const Color(0xffEE7A1D),
+                        borderRadius: BorderRadius.circular(100),
+                      ),
+                      indicatorColor: Colors.blueGrey,
+                      unselectedLabelColor: const Color(0xffEE7A1D),
+                      labelColor: Colors.white,
+                    ),
+                  ),
+                  // Image.asset(_switchValue
+                  //     ? "assets/images/1screen.png"
+                  //     : "assets/images/adlutcoat.png")
+                ],
+              ),
+            ),
             // SizedBox(
             //   width: 397.w,
             //   height: 127.h,

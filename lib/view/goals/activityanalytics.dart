@@ -65,6 +65,8 @@ class _activityanalyticState extends State<activityanalytic>
                 ? Column(
                     children: [
                       Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           20.verticalSpace,
                           Text(
@@ -77,7 +79,6 @@ class _activityanalyticState extends State<activityanalytic>
                           30.verticalSpace,
                           Container(
                             width: 349.w,
-                            height: 131.h,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.only(
                                     topRight: Radius.circular(15.r),
@@ -122,7 +123,6 @@ class _activityanalyticState extends State<activityanalytic>
                           3.verticalSpace,
                           Container(
                             width: 349.w,
-                            height: 131.h,
                             decoration: BoxDecoration(
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(3)),
@@ -130,6 +130,8 @@ class _activityanalyticState extends State<activityanalytic>
                             child: Padding(
                               padding: const EdgeInsets.all(20),
                               child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Text(
                                     "WORKOUT TIME",
@@ -166,7 +168,6 @@ class _activityanalyticState extends State<activityanalytic>
                           3.verticalSpace,
                           Container(
                             width: 349.w,
-                            height: 131.h,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.only(
                                     bottomLeft: Radius.circular(15.r),
@@ -175,6 +176,8 @@ class _activityanalyticState extends State<activityanalytic>
                             child: Padding(
                               padding: const EdgeInsets.all(20),
                               child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Text(
                                     "FREE THROW",
@@ -216,16 +219,17 @@ class _activityanalyticState extends State<activityanalytic>
                               borderRadius: BorderRadius.circular(20),
                               color: Colors.black,
                             ),
-                            child: SizedBox(
-                              width: 260.w,
-                              height: 260.h,
-                              child: Padding(
-                                padding: const EdgeInsets.all(15),
-                                child: Image.asset(
-                                  "assets/images/activity2.png",
-                                  fit: BoxFit.contain,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                SizedBox(
+                                  child: Image.asset(
+                                    "assets/images/activity2.png",
+                                    width: 200.w,
+                                    height: 200.h,
+                                  ),
                                 ),
-                              ),
+                              ],
                             ),
                           ),
                           19.verticalSpace,
@@ -276,78 +280,73 @@ class _activityanalyticState extends State<activityanalytic>
                               labelColor: Colors.white,
                             ),
                           ),
-                          Container(
-                            width: 351.w,
-                            height: 220.h,
-                            decoration: BoxDecoration(
-                                border: Border.all(
-                                    width: 1, color: Color(0xffECEDEF)),
-                                borderRadius: BorderRadius.circular(13)),
-                            child: Column(
-                              children: [
-                                Container(
-                                  width: 331,
-                                  height: 80,
-                                  decoration: BoxDecoration(
-                                    color: Color(0xff57891F),
-                                    borderRadius: BorderRadius.circular(12),
+                          15.verticalSpace,
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                width: 331,
+                                height: 80,
+                                decoration: BoxDecoration(
+                                  color: Color(0xff57891F),
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                child: ListTile(
+                                  title: Text(
+                                    'PRACTICE',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 14.sp,
+                                    ),
                                   ),
-                                  child: ListTile(
-                                    title: Text(
-                                      'PRACTICE',
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.w400,
-                                        fontSize: 14.sp,
-                                      ),
-                                    ),
-                                    subtitle: Text(
-                                      '01:58:44 HRS',
-                                      style: TextStyle(
-                                        fontSize: 18.sp,
-                                        fontWeight: FontWeight.w700,
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                    trailing: Icon(
-                                      LucideIcons.chevronRight,
+                                  subtitle: Text(
+                                    '01:58:44 HRS',
+                                    style: TextStyle(
+                                      fontSize: 18.sp,
+                                      fontWeight: FontWeight.w700,
                                       color: Colors.white,
                                     ),
                                   ),
-                                ),
-                                5.verticalSpace,
-                                Container(
-                                  width: 331,
-                                  height: 80,
-                                  decoration: BoxDecoration(
-                                    color: Color(0xff000000),
-                                    borderRadius: BorderRadius.circular(12),
+                                  trailing: Icon(
+                                    LucideIcons.chevronRight,
+                                    color: Colors.white,
                                   ),
-                                  child: ListTile(
-                                    title: Text(
-                                      'LIVE MATCH',
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.w400,
-                                        fontSize: 14.sp,
-                                      ),
+                                ),
+                              ),
+                              5.verticalSpace,
+                              Container(
+                                width: 331,
+                                height: 80,
+                                decoration: BoxDecoration(
+                                  color: Color(0xff000000),
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                child: ListTile(
+                                  title: Text(
+                                    'LIVE MATCH',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 14.sp,
                                     ),
-                                    subtitle: Text(
-                                      '00:32:04 HRS',
-                                      style: TextStyle(
-                                        fontSize: 18.sp,
-                                        fontWeight: FontWeight.w700,
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                    trailing: Icon(
-                                      LucideIcons.chevronRight,
+                                  ),
+                                  subtitle: Text(
+                                    '00:32:04 HRS',
+                                    style: TextStyle(
+                                      fontSize: 18.sp,
+                                      fontWeight: FontWeight.w700,
                                       color: Colors.white,
                                     ),
                                   ),
+                                  trailing: Icon(
+                                    LucideIcons.chevronRight,
+                                    color: Colors.white,
+                                  ),
                                 ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
                           45.verticalSpace,
                           SizedBox(
@@ -363,7 +362,6 @@ class _activityanalyticState extends State<activityanalytic>
                           22.verticalSpace,
                           Container(
                             width: 351.w,
-                            height: 138.h,
                             decoration: BoxDecoration(
                                 color: Color(0xffFAFAFB),
                                 borderRadius: BorderRadius.circular(13),
@@ -542,7 +540,6 @@ class _activityanalyticState extends State<activityanalytic>
                           15.verticalSpace,
                           Container(
                             width: 351.w,
-                            height: 138.h,
                             decoration: BoxDecoration(
                                 color: Color(0xffFAFAFB),
                                 borderRadius: BorderRadius.circular(13),
@@ -722,7 +719,6 @@ class _activityanalyticState extends State<activityanalytic>
                           30.verticalSpace,
                           Container(
                             width: 349.w,
-                            height: 131.h,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.only(
                                     topRight: Radius.circular(15.r),
@@ -731,6 +727,8 @@ class _activityanalyticState extends State<activityanalytic>
                             child: Padding(
                               padding: const EdgeInsets.all(20),
                               child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Text(
                                     "SHOTS ATTEMPTED",
@@ -767,7 +765,6 @@ class _activityanalyticState extends State<activityanalytic>
                           3.verticalSpace,
                           Container(
                             width: 349.w,
-                            height: 131.h,
                             decoration: BoxDecoration(
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(3)),
@@ -775,6 +772,8 @@ class _activityanalyticState extends State<activityanalytic>
                             child: Padding(
                               padding: const EdgeInsets.all(20),
                               child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Text(
                                     "WORKOUT TIME",
@@ -811,7 +810,6 @@ class _activityanalyticState extends State<activityanalytic>
                           3.verticalSpace,
                           Container(
                             width: 349.w,
-                            height: 131.h,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.only(
                                     bottomLeft: Radius.circular(15.r),
@@ -820,6 +818,8 @@ class _activityanalyticState extends State<activityanalytic>
                             child: Padding(
                               padding: const EdgeInsets.all(20),
                               child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Text(
                                     "FREE THROW",
@@ -861,16 +861,22 @@ class _activityanalyticState extends State<activityanalytic>
                               borderRadius: BorderRadius.circular(20),
                               color: Colors.black,
                             ),
-                            child: SizedBox(
-                              width: 273.w,
-                              height: 223.h,
-                              child: Padding(
-                                padding: const EdgeInsets.all(15),
-                                child: Image.asset(
-                                  "assets/images/activity2.png",
-                                  fit: BoxFit.contain,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                SizedBox(
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(15),
+                                    child: Image.asset(
+                                      "assets/images/activity2.png",
+                                      width: 200.w,
+                                      height: 200.h,
+                                      fit: BoxFit.contain,
+                                    ),
+                                  ),
                                 ),
-                              ),
+                              ],
                             ),
                           ),
                           19.verticalSpace,
@@ -916,78 +922,73 @@ class _activityanalyticState extends State<activityanalytic>
                               labelColor: Colors.white,
                             ),
                           ),
-                          Container(
-                            width: 351.w,
-                            height: 220.h,
-                            decoration: BoxDecoration(
-                                border: Border.all(
-                                    width: 1, color: Color(0xffECEDEF)),
-                                borderRadius: BorderRadius.circular(13)),
-                            child: Column(
-                              children: [
-                                Container(
-                                  width: 331,
-                                  height: 80,
-                                  decoration: BoxDecoration(
-                                    color: Color(0xff57891F),
-                                    borderRadius: BorderRadius.circular(12),
+                          15.verticalSpace,
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                width: 331,
+                                height: 80,
+                                decoration: BoxDecoration(
+                                  color: Color(0xff57891F),
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                child: ListTile(
+                                  title: Text(
+                                    'PRACTICE',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 14.sp,
+                                    ),
                                   ),
-                                  child: ListTile(
-                                    title: Text(
-                                      'PRACTICE',
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.w400,
-                                        fontSize: 14.sp,
-                                      ),
-                                    ),
-                                    subtitle: Text(
-                                      '01:58:44 HRS',
-                                      style: TextStyle(
-                                        fontSize: 18.sp,
-                                        fontWeight: FontWeight.w700,
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                    trailing: Icon(
-                                      LucideIcons.chevronRight,
+                                  subtitle: Text(
+                                    '01:58:44 HRS',
+                                    style: TextStyle(
+                                      fontSize: 18.sp,
+                                      fontWeight: FontWeight.w700,
                                       color: Colors.white,
                                     ),
                                   ),
-                                ),
-                                5.verticalSpace,
-                                Container(
-                                  width: 331,
-                                  height: 80,
-                                  decoration: BoxDecoration(
-                                    color: Color(0xff000000),
-                                    borderRadius: BorderRadius.circular(12),
+                                  trailing: Icon(
+                                    LucideIcons.chevronRight,
+                                    color: Colors.white,
                                   ),
-                                  child: ListTile(
-                                    title: Text(
-                                      'LIVE MATCH',
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.w400,
-                                        fontSize: 14.sp,
-                                      ),
+                                ),
+                              ),
+                              5.verticalSpace,
+                              Container(
+                                width: 331,
+                                height: 80,
+                                decoration: BoxDecoration(
+                                  color: Color(0xff000000),
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                child: ListTile(
+                                  title: Text(
+                                    'LIVE MATCH',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 14.sp,
                                     ),
-                                    subtitle: Text(
-                                      '00:32:04 HRS',
-                                      style: TextStyle(
-                                        fontSize: 18.sp,
-                                        fontWeight: FontWeight.w700,
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                    trailing: Icon(
-                                      LucideIcons.chevronRight,
+                                  ),
+                                  subtitle: Text(
+                                    '00:32:04 HRS',
+                                    style: TextStyle(
+                                      fontSize: 18.sp,
+                                      fontWeight: FontWeight.w700,
                                       color: Colors.white,
                                     ),
                                   ),
+                                  trailing: Icon(
+                                    LucideIcons.chevronRight,
+                                    color: Colors.white,
+                                  ),
                                 ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
                           45.verticalSpace,
                           SizedBox(
@@ -1003,7 +1004,6 @@ class _activityanalyticState extends State<activityanalytic>
                           22.verticalSpace,
                           Container(
                             width: 351.w,
-                            height: 138.h,
                             decoration: BoxDecoration(
                                 color: Color(0xffFAFAFB),
                                 borderRadius: BorderRadius.circular(13),
@@ -1182,7 +1182,6 @@ class _activityanalyticState extends State<activityanalytic>
                           15.verticalSpace,
                           Container(
                             width: 351.w,
-                            height: 138.h,
                             decoration: BoxDecoration(
                                 color: Color(0xffFAFAFB),
                                 borderRadius: BorderRadius.circular(13),

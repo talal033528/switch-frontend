@@ -14,20 +14,28 @@ class congratulationscreen extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.white,
-        leading: Icon(
-          LucideIcons.arrowLeft,
-          color: Color(0xffEE7A1D),
+        leading: GestureDetector(
+          onTap: () {
+            context.pop();
+          },
+          child: Icon(
+            LucideIcons.arrowLeft,
+            color: Color(0xffEE7A1D),
+          ),
         ),
       ),
       body: SizedBox(
         width: double.infinity,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            43.verticalSpace,
             SizedBox(
-              width: 262.w,
-              height: 264.h,
-              child: Image.asset("assets/images/Congratulations.png"),
+              child: Image.asset(
+                "assets/images/55.png",
+                width: 300.w,
+                height: 300.h,
+                fit: BoxFit.contain,
+              ),
             ),
             36.verticalSpace,
             GestureDetector(

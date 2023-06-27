@@ -175,116 +175,103 @@ class _kidactivityanalyticsState extends State<kidactivityanalytics>
                                 22.verticalSpace,
                                 Column(
                                   children: [
-                                    Container(
-                                      width: 351.w,
-                                      decoration: BoxDecoration(
-                                        border: Border.all(
-                                            width: 2.w,
-                                            color: Color(0xffECEDEF)),
-                                        borderRadius: BorderRadius.circular(13),
-                                      ),
-                                      child: Column(
-                                        children: [
-                                          Container(
-                                            width: 333.w,
-                                            decoration: BoxDecoration(
-                                              color: const Color(0xffECEDEF),
+                                    Column(
+                                      children: [
+                                        Container(
+                                          width: 333.w,
+                                          decoration: BoxDecoration(
+                                            color: const Color(0xffECEDEF),
+                                            borderRadius:
+                                                BorderRadius.circular(100),
+                                          ),
+                                          child: TabBar(
+                                            controller: _controller,
+                                            tabs: _tabs,
+                                            onTap: (index) {
+                                              setState(() {
+                                                _selectedIndex = index;
+                                              });
+                                            },
+                                            indicator: BoxDecoration(
+                                              color: const Color(0xffEE7A1D),
                                               borderRadius:
                                                   BorderRadius.circular(100),
                                             ),
-                                            child: TabBar(
-                                              controller: _controller,
-                                              tabs: _tabs,
-                                              onTap: (index) {
-                                                setState(() {
-                                                  _selectedIndex = index;
-                                                });
-                                              },
-                                              indicator: BoxDecoration(
-                                                color: const Color(0xffEE7A1D),
+                                            indicatorColor: Colors.blueGrey,
+                                            unselectedLabelColor:
+                                                const Color(0xffEE7A1D),
+                                            labelColor: Colors.white,
+                                          ),
+                                        ),
+                                        15.verticalSpace,
+                                        Column(
+                                          children: [
+                                            Container(
+                                              width: 331,
+                                              height: 80,
+                                              decoration: BoxDecoration(
+                                                color: Color(0xff57891F),
                                                 borderRadius:
-                                                    BorderRadius.circular(100),
+                                                    BorderRadius.circular(12),
                                               ),
-                                              indicatorColor: Colors.blueGrey,
-                                              unselectedLabelColor:
-                                                  const Color(0xffEE7A1D),
-                                              labelColor: Colors.white,
+                                              child: ListTile(
+                                                title: Text(
+                                                  'PRACTICE',
+                                                  style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontWeight: FontWeight.w400,
+                                                    fontSize: 14.sp,
+                                                  ),
+                                                ),
+                                                subtitle: Text(
+                                                  '01:58:44 HRS',
+                                                  style: TextStyle(
+                                                    fontSize: 18.sp,
+                                                    fontWeight: FontWeight.w700,
+                                                    color: Colors.white,
+                                                  ),
+                                                ),
+                                                trailing: Icon(
+                                                  LucideIcons.chevronRight,
+                                                  color: Colors.white,
+                                                ),
+                                              ),
                                             ),
-                                          ),
-                                          5.verticalSpace,
-                                          Column(
-                                            children: [
-                                              Container(
-                                                width: 331,
-                                                height: 80,
-                                                decoration: BoxDecoration(
-                                                  color: Color(0xff57891F),
-                                                  borderRadius:
-                                                      BorderRadius.circular(12),
+                                            5.verticalSpace,
+                                            Container(
+                                              width: 331,
+                                              height: 80,
+                                              decoration: BoxDecoration(
+                                                color: Color(0xff000000),
+                                                borderRadius:
+                                                    BorderRadius.circular(12),
+                                              ),
+                                              child: ListTile(
+                                                title: Text(
+                                                  'LIVE MATCH',
+                                                  style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontWeight: FontWeight.w400,
+                                                    fontSize: 14.sp,
+                                                  ),
                                                 ),
-                                                child: ListTile(
-                                                  title: Text(
-                                                    'PRACTICE',
-                                                    style: TextStyle(
-                                                      color: Colors.white,
-                                                      fontWeight:
-                                                          FontWeight.w400,
-                                                      fontSize: 14.sp,
-                                                    ),
-                                                  ),
-                                                  subtitle: Text(
-                                                    '01:58:44 HRS',
-                                                    style: TextStyle(
-                                                      fontSize: 18.sp,
-                                                      fontWeight:
-                                                          FontWeight.w700,
-                                                      color: Colors.white,
-                                                    ),
-                                                  ),
-                                                  trailing: Icon(
-                                                    LucideIcons.chevronRight,
+                                                subtitle: Text(
+                                                  '00:32:04 HRS',
+                                                  style: TextStyle(
+                                                    fontSize: 18.sp,
+                                                    fontWeight: FontWeight.w700,
                                                     color: Colors.white,
                                                   ),
                                                 ),
-                                              ),
-                                              5.verticalSpace,
-                                              Container(
-                                                width: 331,
-                                                height: 80,
-                                                decoration: BoxDecoration(
-                                                  color: Color(0xff000000),
-                                                  borderRadius:
-                                                      BorderRadius.circular(12),
-                                                ),
-                                                child: ListTile(
-                                                  title: Text(
-                                                    'LIVE MATCH',
-                                                    style: TextStyle(
-                                                      color: Colors.white,
-                                                      fontWeight:
-                                                          FontWeight.w400,
-                                                      fontSize: 14.sp,
-                                                    ),
-                                                  ),
-                                                  subtitle: Text(
-                                                    '00:32:04 HRS',
-                                                    style: TextStyle(
-                                                      fontSize: 18.sp,
-                                                      fontWeight:
-                                                          FontWeight.w700,
-                                                      color: Colors.white,
-                                                    ),
-                                                  ),
-                                                  trailing: Icon(
-                                                    LucideIcons.chevronRight,
-                                                    color: Colors.white,
-                                                  ),
+                                                trailing: Icon(
+                                                  LucideIcons.chevronRight,
+                                                  color: Colors.white,
                                                 ),
                                               ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
                                     ),
                                   ],
                                 )
