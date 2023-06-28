@@ -70,7 +70,7 @@ class _shotsatemptState extends State<shotsatempt> {
                         text: '84',
                         value: '/200 Shots',
                         date: 'June 6,2023',
-                        linevalue: '5.5',
+                        linevalue: '50',
                       ),
                     ),
                     20.verticalSpace,
@@ -88,7 +88,7 @@ class _shotsatemptState extends State<shotsatempt> {
                       value: '/200 Shots',
                       date: 'June 4,2023',
                       subtext: '',
-                      linevalue: '30',
+                      linevalue: '52',
                     ),
                     10.verticalSpace,
                     CustomContainer(
@@ -97,7 +97,7 @@ class _shotsatemptState extends State<shotsatempt> {
                       value: '/120 Shots',
                       date: 'June 4,2023',
                       subtext: '',
-                      linevalue: '60',
+                      linevalue: '40',
                     ),
                     10.verticalSpace,
                     CustomContainer(
@@ -106,7 +106,7 @@ class _shotsatemptState extends State<shotsatempt> {
                       value: '/120 Shots',
                       date: 'June 2,2023',
                       subtext: '',
-                      linevalue: '99',
+                      linevalue: '45',
                     ),
                     10.verticalSpace,
                     CustomContainer(
@@ -115,7 +115,7 @@ class _shotsatemptState extends State<shotsatempt> {
                       value: '/120 Shots',
                       date: 'June 2,2023',
                       subtext: '',
-                      linevalue: '75',
+                      linevalue: '13',
                     ),
 
                     15.verticalSpace,

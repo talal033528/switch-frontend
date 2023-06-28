@@ -104,6 +104,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                       title: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
                             "Dave Ottrando",
@@ -139,6 +140,7 @@ class HomeScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Container(
+                    alignment: Alignment.center,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       gradient: LinearGradient(
@@ -151,15 +153,26 @@ class HomeScreen extends StatelessWidget {
                         ],
                       ),
                     ),
-                    child: ListTile(
-                      leading: Icon(
-                        Icons.add,
-                        color: const Color(0xffEE7A1D),
-                        size: 30.w,
-                      ),
-                      title: Text("Invite User",
-                          style: TextStyle(
-                              color: const Color(0xffEE7A1D), fontSize: 18.sp)),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        SizedBox(
+                          width: 70.w,
+                          child: Icon(
+                            Icons.add,
+                            color: const Color(0xffEE7A1D),
+                            size: 30.w,
+                          ),
+                        ),
+                        SizedBox(
+                          width: 200.w,
+                          child: Text("Invite Your Child",
+                              style: TextStyle(
+                                  color: const Color(0xffEE7A1D),
+                                  fontSize: 18.sp)),
+                        ),
+                      ],
                     ),
                   ),
                 ),

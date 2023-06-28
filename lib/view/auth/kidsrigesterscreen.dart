@@ -85,16 +85,28 @@ class kidsregisterscreen extends StatelessWidget {
                         ),
                         9.verticalSpace,
                         const Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            SkillsCard(
-                              title: 'Beginner',
+                            SizedBox(
+                              width: 105,
+                              height: 107,
+                              child: SkillsCard(
+                                title: 'Beginner',
+                              ),
                             ),
-                            SkillsCard(
-                              title: 'Intermediate',
+                            SizedBox(
+                              width: 105,
+                              height: 107,
+                              child: SkillsCard(
+                                title: 'Intermediate',
+                              ),
                             ),
-                            SkillsCard(
-                              title: 'Expert',
+                            SizedBox(
+                              width: 105,
+                              height: 107,
+                              child: SkillsCard(
+                                title: 'Expert',
+                              ),
                             )
                           ],
                         )
