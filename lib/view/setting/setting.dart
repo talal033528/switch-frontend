@@ -76,13 +76,13 @@ Widget settingWidget(icon, title) {
           leading: Icon(icon),
           title: Text(
             title,
-            style: TextStyle(color: const Color(0xff5F677E), fontSize: 14.sp),
+            style: TextStyle(color: Colors.white, fontSize: 14.sp),
           ),
           trailing: const Icon(Icons.arrow_forward_ios),
         ),
         Divider(
           thickness: 2.h,
-          color: const Color(0xffF5F6F7),
+          color: Colors.white,
         )
       ],
     ),

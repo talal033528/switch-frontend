@@ -86,7 +86,14 @@ class _ScoreAnalyticsState extends State<ScoreAnalytics> {
                         options: const [
                           'Shot Selection',
                           'Total Shots',
-                          'Free Throw %'
+                          'Free Throw %',
+                          "Around the Rim",
+                          "Short",
+                          "Mid",
+                          "Three",
+                          "RIGHT",
+                          "Left",
+                          "select zont",
                         ],
                         selectedValue: 'Shot Selection',
                         onChanged: (newValue) {
@@ -99,7 +106,12 @@ class _ScoreAnalyticsState extends State<ScoreAnalytics> {
                     SizedBox(
                       width: 132.w,
                       child: MyDropdownWidget(
-                        options: const ['Frequency', 'Last Month', 'Last Year'],
+                        options: const [
+                          'Frequency',
+                          'Last Month',
+                          'Last Year',
+                          "All Time"
+                        ],
                         selectedValue: 'Frequency',
                         onChanged: (newValue) {
                           // setState(() {

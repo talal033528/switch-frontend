@@ -58,16 +58,18 @@ class kidsregisterscreen extends StatelessWidget {
                     SizedBox(
                       width: 333.w,
                       child: MyDropdownWidget(
-                        options: [
-                          "Option 1",
-                          "Option 2",
-                          "Option 3"
-                        ], // Replace with your desired options
-                        selectedValue:
-                            "Option 2", // Replace with the selected value
+                        options: const [
+                          'Court Size',
+                          'Youth-Middle-High-School',
+                          'Women -College',
+                          "Men's College",
+                          "NBA",
+                        ],
+                        selectedValue: 'Court Size',
                         onChanged: (newValue) {
-                          // Handle the value change
-                          // You can store the selected value in a variable or perform any other necessary actions
+                          // setState(() {
+                          //   selectedValue = newValue;
+                          // });
                         },
                       ),
                     ),
