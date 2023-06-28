@@ -24,8 +24,9 @@ class CustomContainer extends StatefulWidget {
 
 class _CustomContainerState extends State<CustomContainer>
     with TickerProviderStateMixin {
-  double _activeSliderValue = 60;
+  final double _activeSliderValue = 60;
   late AnimationController controller;
+  @override
   void initState() {
     controller = AnimationController(
       /// [AnimationController]s can be created with `vsync: this` because of
@@ -147,10 +148,11 @@ class _CustomContainerState extends State<CustomContainer>
           20.verticalSpace,
           Container(
             width: 335.w,
-            padding: EdgeInsets.only(bottom: 10),
+            padding: const EdgeInsets.only(bottom: 10),
             child: LinearProgressIndicator(
               backgroundColor: Colors.grey[300],
-              valueColor: AlwaysStoppedAnimation<Color>(Color(0xff649E24)),
+              valueColor:
+                  const AlwaysStoppedAnimation<Color>(Color(0xff649E24)),
               value: double.parse(widget.linevalue) /
                   100, // Set the progress value based on linevalue
             ),
@@ -220,8 +222,9 @@ class CustomContainerBlue extends StatefulWidget {
 
 class _CustomContainerBlueState extends State<CustomContainerBlue>
     with TickerProviderStateMixin {
-  double _activeSliderValue = 60;
+  final double _activeSliderValue = 60;
   late AnimationController controller;
+  @override
   void initState() {
     controller = AnimationController(
       /// [AnimationController]s can be created with `vsync: this` because of
@@ -243,124 +246,121 @@ class _CustomContainerBlueState extends State<CustomContainerBlue>
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
-        decoration: BoxDecoration(
-          gradient: const LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Color(0xffFFFFFF),
-              Color(0xffD7D7D7),
-              Color(0xffFFFFFF),
-            ],
-          ),
-          borderRadius: const BorderRadius.all(Radius.circular(10)),
-          border: Border.all(color: const Color(0xffB4B8C3), width: 1),
+    return Container(
+      decoration: BoxDecoration(
+        gradient: const LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            Color(0xffFFFFFF),
+            Color(0xffD7D7D7),
+            Color(0xffFFFFFF),
+          ],
         ),
-        width: 353,
-        child: Expanded(
-          child: Column(
-            children: [
-              Padding(
-                padding: EdgeInsets.only(left: 10.w, right: 10.w, top: 10.w),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        borderRadius: const BorderRadius.all(Radius.circular(10)),
+        border: Border.all(color: const Color(0xffB4B8C3), width: 1),
+      ),
+      width: 353,
+      child: Column(
+        children: [
+          Padding(
+            padding: EdgeInsets.only(left: 10.w, right: 10.w, top: 10.w),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
                   children: [
-                    Row(
-                      children: [
-                        Text(
-                          widget.date,
-                          style: const TextStyle(
-                            color: Color(0xff5F677E),
-                            fontSize: 14,
-                          ),
-                        ),
-                        10.horizontalSpace,
-                        const Icon(
-                          Icons.circle,
-                          size: 8,
-                          color: Color(0xff5F677E),
-                        ),
-                        10.horizontalSpace,
-                        const Text(
-                          "02:29 PM",
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w400,
-                            color: Color(0xffB4B8C3),
-                          ),
-                        ),
-                      ],
-                    ),
                     Text(
-                      widget.data,
+                      widget.date,
                       style: const TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 11,
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              10.verticalSpace,
-              Padding(
-                padding: EdgeInsets.only(left: 10.w, right: 10.w),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    SizedBox(
-                      child: Text(
-                        widget.text,
-                        style: const TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w700,
-                          color: Color(0xff5484FF),
-                        ),
+                        color: Color(0xff5F677E),
+                        fontSize: 14,
                       ),
                     ),
-                    SizedBox(
-                      child: Text(
-                        widget.value,
-                        style: const TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400,
-                          color: Color(0xffB4B8C3),
-                        ),
+                    10.horizontalSpace,
+                    const Icon(
+                      Icons.circle,
+                      size: 8,
+                      color: Color(0xff5F677E),
+                    ),
+                    10.horizontalSpace,
+                    const Text(
+                      "02:29 PM",
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        color: Color(0xffB4B8C3),
                       ),
                     ),
                   ],
                 ),
-              ),
-              20.verticalSpace,
-              Container(
-                width: 335.w,
-                padding: EdgeInsets.only(bottom: 10),
-                child: LinearProgressIndicator(
-                  backgroundColor: Colors.grey[300],
-                  valueColor: AlwaysStoppedAnimation<Color>(Color(0xff5484FF)),
-                  value: double.parse(widget.linevalue) /
-                      100, // Set the progress value based on linevalue
-                ),
-              )
-              // Slider(
-              //   value: _activeSliderValue,
-              //   max: 100,
-              //   thumbColor: const Color(0xff5484FF),
-              //   activeColor: const Color(0xff5484FF),
-              //   inactiveColor: const Color(0xffC2C6CE),
-              //   divisions: 100,
-              //   label: _activeSliderValue.round().toString(),
-              //   onChanged: (double value) {
-              //     setState(() {
-              //       _activeSliderValue = value;
-              //     });
-              //   },
-              // ),
-            ],
+                Text(
+                  widget.data,
+                  style: const TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 11,
+                  ),
+                )
+              ],
+            ),
           ),
-        ),
+          10.verticalSpace,
+          Padding(
+            padding: EdgeInsets.only(left: 10.w, right: 10.w),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                SizedBox(
+                  child: Text(
+                    widget.text,
+                    style: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w700,
+                      color: Color(0xff5484FF),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  child: Text(
+                    widget.value,
+                    style: const TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400,
+                      color: Color(0xffB4B8C3),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          20.verticalSpace,
+          Container(
+            width: 335.w,
+            padding: const EdgeInsets.only(bottom: 10),
+            child: LinearProgressIndicator(
+              backgroundColor: Colors.grey[300],
+              valueColor:
+                  const AlwaysStoppedAnimation<Color>(Color(0xff5484FF)),
+              value: double.parse(widget.linevalue) /
+                  100, // Set the progress value based on linevalue
+            ),
+          )
+          // Slider(
+          //   value: _activeSliderValue,
+          //   max: 100,
+          //   thumbColor: const Color(0xff5484FF),
+          //   activeColor: const Color(0xff5484FF),
+          //   inactiveColor: const Color(0xffC2C6CE),
+          //   divisions: 100,
+          //   label: _activeSliderValue.round().toString(),
+          //   onChanged: (double value) {
+          //     setState(() {
+          //       _activeSliderValue = value;
+          //     });
+          //   },
+          // ),
+        ],
       ),
     );
   }
@@ -389,7 +389,7 @@ class CustomContainerOrange extends StatefulWidget {
 }
 
 class _CustomContainerOrangeState extends State<CustomContainerOrange> {
-  double _activeSliderValue = 60;
+  final double _activeSliderValue = 60;
 
   @override
   Widget build(BuildContext context) {
@@ -496,10 +496,11 @@ class _CustomContainerOrangeState extends State<CustomContainerOrange> {
           20.verticalSpace,
           Container(
             width: 335.w,
-            padding: EdgeInsets.only(bottom: 10),
+            padding: const EdgeInsets.only(bottom: 10),
             child: LinearProgressIndicator(
               backgroundColor: Colors.grey[300],
-              valueColor: AlwaysStoppedAnimation<Color>(Color(0xffEE7A1D)),
+              valueColor:
+                  const AlwaysStoppedAnimation<Color>(Color(0xffEE7A1D)),
               value: double.parse(widget.linevalue) /
                   100, // Set the progress value based on linevalue
             ),
