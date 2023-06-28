@@ -139,23 +139,25 @@ class mikeottrando extends StatelessWidget {
               child: SizedBox(
                 width: 353.w,
                 height: 60.h,
-                child: GreyBG(
-                  child: ListTile(
-                    leading: Image.asset(
-                      "assets/images/dave.png",
-                      width: 40.w,
-                      height: 40.h,
-                    ),
-                    title: Text(
-                      "Dave Ottrando           (Kid account)    ",
-                      style: TextStyle(
-                          fontSize: 18.sp,
-                          fontWeight: FontWeight.w400,
-                          color: Color(0xffEE7A1D)),
-                    ),
-                    trailing: Icon(
-                      LucideIcons.chevronDown,
-                      color: Color(0xffEE7A1D),
+                child: Center(
+                  child: GreyBG(
+                    child: ListTile(
+                      leading: Image.asset(
+                        "assets/images/dave.png",
+                        width: 40.w,
+                        height: 40.h,
+                      ),
+                      title: Text(
+                        "Dave Ottrando        (Kid account)    ",
+                        style: TextStyle(
+                            fontSize: 18.sp,
+                            fontWeight: FontWeight.w400,
+                            color: Color(0xffEE7A1D)),
+                      ),
+                      trailing: Icon(
+                        LucideIcons.chevronDown,
+                        color: Color(0xffEE7A1D),
+                      ),
                     ),
                   ),
                 ),
