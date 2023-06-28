@@ -76,7 +76,7 @@ Widget settingWidget(icon, title) {
           leading: Icon(icon),
           title: Text(
             title,
-            style: TextStyle(color: Colors.white, fontSize: 14.sp),
+            style: TextStyle(color: Color(0xFF5F677E), fontSize: 14.sp),
           ),
           trailing: const Icon(Icons.arrow_forward_ios),
         ),
