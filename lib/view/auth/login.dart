@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+import 'package:swish_basketball/view/goals/workout.dart';
 import 'package:swish_basketball/widgets/authtextfield.dart';
 import 'package:swish_basketball/widgets/button.dart';
 
@@ -118,6 +119,23 @@ class _LoginScreenState extends State<LoginScreen> {
                       text: 'Login',
                     )),
               ),
+              25.verticalSpace,
+              GestureDetector(
+                onTap: () {
+                  context.push('/Resetpaswordtp');
+                },
+                child: Container(
+                  alignment: Alignment.centerRight,
+                  width: 345.w,
+                  child: Text(
+                    'Forgot Password?',
+                    style: TextStyle(
+                        color: const Color(0xffEE7A1D),
+                        fontSize: 14.sp,
+                        fontWeight: FontWeight.w400),
+                  ),
+                ),
+              )
             ],
           ),
         ),

@@ -15,9 +15,14 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Image.asset(
-            'assets/images/userph.png',
-            width: 40.w,
+          child: GestureDetector(
+            onTap: () {
+              context.push('/home/child/EDITPROFILE');
+            },
+            child: Image.asset(
+              'assets/images/userph.png',
+              width: 40.w,
+            ),
           ),
         ),
         title: Text(

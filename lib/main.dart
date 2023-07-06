@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:swish_basketball/splash.dart';
 
 import 'package:swish_basketball/view/analytics/scoreanalytics.dart';
+import 'package:swish_basketball/view/auth/forgotpaswordscreen.dart';
 import 'package:swish_basketball/view/auth/kidsrigesterscreen.dart';
 import 'package:swish_basketball/view/auth/login.dart';
 import 'package:swish_basketball/view/auth/otp.dart';
@@ -15,6 +16,7 @@ import 'package:swish_basketball/view/goals/congratulation.dart';
 import 'package:swish_basketball/view/goals/createyourgoals.dart';
 import 'package:swish_basketball/view/goals/downloadscreen.dart';
 import 'package:swish_basketball/view/goals/freethrow.dart';
+import 'package:swish_basketball/view/goals/profileupdated.dart';
 import 'package:swish_basketball/view/goals/setmygoals.dart';
 import 'package:swish_basketball/view/goals/shortatempts.dart';
 import 'package:swish_basketball/view/goals/shortchart.dart';
@@ -175,6 +177,12 @@ final GoRouter _router = GoRouter(
             },
           ),
           GoRoute(
+            path: 'EDITPROFILE',
+            builder: (BuildContext context, GoRouterState state) {
+              return const EDITPROFILE();
+            },
+          ),
+          GoRoute(
             path: 'workoutscreen',
             builder: (BuildContext context, GoRouterState state) {
               return const workoutscreen();
@@ -308,6 +316,12 @@ final GoRouter _router = GoRouter(
         return const RegisterScreen();
       },
       routes: [
+        GoRoute(
+          path: 'Resetpasword',
+          builder: (BuildContext context, GoRouterState state) {
+            return const Resetpasword();
+          },
+        ),
         GoRoute(
           path: 'otp',
           builder: (BuildContext context, GoRouterState state) {

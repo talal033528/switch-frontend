@@ -72,7 +72,7 @@ class _OtpScreenState extends State<OtpScreen> {
                 width: 333.w,
                 child: PinCodeTextField(
                   appContext: context,
-                  length: 4,
+                  length: 5,
                   obscureText: false,
                   animationType: AnimationType.fade,
                   textStyle: TextStyle(

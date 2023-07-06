@@ -108,14 +108,6 @@ class _CustomContainerState extends State<CustomContainer>
                         color: Color(0xff273251),
                       ),
                     ),
-                    // Text(
-                    //   widget.subtext,
-                    //   style: TextStyle(
-                    //     color: Colors.black,
-                    //     fontWeight: FontWeight.bold,
-                    //     fontSize: 11,
-                    //   ),
-                    // ),
                   ],
                 )
               ],
@@ -157,42 +149,6 @@ class _CustomContainerState extends State<CustomContainer>
                   100, // Set the progress value based on linevalue
             ),
           )
-
-          // LinearProgressIndicator(
-          //   value: controller.value,
-          //   semanticsLabel: 'Linear progress indicator',
-          // ),
-          // Slider(
-          //   value: _activeSliderValue,
-          //   max: 100,
-          //   thumbColor: const Color(0xff649E24),
-          //   activeColor: const Color(0xff649E24),
-          //   secondaryActiveColor: const Color(0xff5484FF),
-          //   inactiveColor: const Color(0xffC2C6CE),
-          //   divisions: 100,
-          //   label: _activeSliderValue.round().toString(),
-          //   onChanged: (double value) {
-          //     setState(() {
-          //       _activeSliderValue = value;
-          //       // _activeSliderValue = 40;
-          //     });
-          //   },
-          // ),
-          // Slider(
-          //   value: _shotsSliderValue,
-          //   max: 100,
-          //   thumbColor: Color.fromARGB(255, 158, 36, 67),
-          //   activeColor: Color.fromARGB(255, 158, 36, 67),
-          //   secondaryActiveColor: Color.fromARGB(255, 158, 36, 77),
-          //   inactiveColor: const Color(0xffC2C6CE),
-          //   divisions: 100,
-          //   label: _shotsSliderValue.round().toString(),
-          //   onChanged: (double value) {
-          //     setState(() {
-          //       _shotsSliderValue = value;
-          //     });
-          //   },
-          // ),
         ],
       ),
     );
@@ -227,8 +183,6 @@ class _CustomContainerBlueState extends State<CustomContainerBlue>
   @override
   void initState() {
     controller = AnimationController(
-      /// [AnimationController]s can be created with `vsync: this` because of
-      /// [TickerProviderStateMixin].
       vsync: this,
       duration: const Duration(seconds: 5),
     )..addListener(() {
@@ -346,20 +300,6 @@ class _CustomContainerBlueState extends State<CustomContainerBlue>
                   100, // Set the progress value based on linevalue
             ),
           )
-          // Slider(
-          //   value: _activeSliderValue,
-          //   max: 100,
-          //   thumbColor: const Color(0xff5484FF),
-          //   activeColor: const Color(0xff5484FF),
-          //   inactiveColor: const Color(0xffC2C6CE),
-          //   divisions: 100,
-          //   label: _activeSliderValue.round().toString(),
-          //   onChanged: (double value) {
-          //     setState(() {
-          //       _activeSliderValue = value;
-          //     });
-          //   },
-          // ),
         ],
       ),
     );
@@ -505,20 +445,6 @@ class _CustomContainerOrangeState extends State<CustomContainerOrange> {
                   100, // Set the progress value based on linevalue
             ),
           )
-          // Slider(
-          //   value: _activeSliderValue,
-          //   max: 100,
-          //   thumbColor: const Color(0xffEE7A1D),
-          //   activeColor: const Color(0xffEE7A1D),
-          //   inactiveColor: const Color(0xffC2C6CE),
-          //   divisions: 100,
-          //   label: _activeSliderValue.round().toString(),
-          //   onChanged: (double value) {
-          //     setState(() {
-          //       _activeSliderValue = value;
-          //     });
-          //   },
-          // ),
         ],
       ),
     );
