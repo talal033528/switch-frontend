@@ -317,15 +317,15 @@ final GoRouter _router = GoRouter(
       },
       routes: [
         GoRoute(
-          path: 'Resetpasword',
-          builder: (BuildContext context, GoRouterState state) {
-            return const Resetpasword();
-          },
-        ),
-        GoRoute(
           path: 'otp',
           builder: (BuildContext context, GoRouterState state) {
             return const OtpScreen();
+          },
+        ),
+        GoRoute(
+          path: 'Resetpasword',
+          builder: (BuildContext context, GoRouterState state) {
+            return const Resetpasword();
           },
         ),
         GoRoute(
